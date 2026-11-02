@@ -119,6 +119,13 @@ function kalanMetni(kalkis, simdiDk) {
   return `${Math.floor(fark / 60)} sa ${fark % 60} dk sonra`;
 }
 
+// Kalan dakikaya göre aciliyet: 0-15 kırmızı, 16-20 turuncu.
+function aciliyet(kalanDk) {
+  if (kalanDk >= 0 && kalanDk <= 15) return "kirmizi";
+  if (kalanDk > 15 && kalanDk <= 20) return "turuncu";
+  return "";
+}
+
 // ---------- Veri güncelliği ----------
 const ESKI_GUN = 14;
 
@@ -213,8 +220,11 @@ function kompaktSatir(s) {
 
 function siradakiKart(s, simdi, iskeleler) {
   const bilgi = [s.varis ? `varış ${saatGoster(s.varis)}` : "", s.not].filter(Boolean).join(" · ");
-  return `<div class="kart siradaki" id="siradaki">
+  const kalanDk = dk(s.kalkis) - simdi.dk;
+  const acil = aciliyet(kalanDk);
+  return `<div class="kart siradaki${acil ? " acil-" + acil : ""}" id="siradaki">
     <div class="buyuk"><span class="saat">${saatHtml(s.kalkis, s.gece)}</span><span class="kalan">${kalanMetni(s.kalkis, simdi.dk)}</span></div>
+    ${acil ? `<div class="acil-uyari" role="alert">⚠️ Son ${kalanDk} dakika ⚠️</div>` : ""}
     <div class="rota">${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)}</div>
     ${bilgi ? `<div class="not">${esc(bilgi)}</div>` : ""}
     <div class="alt-satir">${rozet(s.firma)}${yolDugmesi(s, iskeleler, "hap")}</div>
@@ -447,5 +457,5 @@ if (typeof document !== "undefined") {
 }
 
 if (typeof module !== "undefined") {
-  module.exports = { guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, gunSeferleri, kalanMetni, haritaLink, noktaBul, otoparkBilgisi };
+  module.exports = { guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, gunSeferleri, kalanMetni, aciliyet, haritaLink, noktaBul, otoparkBilgisi };
 }

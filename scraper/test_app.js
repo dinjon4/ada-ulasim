@@ -78,4 +78,11 @@ const ad = (s) => `${a.saatGoster(s.kalkis)}${s.gece || s.kalkis >= "24" ? "(gec
   const bos = calis("2026-11-09T23:48", "adadan", []);
   assert(bos.r.yarinIlk.length === 0);
 }
+// i) aciliyet esikleri
+assert.strictEqual(a.aciliyet(15), "kirmizi");
+assert.strictEqual(a.aciliyet(0), "kirmizi");
+assert.strictEqual(a.aciliyet(16), "turuncu");
+assert.strictEqual(a.aciliyet(20), "turuncu");
+assert.strictEqual(a.aciliyet(21), "");
+assert.strictEqual(a.aciliyet(-1), "");
 console.log("TUM TESTLER GECTI");
