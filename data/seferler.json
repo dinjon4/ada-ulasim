@@ -1,59 +1,59 @@
 {
- "son_kontrol": "2026-11-02T23:25:40+03:00",
+ "son_kontrol": "2026-11-02T23:27:38+03:00",
  "son_degisiklik": "2026-11-02T23:02:34+03:00",
- "guncelleme": "2026-11-02T23:25:40+03:00",
+ "guncelleme": "2026-11-02T23:27:38+03:00",
  "kaynaklar": {
   "sehirhatlari-maltepe": {
    "durum": "ok",
    "sefer": 56,
    "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/maltepe-buyukada-heybeliada-burgazada-kinaliada-hatti-2020",
-   "son_basari": "2026-11-02T23:25:40+03:00"
+   "son_basari": "2026-11-02T23:27:38+03:00"
   },
   "sehirhatlari-bostanci": {
    "durum": "ok",
    "sefer": 35,
    "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/bostanci-adalar-ring-hatti-770",
-   "son_basari": "2026-11-02T23:25:40+03:00"
+   "son_basari": "2026-11-02T23:27:38+03:00"
   },
   "sehirhatlari-kabatas": {
    "durum": "ok",
    "sefer": 123,
    "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/kabatasadalar-177",
-   "son_basari": "2026-11-02T23:25:40+03:00"
+   "son_basari": "2026-11-02T23:27:38+03:00"
   },
   "mavimarmara-bostanci-buyukada": {
    "durum": "ok",
    "sefer": 16,
    "url": "https://mavimarmara.net/tarifeler/bostanci-buyukada/",
-   "son_basari": "2026-11-02T23:25:40+03:00"
+   "son_basari": "2026-11-02T23:27:38+03:00"
   },
   "mavimarmara-buyukada-bostanci": {
    "durum": "ok",
    "sefer": 17,
    "url": "https://mavimarmara.net/tarifeler/buyukada-bostanci/",
-   "son_basari": "2026-11-02T23:25:40+03:00"
+   "son_basari": "2026-11-02T23:27:38+03:00"
   },
   "mavimarmara-kabatas-buyukada": {
    "durum": "ok",
    "sefer": 2,
    "url": "https://mavimarmara.net/tarifeler/kabatas-buyukada/",
-   "son_basari": "2026-11-02T23:25:40+03:00"
+   "son_basari": "2026-11-02T23:27:38+03:00"
   },
   "mavimarmara-buyukada-kabatas": {
    "durum": "ok",
    "sefer": 2,
    "url": "https://mavimarmara.net/tarifeler/buyukada-kabatas/",
-   "son_basari": "2026-11-02T23:25:40+03:00"
+   "son_basari": "2026-11-02T23:27:38+03:00"
   },
   "prenstur": {
    "durum": "ok",
    "sefer": 76,
    "url": "https://www.prenstur.net/index3e95.html?option=com_content&view=article&id=75&Itemid=477",
-   "son_basari": "2026-11-02T23:25:40+03:00"
+   "son_basari": "2026-11-02T23:27:38+03:00"
   },
   "tatiller": {
    "durum": "ok",
-   "son_basari": "2026-11-02T23:25:40+03:00",
+   "son_basari": "2026-11-02T23:27:38+03:00",
    "sefer": 27,
    "url": "https://date.nager.at/api/v3/PublicHolidays/2026/TR"
   }
