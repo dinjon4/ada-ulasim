@@ -73,11 +73,11 @@ def hh_mm(s):
     return f"{int(m.group(1)):02d}:{m.group(2)}" if m else None
 
 
-def kayit(firma, kalkis_iskele, varis_iskele, kalkis, varis, gunler, not_="", kaynak=""):
+def kayit(firma, kalkis_iskele, varis_iskele, kalkis, varis, gunler, not_="", kaynak="", ara_durak=()):
     yon = "adadan" if kalkis_iskele == ADA else "adaya"
     return {"firma": firma, "kalkis_iskele": kalkis_iskele, "varis_iskele": varis_iskele,
             "kalkis": kalkis, "varis": varis, "gunler": list(gunler), "yon": yon,
-            "not": not_, "kaynak": kaynak}
+            "not": not_, "kaynak": kaynak, "ara_durak": list(ara_durak)}
 
 
 def tekille(seferler):
@@ -155,11 +155,38 @@ def sehirhatlari(url, kaynak="sehirhatlari"):
                     if yildiz_kurali and (yildizli[i] or yildizli[j]):
                         g = HAFTA_ICI_CT
                     seferler.append(kayit("Şehir Hatları", a, b, hh_mm_24(saatler[i], gun_ofset[i]),
-                                          hh_mm_24(saatler[j], gun_ofset[j]), g, "", kaynak))
+                                          hh_mm_24(saatler[j], gun_ofset[j]), g, "", kaynak,
+                                          ara_durak=[duraklar[m] for m in range(i + 1, j) if saatler[m]]))
     return tekille(seferler)
 
 
 # ---------- Mavi Marmara ----------
+
+def _tr_buyuk(s):
+    return s.replace("i", "İ").replace("ı", "I").upper()
+
+
+def mm_ara_durak(not_, kalkis_iskele, varis_iskele):
+    """Guzergah notundan (orn. 'HEYBELİADA - BÜYÜKADA') varistan ONCE gelen iskeleler.
+    Varis notta varsa ondan oncekiler; yoksa (orn. 'HEYBELİADA') kalkis/varis disindaki iskeleler.
+    'DİREKT ...' ve bos not -> []."""
+    n = _tr_buyuk(not_ or "")
+    if not n.strip() or n.startswith("DİREKT"):
+        return []
+    kalk, var = _tr_buyuk(kalkis_iskele), _tr_buyuk(varis_iskele)
+    parcalar = [p.strip() for p in n.split(" - ") if p.strip()]
+    if var in parcalar:
+        parcalar = parcalar[:parcalar.index(var)]
+    return [_iskele_adi(p) for p in parcalar if p != kalk]
+
+
+_ISKELE_ADLARI = {_tr_buyuk(a): a for a in ("Heybeliada", "Büyükada", "Burgazada", "Kınalıada", "Bostancı",
+                                            "Kabataş", "Maltepe", "Kartal", "Kadıköy")}
+
+
+def _iskele_adi(p):
+    return _ISKELE_ADLARI.get(p, p.capitalize())
+
 
 def mavimarmara(url, kalkis_iskele, varis_iskele, kaynak="mavimarmara"):
     soup = BeautifulSoup(indir(url).text, "html.parser")
@@ -179,7 +206,8 @@ def mavimarmara(url, kalkis_iskele, varis_iskele, kaynak="mavimarmara"):
         else:
             varis, not_ = None, h[1]
         seferler.append(kayit("Mavi Marmara", kalkis_iskele, varis_iskele, kalkis, varis,
-                              HAFTA_ICI_CT if yildizli else HEPSI, not_, kaynak))
+                              HAFTA_ICI_CT if yildizli else HEPSI, not_, kaynak,
+                              ara_durak=mm_ara_durak(not_, kalkis_iskele, varis_iskele)))
     return tekille(seferler)
 
 

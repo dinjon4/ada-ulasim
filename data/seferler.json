@@ -1,59 +1,59 @@
 {
- "son_kontrol": "2026-11-02T23:27:38+03:00",
- "son_degisiklik": "2026-11-02T23:02:34+03:00",
- "guncelleme": "2026-11-02T23:27:38+03:00",
+ "son_kontrol": "2026-11-03T00:12:03+03:00",
+ "son_degisiklik": "2026-11-03T00:12:03+03:00",
+ "guncelleme": "2026-11-03T00:12:03+03:00",
  "kaynaklar": {
   "sehirhatlari-maltepe": {
    "durum": "ok",
    "sefer": 56,
    "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/maltepe-buyukada-heybeliada-burgazada-kinaliada-hatti-2020",
-   "son_basari": "2026-11-02T23:27:38+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00"
   },
   "sehirhatlari-bostanci": {
    "durum": "ok",
    "sefer": 35,
    "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/bostanci-adalar-ring-hatti-770",
-   "son_basari": "2026-11-02T23:27:38+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00"
   },
   "sehirhatlari-kabatas": {
    "durum": "ok",
    "sefer": 123,
    "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/kabatasadalar-177",
-   "son_basari": "2026-11-02T23:27:38+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00"
   },
   "mavimarmara-bostanci-buyukada": {
    "durum": "ok",
    "sefer": 16,
    "url": "https://mavimarmara.net/tarifeler/bostanci-buyukada/",
-   "son_basari": "2026-11-02T23:27:38+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00"
   },
   "mavimarmara-buyukada-bostanci": {
    "durum": "ok",
    "sefer": 17,
    "url": "https://mavimarmara.net/tarifeler/buyukada-bostanci/",
-   "son_basari": "2026-11-02T23:27:38+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00"
   },
   "mavimarmara-kabatas-buyukada": {
    "durum": "ok",
    "sefer": 2,
    "url": "https://mavimarmara.net/tarifeler/kabatas-buyukada/",
-   "son_basari": "2026-11-02T23:27:38+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00"
   },
   "mavimarmara-buyukada-kabatas": {
    "durum": "ok",
    "sefer": 2,
    "url": "https://mavimarmara.net/tarifeler/buyukada-kabatas/",
-   "son_basari": "2026-11-02T23:27:38+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00"
   },
   "prenstur": {
    "durum": "ok",
    "sefer": 76,
    "url": "https://www.prenstur.net/index3e95.html?option=com_content&view=article&id=75&Itemid=477",
-   "son_basari": "2026-11-02T23:27:38+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00"
   },
   "tatiller": {
    "durum": "ok",
-   "son_basari": "2026-11-02T23:27:38+03:00",
+   "son_basari": "2026-11-03T00:12:03+03:00",
    "sefer": 27,
    "url": "https://date.nager.at/api/v3/PublicHolidays/2026/TR"
   }
@@ -74,7 +74,10 @@
    ],
    "yon": "adaya",
    "not": "HEYBELİADA - BÜYÜKADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -89,7 +92,10 @@
    ],
    "yon": "adaya",
    "not": "HEYBELİADA - BÜYÜKADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -104,7 +110,8 @@
    ],
    "yon": "adaya",
    "not": "BÜYÜKADA - HEYBELİADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -119,7 +126,8 @@
    ],
    "yon": "adaya",
    "not": "BÜYÜKADA - HEYBELİADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -134,7 +142,10 @@
    ],
    "yon": "adaya",
    "not": "HEYBELİADA - BÜYÜKADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -149,7 +160,8 @@
    ],
    "yon": "adaya",
    "not": "BÜYÜKADA - HEYBELİADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -164,7 +176,8 @@
    ],
    "yon": "adaya",
    "not": "BÜYÜKADA - HEYBELİADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -179,7 +192,8 @@
    ],
    "yon": "adaya",
    "not": "BÜYÜKADA - HEYBELİADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -194,7 +208,10 @@
    ],
    "yon": "adaya",
    "not": "HEYBELİADA - BÜYÜKADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -209,7 +226,8 @@
    ],
    "yon": "adaya",
    "not": "BÜYÜKADA - HEYBELİADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -224,7 +242,10 @@
    ],
    "yon": "adaya",
    "not": "HEYBELİADA - BÜYÜKADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -239,7 +260,8 @@
    ],
    "yon": "adaya",
    "not": "BÜYÜKADA - HEYBELİADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -254,7 +276,8 @@
    ],
    "yon": "adaya",
    "not": "BÜYÜKADA - HEYBELİADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -269,7 +292,10 @@
    ],
    "yon": "adaya",
    "not": "HEYBELİADA - BÜYÜKADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -284,7 +310,8 @@
    ],
    "yon": "adaya",
    "not": "BÜYÜKADA - HEYBELİADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -299,7 +326,10 @@
    ],
    "yon": "adaya",
    "not": "HEYBELİADA - BÜYÜKADA",
-   "kaynak": "mavimarmara-bostanci-buyukada"
+   "kaynak": "mavimarmara-bostanci-buyukada",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -314,7 +344,10 @@
    ],
    "yon": "adadan",
    "not": "HEYBELİADA - BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -328,7 +361,8 @@
    ],
    "yon": "adadan",
    "not": "DİREKT BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -343,7 +377,8 @@
    ],
    "yon": "adadan",
    "not": "DİREKT BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -358,7 +393,8 @@
    ],
    "yon": "adadan",
    "not": "DİREKT BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -373,7 +409,10 @@
    ],
    "yon": "adadan",
    "not": "HEYBELİADA - BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -388,7 +427,10 @@
    ],
    "yon": "adadan",
    "not": "HEYBELİADA - BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -403,7 +445,8 @@
    ],
    "yon": "adadan",
    "not": "DİREKT BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -418,7 +461,10 @@
    ],
    "yon": "adadan",
    "not": "HEYBELİADA - BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -433,7 +479,10 @@
    ],
    "yon": "adadan",
    "not": "HEYBELİADA - BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -448,7 +497,10 @@
    ],
    "yon": "adadan",
    "not": "HEYBELİADA - BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -463,7 +515,8 @@
    ],
    "yon": "adadan",
    "not": "DİREKT BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -478,7 +531,8 @@
    ],
    "yon": "adadan",
    "not": "DİREKT BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -493,7 +547,8 @@
    ],
    "yon": "adadan",
    "not": "DİREKT BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -508,7 +563,8 @@
    ],
    "yon": "adadan",
    "not": "DİREKT BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -523,7 +579,8 @@
    ],
    "yon": "adadan",
    "not": "DİREKT BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -538,7 +595,8 @@
    ],
    "yon": "adadan",
    "not": "DİREKT BOSTANCI",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -553,7 +611,10 @@
    ],
    "yon": "adadan",
    "not": "HEYBELİADA",
-   "kaynak": "mavimarmara-buyukada-bostanci"
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Mavi Marmara",
@@ -568,7 +629,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "mavimarmara-buyukada-kabatas"
+   "kaynak": "mavimarmara-buyukada-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -583,7 +645,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "mavimarmara-buyukada-kabatas"
+   "kaynak": "mavimarmara-buyukada-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -598,7 +661,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "mavimarmara-kabatas-buyukada"
+   "kaynak": "mavimarmara-kabatas-buyukada",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -613,7 +677,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "mavimarmara-kabatas-buyukada"
+   "kaynak": "mavimarmara-kabatas-buyukada",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -626,7 +691,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -641,7 +707,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -656,7 +723,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -671,7 +739,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -686,7 +755,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -701,7 +771,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -716,7 +787,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -731,7 +803,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -746,7 +819,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -761,7 +835,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -776,7 +851,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -791,7 +867,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -806,7 +883,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -821,7 +899,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -836,7 +915,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -851,7 +931,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -866,7 +947,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -881,7 +963,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -896,7 +979,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -909,7 +993,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -924,7 +1009,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -939,7 +1025,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -954,7 +1041,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -969,7 +1057,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -984,7 +1073,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -999,7 +1089,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1014,7 +1105,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1029,7 +1121,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1044,7 +1137,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1059,7 +1153,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1074,7 +1169,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1089,7 +1185,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1104,7 +1201,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1119,7 +1217,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1134,7 +1233,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1149,7 +1249,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1164,7 +1265,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1179,7 +1281,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1192,7 +1295,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1207,7 +1311,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1222,7 +1327,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1237,7 +1343,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1252,7 +1359,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1267,7 +1375,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1282,7 +1391,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1297,7 +1407,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1312,7 +1423,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1327,7 +1439,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1342,7 +1455,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1357,7 +1471,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1372,7 +1487,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1387,7 +1503,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1402,7 +1519,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1417,7 +1535,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1432,7 +1551,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1447,7 +1567,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1462,7 +1583,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1475,7 +1597,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1490,7 +1613,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1505,7 +1629,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1520,7 +1645,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1535,7 +1661,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1550,7 +1677,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1565,7 +1693,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1580,7 +1709,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1595,7 +1725,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1610,7 +1741,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1625,7 +1757,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1640,7 +1773,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1655,7 +1789,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1670,7 +1805,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1685,7 +1821,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1700,7 +1837,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1715,7 +1853,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1730,7 +1869,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Prenstur",
@@ -1745,7 +1885,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "prenstur"
+   "kaynak": "prenstur",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -1760,7 +1901,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -1775,7 +1921,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -1788,7 +1939,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -1802,7 +1954,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -1817,7 +1970,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -1831,7 +1985,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -1844,7 +1999,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -1859,7 +2015,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -1874,7 +2031,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -1889,7 +2047,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -1904,7 +2067,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -1919,7 +2083,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -1934,7 +2099,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -1949,7 +2115,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -1964,7 +2135,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -1979,7 +2151,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -1994,7 +2167,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2008,7 +2182,10 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2021,7 +2198,10 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2035,7 +2215,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2048,7 +2229,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2062,7 +2244,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2075,7 +2262,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2090,7 +2282,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2105,7 +2298,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2120,7 +2314,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2135,7 +2330,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2150,7 +2346,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2165,7 +2366,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2180,7 +2382,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2195,7 +2398,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2209,7 +2417,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2222,7 +2431,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2236,7 +2446,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2250,7 +2461,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2263,7 +2475,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2277,7 +2490,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2290,7 +2504,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2303,7 +2518,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2317,7 +2533,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2331,7 +2548,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2344,7 +2562,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2359,7 +2578,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2373,7 +2593,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2388,7 +2609,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2403,7 +2625,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2417,7 +2640,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2431,7 +2655,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2444,7 +2669,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2457,7 +2683,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2472,7 +2699,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2487,7 +2715,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2502,7 +2731,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2517,7 +2747,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2532,7 +2763,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2547,7 +2779,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2562,7 +2795,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2577,7 +2811,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2592,7 +2827,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2607,7 +2843,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2622,7 +2859,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2637,7 +2875,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2652,7 +2891,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2667,7 +2907,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2682,7 +2923,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2697,7 +2939,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2712,7 +2955,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2727,7 +2971,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2742,7 +2987,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2757,7 +3003,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2772,7 +3019,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2787,7 +3035,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -2801,7 +3050,14 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy",
+    "Eminönü"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2814,7 +3070,14 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy",
+    "Eminönü"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2828,7 +3091,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2841,7 +3110,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2854,7 +3129,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2868,7 +3149,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2882,7 +3169,10 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2895,7 +3185,10 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2910,7 +3203,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2924,7 +3223,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2937,7 +3242,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2952,7 +3263,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2967,7 +3284,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2982,7 +3305,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -2997,7 +3326,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3012,7 +3347,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3027,7 +3368,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3042,7 +3389,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3057,7 +3410,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3072,7 +3431,13 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada",
+    "Kadıköy"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3086,7 +3451,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3099,7 +3469,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3113,7 +3488,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3126,7 +3506,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3139,7 +3524,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3153,7 +3543,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3168,7 +3563,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3182,7 +3582,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3195,7 +3600,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3210,7 +3620,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3225,7 +3640,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3240,7 +3660,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3255,7 +3680,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3270,7 +3700,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3285,7 +3720,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3300,7 +3740,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3315,7 +3760,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3330,7 +3780,12 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada",
+    "Burgazada",
+    "Kınalıada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -3344,7 +3799,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3358,7 +3814,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3373,7 +3830,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3388,7 +3846,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3403,7 +3862,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3418,7 +3878,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3433,7 +3894,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3448,7 +3910,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3463,7 +3926,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3478,7 +3942,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3493,7 +3958,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3508,7 +3974,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3523,7 +3990,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3538,7 +4006,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3553,7 +4022,8 @@
    ],
    "yon": "adadan",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3568,7 +4038,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3583,7 +4054,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3597,7 +4069,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3611,7 +4084,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3625,7 +4099,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3640,7 +4115,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3653,7 +4129,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3668,7 +4145,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3682,7 +4160,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3695,7 +4174,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3709,7 +4189,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3722,7 +4203,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3737,7 +4219,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3752,7 +4235,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3767,7 +4251,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3782,7 +4267,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3796,7 +4282,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3809,7 +4296,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3824,7 +4312,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3839,7 +4328,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3854,7 +4344,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3869,7 +4360,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3884,7 +4376,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3899,7 +4392,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3914,7 +4408,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3929,7 +4424,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3944,7 +4440,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3959,7 +4456,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3974,7 +4472,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -3989,7 +4488,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4004,7 +4504,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4019,7 +4520,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4034,7 +4536,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4049,7 +4552,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4064,7 +4568,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4079,7 +4584,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-bostanci"
+   "kaynak": "sehirhatlari-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4094,7 +4600,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4109,7 +4616,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4123,7 +4631,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4136,7 +4650,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4150,7 +4670,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4163,7 +4689,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4177,7 +4709,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4190,7 +4728,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4205,7 +4749,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4220,7 +4770,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4234,7 +4790,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4247,7 +4809,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4262,7 +4830,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4277,7 +4851,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4292,7 +4872,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4307,7 +4893,10 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4322,7 +4911,14 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Eminönü",
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4337,7 +4933,10 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4352,7 +4951,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4367,7 +4972,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4382,7 +4993,13 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kadıköy",
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4396,7 +5013,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4409,7 +5031,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4423,7 +5050,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4436,7 +5068,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4450,7 +5087,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4463,7 +5105,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4478,7 +5125,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4493,7 +5145,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4507,7 +5164,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4520,7 +5182,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4535,7 +5202,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4550,7 +5222,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4565,7 +5242,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4580,7 +5262,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4595,7 +5282,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4610,7 +5302,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4625,7 +5322,12 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-kabatas"
+   "kaynak": "sehirhatlari-kabatas",
+   "ara_durak": [
+    "Kınalıada",
+    "Burgazada",
+    "Heybeliada"
+   ]
   },
   {
    "firma": "Şehir Hatları",
@@ -4639,7 +5341,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4653,7 +5356,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4668,7 +5372,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4683,7 +5388,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4698,7 +5404,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4713,7 +5420,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4728,7 +5436,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4743,7 +5452,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4758,7 +5468,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4773,7 +5484,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4788,7 +5500,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4803,7 +5516,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4818,7 +5532,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4833,7 +5548,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   },
   {
    "firma": "Şehir Hatları",
@@ -4848,7 +5564,8 @@
    ],
    "yon": "adaya",
    "not": "",
-   "kaynak": "sehirhatlari-maltepe"
+   "kaynak": "sehirhatlari-maltepe",
+   "ara_durak": []
   }
  ],
  "tatiller": [

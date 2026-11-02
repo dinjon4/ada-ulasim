@@ -85,4 +85,22 @@ assert.strictEqual(a.aciliyet(16), "turuncu");
 assert.strictEqual(a.aciliyet(20), "turuncu");
 assert.strictEqual(a.aciliyet(21), "");
 assert.strictEqual(a.aciliyet(-1), "");
+// j) ara_durak metni
+{
+  const M = "Ara duraklar var, varış saatini kontrol ediniz";
+  assert.strictEqual(a.araDurakMetni({ ara_durak: ["Heybeliada"] }), M);
+  assert.strictEqual(a.araDurakMetni({ ara_durak: [] }), "");
+  assert.strictEqual(a.araDurakMetni({}), "");
+  const x = calis("2026-11-09T01:50", "adaya");
+  const s = sira(x);
+  assert(s.ara_durak.length > 0);
+  const simdi = x.simdi, isk = {};
+  assert(a.siradakiKart(s, simdi, isk).includes(M));
+  assert(a.gelecekSatir(s, simdi, isk, true).includes(M));
+  const eski = { ...s }; delete eski.ara_durak;
+  assert(!a.siradakiKart(eski, simdi, isk).includes(M) && !a.gelecekSatir(eski, simdi, isk, true).includes(M));
+  assert(!a.siradakiKart({ ...s, ara_durak: [] }, simdi, isk).includes(M));
+  assert(!a.siradakiKart(s, simdi, isk).includes("Kınalıada"));
+  console.log("j) ara_durak metni OK");
+}
 console.log("TUM TESTLER GECTI");
