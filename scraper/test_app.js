@@ -180,4 +180,17 @@ assert.strictEqual(a.sureMetni("10:00", "16:00"), "");
   assert(hs.includes(`data-sefer="${a.seferKimlik(bx.sefer)}"`));
   console.log("m) son sefer bilgisi OK:", ad(bx.sefer), "kalan", bx.kalanSayi);
 }
+{
+  const h1 = a.gecmisBaslik([1], { gecmisGizli: false });
+  assert(h1.includes("(1) ▴") && h1.includes('aria-expanded="true"') && h1.includes("<button"));
+  const h2 = a.gecmisBaslik([1], { gecmisGizli: true });
+  assert(h2.includes("(1) ▾") && h2.includes('aria-expanded="false"'));
+  assert(a.gecmisGorunen([1], { gecmisGizli: true }).length === 0 && a.gecmisGorunen([1], {}).length === 1);
+  const h5 = a.gecmisBaslik([1, 2, 3, 4, 5], { eskiAcik: false });
+  assert(h5.includes("(4) ▾") && h5.includes('aria-expanded="false"'));
+  assert(a.gecmisBaslik([1, 2, 3], { eskiAcik: true }).includes("(2) ▴"));
+  assert(a.gecmisGorunen([1, 2, 3, 4, 5], { eskiAcik: false }).length === 1 && a.gecmisGorunen([1, 2, 3, 4, 5], { eskiAcik: true }).length === 5);
+  assert(a.gecmisBaslik([], {}).includes("baslik-bos"));
+  console.log("n) gecmisBaslik OK");
+}
 console.log("TUM TESTLER GECTI");

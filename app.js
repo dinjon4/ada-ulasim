@@ -262,6 +262,17 @@ function araDurakMetni(s) {
   return Array.isArray(s.ara_durak) && s.ara_durak.length > 0 ? ARA_DURAK_METNI : "";
 }
 
+function gecmisGorunen(gecmis, durum) {
+  if (gecmis.length === 1) return durum.gecmisGizli ? [] : gecmis;
+  return (durum.eskiAcik ? gecmis.slice(0, -1) : []).concat(gecmis.slice(-1));
+}
+function gecmisBaslik(gecmis, durum) {
+  if (!gecmis.length) return '<span class="baslik-bos"></span>';
+  const tek = gecmis.length === 1;
+  const acik = tek ? !durum.gecmisGizli : !!durum.eskiAcik;
+  const n = gecmis.length - (tek ? 0 : 1);
+  return `<h2><button class="baslik-dugme baslik-hap" id="eski-dugme"${tek ? ' data-tek="1"' : ""} aria-expanded="${acik}">Geçmiş Seferler (${n}) ${acik ? "▴" : "▾"}</button></h2>`;
+}
 function siradakiKart(s, simdi, iskeleler) {
   const bilgi = bilgiMetni(s);
   const kalanDk = dk(s.kalkis) - simdi.dk;
@@ -289,6 +300,7 @@ if (typeof document !== "undefined") {
     secili: JSON.parse(localStorage.getItem("secili") || "null") || ANA_ISKELELER.slice(),
     digerAcik: localStorage.getItem("digerAcik") === "1",
     eskiAcik: false,
+    gecmisGizli: false,
     veri: null, iskeleler: null,
   };
   const testSaat = saatiCoz(new URLSearchParams(location.search).get("t"));
@@ -326,7 +338,7 @@ if (typeof document !== "undefined") {
     kutu.hidden = false;
   }
 
-  function ciz(kaydir) {
+function ciz(kaydir) {
     if (!durum.veri) return;
     const simdi = simdiAl();
     const r = listeHesapla(durum.veri, durum.yon, durum.secili, simdi);
@@ -341,13 +353,9 @@ if (typeof document !== "undefined") {
 
     const tus = sonSeferTusu(sonSeferBilgisi(r));
     if (gecmis.length || tus) {
-      const son2 = gecmis.slice(-1), eski = gecmis.slice(0, -1);
-      const baslik = !gecmis.length ? '<span class="baslik-bos"></span>'
-        : eski.length
-        ? `<h2><button class="baslik-dugme baslik-hap" id="eski-dugme" aria-expanded="${durum.eskiAcik}">Geçmiş Seferler (${eski.length}) ${durum.eskiAcik ? "▴" : "▾"}</button></h2>`
-        : '<h2><span class="baslik-hap">Geçmiş Seferler</span></h2>';
+      const baslik = gecmisBaslik(gecmis, durum);
       bolge.push(`<section class="bolum gecmis-bolum"><div class="gecmis-baslik">${baslik}${tus}</div>
-        ${gecmis.length ? `<ul class="kompakt-liste">${(durum.eskiAcik ? eski : []).concat(son2).map(kompaktSatir).join("")}</ul>` : ""}</section>`);
+        ${gecmis.length ? `<ul class="kompakt-liste">${gecmisGorunen(gecmis, durum).map(kompaktSatir).join("")}</ul>` : ""}</section>`);
     }
     if (r.siradaki !== -1) {
       sonraki = r.bugun[r.siradaki];
@@ -368,7 +376,7 @@ if (typeof document !== "undefined") {
     }
     $("liste").innerHTML = bolge.join("");
     const ed = $("eski-dugme");
-    if (ed) ed.addEventListener("click", () => { durum.eskiAcik = !durum.eskiAcik; ciz(false); });
+    if (ed) ed.addEventListener("click", () => { if (ed.dataset.tek) durum.gecmisGizli = !durum.gecmisGizli; else durum.eskiAcik = !durum.eskiAcik; ciz(false); });
     const st = $("son-tus");
     if (st) st.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -501,5 +509,5 @@ if (typeof document !== "undefined") {
 }
 
 if (typeof module !== "undefined") {
-  module.exports = { guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, sonSeferBilgisi, sonSeferTusu, seferKimlik, gunSeferleri, kalanMetni, aciliyet, haritaLink, noktaBul, otoparkBilgisi, sureMetni, araDurakMetni, siradakiKart, gelecekSatir };
+  module.exports = { guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, sonSeferBilgisi, sonSeferTusu, seferKimlik, gunSeferleri, kalanMetni, aciliyet, haritaLink, noktaBul, otoparkBilgisi, sureMetni, araDurakMetni, siradakiKart, gelecekSatir, gecmisBaslik, gecmisGorunen };
 }
