@@ -1,6 +1,6 @@
 # Ada Vapur
 
-Büyükada vapur ve motor seferlerini tek listede gösteren küçük, ticari olmayan bir web sitesi (PWA). Şehir Hatları, Mavi Marmara ve Prenstur seferlerini birleştirir; iki sekme vardır: **Adadan çıkış** ve **Adaya dönüş**. iPhone'da Safari > Paylaş > Ana Ekrana Ekle ile uygulama gibi açılır.
+Büyükada vapur ve motor seferlerini tek listede gösteren küçük, ticari olmayan bir web sitesi (PWA). Şehir Hatları, Mavi Marmara ve Prenstur seferlerini birleştirir; iki sekme vardır: **Adadan çıkış** ve **Adaya gidiş**. iPhone'da Safari > Paylaş > Ana Ekrana Ekle ile uygulama gibi açılır.
 
 Resmi değildir; sefer öncesi firmayı kontrol edin.
 
