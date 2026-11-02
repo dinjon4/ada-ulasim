@@ -116,4 +116,25 @@ assert.strictEqual(a.sureMetni("10:00", "16:00"), "");
   assert(a.siradakiKart(sira(x), x.simdi, {}).includes("varış 03:10 (1 saat 10 dakika)"));
   console.log("k) sureMetni OK");
 }
+// l) otopark P dugmesi
+{
+  const ik = require("../data/iskeleler.json");
+  const mk = (yon, firma, kal, var_) => ({ yon, firma, kalkis_iskele: kal, varis_iskele: var_, kalkis: "08:00", gunler: [], });
+  const simdi = { dk: 470 };
+  const adaya = mk("adaya", "Mavi Marmara", "Bostancı", "Büyükada");
+  const adadan = mk("adadan", "Mavi Marmara", "Büyükada", "Bostancı");
+  const bo = a.otoparkBilgisi(adaya, ik);
+  assert(bo && bo.link.includes("travelmode=driving"));
+  const kart = a.siradakiKart(adaya, simdi, ik), satir = a.gelecekSatir(adaya, simdi, ik, true);
+  for (const h of [kart, satir]) {
+    assert(h.includes('class="park-dugme"') && h.includes("travelmode=driving") && h.includes(`aria-label="Otopark: ${bo.ad} · ${bo.mesafe} m"`));
+    assert(h.indexOf("park-dugme") < h.indexOf("Yol tarifi"));
+  }
+  const k2 = a.siradakiKart(adadan, simdi, ik);
+  assert(k2.includes("park-dugme") && k2.includes("travelmode=walking") && !k2.includes("travelmode=driving"));
+  assert(a.gelecekSatir(adadan, simdi, ik, true).includes("travelmode=walking"));
+  const hey = a.siradakiKart(mk("adadan", "Mavi Marmara", "Büyükada", "Heybeliada"), simdi, ik);
+  assert(!hey.includes("park-dugme") && !a.gelecekSatir(mk("adaya", "Mavi Marmara", "Heybeliada", "Büyükada"), simdi, ik, true).includes("park-dugme"));
+  console.log("l) otopark dugmesi OK");
+}
 console.log("TUM TESTLER GECTI");

@@ -99,30 +99,18 @@ ul.cam-liste { padding: 2px 12px; }
 .alt .uyari { background: var(--uyari); color: var(--uyari-yazi); padding: 8px 10px; border-radius: 10px; }
 .linkler { display: flex; flex-direction: column; gap: 2px; }
 .linkler a { display: inline-block; padding: 6px 0; }
-body.otoparkli .alt { padding-bottom: calc(var(--cubuk, 70px) + 24px + env(safe-area-inset-bottom)); }
-
-.otopark-cubugu {
-  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
-  background: rgba(8,30,46,.72); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
-  border-top: 1px solid rgba(255,255,255,.25);
-  padding: 6px 14px calc(10px + env(safe-area-inset-bottom));
-}
-.otopark-cubugu a { display: flex; align-items: center; gap: 10px; min-height: 48px; color: #fff; text-decoration: none; font-size: 16px; }
-.otopark-cubugu .p { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 6px; background: #2a6fdb; font-weight: 800; flex: none; }
-.otopark-cubugu[hidden] { display: none; }
 
 /* destek yoksa / saydamlık azaltıldıysa opak yedek */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   :root { --cam: rgba(235,248,250,.92); --cam-koyu: #14506a; }
-  .otopark-cubugu { background: #0a2536; }
 }
 @media (prefers-reduced-transparency: reduce) {
   :root { --cam: rgba(235,248,250,.96); --cam-koyu: #14506a; }
-  .kart, ul.cam-liste, .otopark-cubugu { -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .kart, ul.cam-liste { -webkit-backdrop-filter: none; backdrop-filter: none; }
   .siradaki { background: #14506a; }
-  .otopark-cubugu { background: #0a2536; }
 }
-.hap.sag { margin-left: auto; }
+.yol-grup { display: inline-flex; align-items: center; gap: 8px; margin-left: auto; flex: none; }
+.park-dugme { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #1f63c4; color: #fff; font-weight: 800; font-size: 22px; line-height: 1; text-decoration: none; border: 2px solid rgba(255,255,255,.92); box-sizing: border-box; box-shadow: 0 1px 4px rgba(0,0,0,.18); }
 .satir.gelecek { align-items: flex-start; }
 .satir.gelecek .saat { padding-top: 2px; }
 .gece { font-size: 11px; font-weight: 600; opacity: .8; border: 1px solid currentColor; border-radius: 6px; padding: 0 4px; margin-left: 4px; vertical-align: middle; }
@@ -131,9 +119,6 @@ body.otoparkli .alt { padding-bottom: calc(var(--cubuk, 70px) + 24px + env(safe-
 #iskele-yol h2 { color: #bfeaf0; }
 [hidden] { display: none !important; }
 .baslik-dugme { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; min-height: 44px; font: inherit; color: inherit; }
-.otopark-cubugu .metin { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
-.otopark-cubugu .ust { font-size: 13px; opacity: .8; }
-.otopark-cubugu .ad { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .baslik-satir { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .yenile { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid var(--cam-kenar); background: var(--cam); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); color: var(--koyu); font-size: 15px; font-weight: 600; }
 .yenile .ok { display: inline-block; font-size: 18px; line-height: 1; }

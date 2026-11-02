@@ -209,19 +209,28 @@ function yolDugmesi(s, iskeleler, sinif) {
   return l ? `<a class="${sinif}" href="${l}" target="_blank" rel="noopener">📍 Yol tarifi</a>` : "";
 }
 
-// Alt çubuk: seferin KARA tarafındaki iskelenin en yakın otoparkı (Heybeliada kara değil -> null).
+// Seferin KARA tarafındaki iskelenin otoparkı (Heybeliada kara değil -> null).
+// Adaya gidiş: arabayla otoparka (driving); adadan çıkış: otoparka yürüyerek (walking).
 function otoparkBilgisi(s, iskeleler, yon) {
-  if (!s || !iskeleler) return null;
+  if (!s || !iskeleler || !iskeleler.iskeleler) return null;
+  yon = yon || s.yon;
   const kara = digerIskele(s);
   const i = iskeleler.iskeleler[kara];
   if (!i || !i.kara) return null;
   const nokta = noktaBul(iskeleler, kara, s.firma);
   const o = nokta && nokta.otopark && nokta.otopark[0];
   if (!o) return null;
-  const link = yon === "adaya"
-    ? haritaLink(o.lat, o.lng, "driving")
-    : `https://www.google.com/maps/search/?api=1&query=${o.lat},${o.lng}`;
+  const link = haritaLink(o.lat, o.lng, yon === "adaya" ? "driving" : "walking");
   return { ad: o.ad, mesafe: o.mesafe_m, link, iskele: kara };
+}
+
+// Yuvarlak "P" düğmesi + Yol tarifi hapı, sağda tek grup.
+function yolGrubu(s, iskeleler, sinif) {
+  const o = otoparkBilgisi(s, iskeleler);
+  const etiket = o ? esc(`Otopark: ${o.ad} · ${o.mesafe} m`) : "";
+  const p = o ? `<a class="park-dugme" href="${o.link}" target="_blank" rel="noopener" aria-label="${etiket}" title="${etiket}">P</a>` : "";
+  const y = yolDugmesi(s, iskeleler, sinif);
+  return p || y ? `<span class="yol-grup">${p}${y}</span>` : "";
 }
 
 function rozet(firma, ek) {
@@ -248,7 +257,7 @@ function siradakiKart(s, simdi, iskeleler) {
     <div class="rota">${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)}</div>
     ${bilgi ? `<div class="not">${esc(bilgi)}</div>` : ""}
     ${araDurakMetni(s) ? `<div class="ara-durak">ⓘ ${esc(araDurakMetni(s))}</div>` : ""}
-    <div class="alt-satir">${rozet(s.firma)}${yolDugmesi(s, iskeleler, "hap")}</div>
+    <div class="alt-satir">${rozet(s.firma)}${yolGrubu(s, iskeleler, "hap")}</div>
   </div>`;
 }
 
@@ -256,7 +265,7 @@ function gelecekSatir(s, simdi, iskeleler, kalanGoster) {
   const bilgi = bilgiMetni(s);
   return `<li class="satir gelecek"><div class="sol"><span class="saat">${saatHtml(s.kalkis, s.gece)}</span></div>
     <div class="orta"><div class="rota">${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)}</div>
-    <div class="alt-satir">${rozet(s.firma, kalanGoster ? kalanMetni(s.kalkis, simdi.dk) : "")}${bilgi ? `<span class="not">${esc(bilgi)}</span>` : ""}${araDurakMetni(s) ? `<span class="not ara-durak">ⓘ ${esc(araDurakMetni(s))}</span>` : ""}${yolDugmesi(s, iskeleler, "hap kucuk sag")}</div></div></li>`;
+    <div class="alt-satir">${rozet(s.firma, kalanGoster ? kalanMetni(s.kalkis, simdi.dk) : "")}${bilgi ? `<span class="not">${esc(bilgi)}</span>` : ""}${araDurakMetni(s) ? `<span class="not ara-durak">ⓘ ${esc(araDurakMetni(s))}</span>` : ""}${yolGrubu(s, iskeleler, "hap kucuk")}</div></div></li>`;
 }
 
 if (typeof document !== "undefined") {
@@ -302,16 +311,6 @@ if (typeof document !== "undefined") {
     kutu.hidden = false;
   }
 
-  function otoparkCubuguCiz(s) {
-    const b = $("otopark");
-    const o = otoparkBilgisi(s, durum.iskeleler, durum.yon);
-    if (!o) { b.hidden = true; document.body.classList.remove("otoparkli"); return; }
-    b.hidden = false;
-    document.body.classList.add("otoparkli");
-    document.documentElement.style.setProperty("--cubuk", b.offsetHeight + "px");
-    b.innerHTML = `<a href="${o.link}" target="_blank" rel="noopener"><span class="p">P</span><span class="metin"><span class="ust">En yakın otopark · ${o.mesafe} m</span><span class="ad">${esc(o.ad)}</span></span></a>`;
-  }
-
   function ciz(kaydir) {
     if (!durum.veri) return;
     const simdi = simdiAl();
@@ -353,15 +352,12 @@ if (typeof document !== "undefined") {
     $("liste").innerHTML = bolge.join("");
     const ed = $("eski-dugme");
     if (ed) ed.addEventListener("click", () => { durum.eskiAcik = !durum.eskiAcik; ciz(false); });
-    otoparkCubuguCiz(sonraki);
 
     if (kaydir) {
       const el = $("siradaki");
       if (el) {
-        // otopark çubuğunu hesaba kat: kartı çubuğun üstündeki görünür alanın ortasına getir
-        const cubuk = $("otopark").hidden ? 0 : $("otopark").offsetHeight;
         const r2 = el.getBoundingClientRect();
-        const gorunur = window.innerHeight - cubuk;
+        const gorunur = window.innerHeight;
         window.scrollTo(0, Math.max(0, r2.top + window.scrollY - (gorunur - r2.height) / 2));
       }
     }
