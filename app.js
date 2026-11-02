@@ -101,10 +101,12 @@ function listeHesapla(veri, yon, secili, simdi) {
     .concat(gunSeferleri(veri, yon, secili, simdi.tarih))
     .sort((a, b) => dk(a.kalkis) - dk(b.kalkis) || a.firma.localeCompare(b.firma, "tr"));
   const siradaki = bugun.findIndex((s) => dk(s.kalkis) >= simdi.dk);
-  const sonuc = { bugun, siradaki, yarin: [], bugunBitti: siradaki === -1 };
+  const yarinGun = sonrakiGun(simdi.tarih);
+  const yarinSeferleri = gunSeferleri(veri, yon, secili, yarinGun).filter((s) => dk(s.kalkis) < 1440);
+  const sonuc = { bugun, siradaki, yarin: [], yarinIlk: yarinSeferleri.slice(0, 2), bugunBitti: siradaki === -1 };
   if (sonuc.bugunBitti) {
     // yarının yalnız <24:00 seferleri (24+ olanlar yarının listesine ait gece seferleri değil, zaten bugünün listesinde)
-    sonuc.yarin = gunSeferleri(veri, yon, secili, sonrakiGun(simdi.tarih)).filter((s) => dk(s.kalkis) < 1440).slice(0, 8);
+    sonuc.yarin = yarinSeferleri.slice(0, 8);
   }
   return sonuc;
 }
@@ -202,6 +204,11 @@ function otoparkBilgisi(s, iskeleler, yon) {
 
 function rozet(firma, ek) {
   return `<span class="rozet ${FIRMA_SINIF[firma] || ""}">${esc(firma)}${ek ? " · " + esc(ek) : ""}</span>`;
+}
+
+// Kompakt tek satır (yarın önizlemesi): "06:20 Büyükada → Bostancı · Mavi Marmara"
+function yarinSatir(s) {
+  return `<li class="yarin-satir"><span class="nokta ${FIRMA_SINIF[s.firma] || ""}"></span><span class="saat">${esc(s.kalkis)}</span> ${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)} <span class="firma">· ${esc(s.firma)}</span></li>`;
 }
 
 function gecmisSatir(s, iskeleler) {
@@ -308,6 +315,9 @@ if (typeof document !== "undefined") {
       const gelecek = r.bugun.slice(r.siradaki + 1);
       if (gelecek.length) {
         bolge.push(`<section class="bolum"><h2>Gelecek Seferler</h2><ul class="kart cam-liste">${gelecek.map((s) => gelecekSatir(s, simdi, durum.iskeleler, true)).join("")}</ul></section>`);
+      }
+      if (r.yarinIlk.length) {
+        bolge.push(`<section class="bolum yarin-onizleme"><h2>Yarın ilk seferler</h2><ul>${r.yarinIlk.map(yarinSatir).join("")}</ul></section>`);
       }
     } else {
       bolge.push(`<section class="bolum" id="siradaki"><div class="kart bos">${r.hepsiFiltreli ? "Tüm iskeleler filtrelendi" : r.bugun.length ? "Bugün başka sefer yok" : "Seçili iskeleler için bugün sefer yok"}</div></section>`);

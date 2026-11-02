@@ -68,4 +68,14 @@ const ad = (s) => `${a.saatGoster(s.kalkis)}${s.gece || s.kalkis >= "24" ? "(gec
   console.log("g2) 18 gun:", g2.fark, "eski:", g2.eski, "eski firmalar:", g2.eskiFirmalar);
   assert(g2.eski && g2.eskiFirmalar.includes("Şehir Hatları") && g2.eskiFirmalar.includes("Mavi Marmara") && !g2.eskiFirmalar.includes("Prenstur"));
 }
+// h) Pzt 23:48, Bostanci filtresi, adadan: yarin onizlemesi 2 sefer
+{
+  const x = calis("2026-11-09T23:48", "adadan", ["Bostancı"]);
+  const beklenen = a.gunSeferleri(v, "adadan", ["Bostancı"], "2026-11-10").filter((s) => s.kalkis < "24:00");
+  console.log("h) yarin onizleme:", x.r.yarinIlk.map(ad), "bugunBitti:", x.r.bugunBitti, "| yarin ilk Büyükada->Bostancı:", beklenen[0].kalkis);
+  assert(!x.r.bugunBitti && x.r.yarinIlk.length === 2 && x.r.yarinIlk[0].kalkis === beklenen[0].kalkis);
+  assert(x.r.yarinIlk.every((s) => s.varis_iskele === "Bostancı" && s.kalkis_iskele === "Büyükada"));
+  const bos = calis("2026-11-09T23:48", "adadan", []);
+  assert(bos.r.yarinIlk.length === 0);
+}
 console.log("TUM TESTLER GECTI");
