@@ -406,7 +406,41 @@ if (typeof document !== "undefined") {
   yukle().catch(() => { $("yukleniyor").textContent = "Veri yüklenemedi. İnternet bağlantısını kontrol edin."; });
   setInterval(() => { ciz(false); guncellikCiz(); }, 30000);
   document.addEventListener("visibilitychange", () => { if (!document.hidden) ciz(false); });
-  if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+  // Service worker: güncellemeyi hemen al, yeni sürüm devralınca BİR kez yeniden yükle
+  let swKayit = null;
+  if ("serviceWorker" in navigator) {
+    let yenilendi = false;
+    const eskiDenetleyici = !!navigator.serviceWorker.controller; // ilk kurulumda yeniden yükleme gerekmez
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (yenilendi || !eskiDenetleyici) return;
+      yenilendi = true;
+      location.reload();
+    });
+    navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).then((reg) => {
+      swKayit = reg;
+      reg.update().catch(() => {});
+    }).catch(() => {});
+    document.addEventListener("visibilitychange", () => { if (!document.hidden && swKayit) swKayit.update().catch(() => {}); });
+  }
+
+  // Yenile düğmesi: önbelleği sil, sayfayı (varsa ?t= korunarak) yeniden yükle
+  $("yenile").addEventListener("click", async () => {
+    const toast = $("toast");
+    if (!navigator.onLine) {
+      toast.textContent = "Bağlantı yok";
+      toast.hidden = false;
+      setTimeout(() => { toast.hidden = true; }, 2500);
+      return;
+    }
+    $("yenile").classList.add("doner");
+    try { if (swKayit) await swKayit.update(); } catch (e) {}
+    try { for (const k of await caches.keys()) await caches.delete(k); } catch (e) {}
+    const p = new URLSearchParams();
+    const t = new URLSearchParams(location.search).get("t");
+    if (t) p.set("t", t);
+    p.set("r", Date.now());
+    location.replace(location.pathname + "?" + p.toString());
+  });
 }
 
 if (typeof module !== "undefined") {

@@ -118,3 +118,10 @@ body.otoparkli .alt { padding-bottom: calc(var(--cubuk, 70px) + 24px + env(safe-
 .otopark-cubugu .metin { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
 .otopark-cubugu .ust { font-size: 13px; opacity: .8; }
 .otopark-cubugu .ad { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.baslik-satir { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.yenile { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid var(--cam-kenar); background: var(--cam); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); color: var(--koyu); font-size: 15px; font-weight: 600; }
+.yenile .ok { display: inline-block; font-size: 18px; line-height: 1; }
+.yenile.doner .ok { animation: don .8s linear infinite; }
+@keyframes don { to { transform: rotate(360deg); } }
+.toast { position: fixed; top: calc(env(safe-area-inset-top) + 8px); left: 50%; transform: translateX(-50%); z-index: 20; background: #fff; color: var(--koyu); padding: 8px 16px; border-radius: 18px; font-weight: 600; box-shadow: 0 2px 10px rgba(0,0,0,.25); }
+@media (prefers-reduced-transparency: reduce) { .yenile { -webkit-backdrop-filter: none; backdrop-filter: none; } }
