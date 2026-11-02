@@ -138,7 +138,7 @@ function sonSeferTusu(b) {
   const s = b.sefer;
   const etiket = b.siradakiSonMu ? "🌙 Son vapur bu" : `🌙 Son vapur ${saatHtml(s.kalkis, s.gece)}`;
   const aria = `Bugünün son vapuru: ${saatGoster(s.kalkis)}${geceMi(s.kalkis) || s.gece ? " gece" : ""} ${s.kalkis_iskele} → ${s.varis_iskele} ${s.firma}`;
-  return `<button type="button" class="son-tus" id="son-tus" data-hedef="${esc(seferKimlik(s))}" aria-label="${esc(aria)}">${etiket}</button>`;
+  return `<button type="button" class="son-tus baslik-hap" id="son-tus" data-hedef="${esc(seferKimlik(s))}" aria-label="${esc(aria)}">${etiket}</button>`;
 }
 
 function kalanMetni(kalkis, simdiDk) {
@@ -344,8 +344,8 @@ if (typeof document !== "undefined") {
       const son2 = gecmis.slice(-1), eski = gecmis.slice(0, -1);
       const baslik = !gecmis.length ? '<span class="baslik-bos"></span>'
         : eski.length
-        ? `<h2><button class="baslik-dugme" id="eski-dugme" aria-expanded="${durum.eskiAcik}">Geçmiş Seferler (${eski.length}) ${durum.eskiAcik ? "▴" : "▾"}</button></h2>`
-        : "<h2>Geçmiş Seferler</h2>";
+        ? `<h2><button class="baslik-dugme baslik-hap" id="eski-dugme" aria-expanded="${durum.eskiAcik}">Geçmiş Seferler (${eski.length}) ${durum.eskiAcik ? "▴" : "▾"}</button></h2>`
+        : '<h2><span class="baslik-hap">Geçmiş Seferler</span></h2>';
       bolge.push(`<section class="bolum gecmis-bolum"><div class="gecmis-baslik">${baslik}${tus}</div>
         ${gecmis.length ? `<ul class="kompakt-liste">${(durum.eskiAcik ? eski : []).concat(son2).map(kompaktSatir).join("")}</ul>` : ""}</section>`);
     }

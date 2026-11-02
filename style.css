@@ -141,10 +141,11 @@ ul.cam-liste { padding: 2px 12px; }
 /* Bugünün son vapuru bandı */
 
 .gecmis-baslik { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.gecmis-baslik h2 { flex: 1 1 auto; min-width: 0; margin-bottom: 0; }
+.gecmis-baslik h2 { flex: 0 1 auto; min-width: 0; margin: 0; }
 .baslik-bos { flex: 1 1 auto; }
-.son-tus { all: unset; box-sizing: border-box; flex: 0 0 auto; cursor: pointer; display: inline-flex; align-items: center; gap: 3px; min-height: 36px; padding: 0 12px; border-radius: 18px; font-size: 13px; font-weight: 600; white-space: nowrap; color: var(--koyu); background: var(--cam); border: 1px solid var(--cam-kenar); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); font-variant-numeric: tabular-nums; }
-.son-tus:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.baslik-hap { all: unset; box-sizing: border-box; flex: 0 0 auto; cursor: pointer; display: inline-flex; align-items: center; gap: 3px; min-height: 36px; padding: 0 12px; border-radius: 18px; font-size: 13px; font-weight: 600; white-space: nowrap; color: var(--koyu); background: var(--cam); border: 1px solid var(--cam-kenar); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); font-variant-numeric: tabular-nums; }
+h2 > span.baslik-hap { cursor: default; }
+.baslik-hap:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 .son-tus small { font-size: 11px; font-weight: 600; }
 @keyframes vurgu-parla { 0%, 100% { box-shadow: 0 0 0 0 rgba(255,214,102,0); } 25%, 70% { box-shadow: 0 0 0 3px rgba(255,214,102,.95), 0 0 18px rgba(255,214,102,.8); } }
 .vurgu { animation: vurgu-parla 1.5s ease-in-out; background-color: rgba(255,214,102,.35); }
