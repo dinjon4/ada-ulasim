@@ -103,7 +103,7 @@ function listeHesapla(veri, yon, secili, simdi) {
   const siradaki = bugun.findIndex((s) => dk(s.kalkis) >= simdi.dk);
   const yarinGun = sonrakiGun(simdi.tarih);
   const yarinSeferleri = gunSeferleri(veri, yon, secili, yarinGun).filter((s) => dk(s.kalkis) < 1440);
-  const sonuc = { bugun, siradaki, yarin: [], yarinIlk: yarinSeferleri.slice(0, 2), bugunBitti: siradaki === -1 };
+  const sonuc = { bugun, siradaki, yarin: [], yarinIlk: yarinSeferleri.slice(0, 3), bugunBitti: siradaki === -1 };
   if (sonuc.bugunBitti) {
     // yarının yalnız <24:00 seferleri (24+ olanlar yarının listesine ait gece seferleri değil, zaten bugünün listesinde)
     sonuc.yarin = yarinSeferleri.slice(0, 8);
@@ -207,14 +207,8 @@ function rozet(firma, ek) {
 }
 
 // Kompakt tek satır (yarın önizlemesi): "06:20 Büyükada → Bostancı · Mavi Marmara"
-function yarinSatir(s) {
-  return `<li class="yarin-satir"><span class="nokta ${FIRMA_SINIF[s.firma] || ""}"></span><span class="saat">${esc(s.kalkis)}</span> ${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)} <span class="firma">· ${esc(s.firma)}</span></li>`;
-}
-
-function gecmisSatir(s, iskeleler) {
-  return `<li class="satir gecmis"><span class="saat">${saatHtml(s.kalkis, s.gece)}</span>
-    <span class="rota">${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)}</span>
-    <span class="kalkti">· kalktı</span></li>`;
+function kompaktSatir(s) {
+  return `<li class="kompakt-satir"><span class="nokta ${FIRMA_SINIF[s.firma] || ""}"></span><span class="saat">${esc(s.kalkis)}</span> ${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)} <span class="firma">· ${esc(s.firma)}</span></li>`;
 }
 
 function siradakiKart(s, simdi, iskeleler) {
@@ -306,8 +300,7 @@ if (typeof document !== "undefined") {
         ? `<h2><button class="baslik-dugme" id="eski-dugme" aria-expanded="${durum.eskiAcik}">Geçmiş Seferler (${eski.length}) ${durum.eskiAcik ? "▴" : "▾"}</button></h2>`
         : "<h2>Geçmiş Seferler</h2>";
       bolge.push(`<section class="bolum gecmis-bolum">${baslik}
-        <svg class="dalga" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C60 30 120 90 200 55 S340 25 400 60 V120 H0Z"/><path d="M0 85 C80 60 150 110 230 80 S350 60 400 90 V120 H0Z"/></svg>
-        <ul class="kart cam-liste">${(durum.eskiAcik ? eski : []).concat(son2).map((s) => gecmisSatir(s)).join("")}</ul></section>`);
+        <ul class="kompakt-liste">${(durum.eskiAcik ? eski : []).concat(son2).map(kompaktSatir).join("")}</ul></section>`);
     }
     if (r.siradaki !== -1) {
       sonraki = r.bugun[r.siradaki];
@@ -317,7 +310,7 @@ if (typeof document !== "undefined") {
         bolge.push(`<section class="bolum"><h2>Gelecek Seferler</h2><ul class="kart cam-liste">${gelecek.map((s) => gelecekSatir(s, simdi, durum.iskeleler, true)).join("")}</ul></section>`);
       }
       if (r.yarinIlk.length) {
-        bolge.push(`<section class="bolum yarin-onizleme"><h2>Yarın ilk seferler</h2><ul>${r.yarinIlk.map(yarinSatir).join("")}</ul></section>`);
+        bolge.push(`<section class="bolum yarin-onizleme"><h2>Yarın ilk seferler</h2><ul class="kompakt-liste">${r.yarinIlk.map(kompaktSatir).join("")}</ul></section>`);
       }
     } else {
       bolge.push(`<section class="bolum" id="siradaki"><div class="kart bos">${r.hepsiFiltreli ? "Tüm iskeleler filtrelendi" : r.bugun.length ? "Bugün başka sefer yok" : "Seçili iskeleler için bugün sefer yok"}</div></section>`);
