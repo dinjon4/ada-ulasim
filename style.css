@@ -136,3 +136,8 @@ ul.cam-liste { padding: 2px 12px; }
 .gecmis-bolum h2 { margin: 0 0 2px 4px; color: #a9d3da; }
 .gecmis-bolum .baslik-dugme { min-height: 36px; }
 .gecmis-bolum .kompakt-liste { filter: grayscale(.5); opacity: .75; }
+
+/* Bugünün son vapuru bandı */
+.son-sefer { margin: 0 0 8px; padding: 8px 12px; border-radius: 12px; font-size: 14px; line-height: 1.4; color: var(--koyu); background: var(--cam); border: 1px solid var(--cam-kenar); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+.son-sefer strong { font-variant-numeric: tabular-nums; }
+.son-sefer .nokta { display: inline-block; vertical-align: middle; margin-right: 4px; }

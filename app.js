@@ -126,6 +126,22 @@ function listeHesapla(veri, yon, secili, simdi) {
   return sonuc;
 }
 
+// Akşam "son vapuru kaçırma" bandı: 20:00 sonrası ya da kalan sefer <= 3 ise bilgi, yoksa null.
+function sonSeferBilgisi(r, simdi) {
+  if (!r || !r.bugun || !r.bugun.length || r.siradaki === -1) return null;
+  const kalanSayi = r.bugun.length - r.siradaki;
+  if (!(simdi.dk >= 1200 || kalanSayi <= 3)) return null;
+  return { sefer: r.bugun[r.bugun.length - 1], kalanSayi, siradakiSonMu: r.siradaki === r.bugun.length - 1 };
+}
+function sonSeferBandi(b) {
+  if (!b) return "";
+  const s = b.sefer;
+  const ic = b.siradakiSonMu
+    ? "🌙 Bu, bugünün son vapuru"
+    : `🌙 Bugün son vapur: <strong>${saatHtml(s.kalkis, s.gece)}</strong> · ${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)} · <span class="nokta ${FIRMA_SINIF[s.firma] || ""}"></span>${esc(s.firma)}`;
+  return `<div class="son-sefer" role="note">${ic}</div>`;
+}
+
 function kalanMetni(kalkis, simdiDk) {
   const fark = dk(kalkis) - simdiDk;
   if (fark < 0) return "kalktı";
@@ -334,7 +350,7 @@ if (typeof document !== "undefined") {
     }
     if (r.siradaki !== -1) {
       sonraki = r.bugun[r.siradaki];
-      bolge.push(`<section class="bolum"><h2>SIRADAKİ Sefer</h2>${siradakiKart(sonraki, simdi, durum.iskeleler)}</section>`);
+      bolge.push(`<section class="bolum">${sonSeferBandi(sonSeferBilgisi(r, simdi))}<h2>SIRADAKİ Sefer</h2>${siradakiKart(sonraki, simdi, durum.iskeleler)}</section>`);
       const gelecek = r.bugun.slice(r.siradaki + 1);
       if (gelecek.length) {
         bolge.push(`<section class="bolum"><h2>Gelecek Seferler</h2><ul class="kart cam-liste">${gelecek.map((s) => gelecekSatir(s, simdi, durum.iskeleler, true)).join("")}</ul></section>`);
@@ -474,5 +490,5 @@ if (typeof document !== "undefined") {
 }
 
 if (typeof module !== "undefined") {
-  module.exports = { guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, gunSeferleri, kalanMetni, aciliyet, haritaLink, noktaBul, otoparkBilgisi, sureMetni, araDurakMetni, siradakiKart, gelecekSatir };
+  module.exports = { guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, sonSeferBilgisi, sonSeferBandi, gunSeferleri, kalanMetni, aciliyet, haritaLink, noktaBul, otoparkBilgisi, sureMetni, araDurakMetni, siradakiKart, gelecekSatir };
 }

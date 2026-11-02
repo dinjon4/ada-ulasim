@@ -137,4 +137,27 @@ assert.strictEqual(a.sureMetni("10:00", "16:00"), "");
   assert(!hey.includes("park-dugme") && !a.gelecekSatir(mk("adaya", "Mavi Marmara", "Heybeliada", "Büyükada"), simdi, ik, true).includes("park-dugme"));
   console.log("l) otopark dugmesi OK");
 }
+// m) son sefer bilgisi
+{
+  const mk = (k, i = 0) => ({ kalkis: k, firma: "Şehir Hatları", kalkis_iskele: "Bostancı", varis_iskele: "Büyükada", gece: false, i });
+  const liste = (n) => Array.from({ length: n }, (_, i) => mk(`${String(10 + i).padStart(2, "0")}:00`));
+  assert.strictEqual(a.sonSeferBilgisi({ bugun: liste(12), siradaki: 2 }, { dk: 19 * 60 }), null);
+  const b = a.sonSeferBilgisi({ bugun: liste(12), siradaki: 3 }, { dk: 20 * 60 + 30 });
+  assert(b && b.sefer.kalkis === "21:00");
+  assert(b.kalanSayi === 9 && b.siradakiSonMu === false);
+  const c = a.sonSeferBilgisi({ bugun: liste(5), siradaki: 3 }, { dk: 15 * 60 });
+  assert(c && c.kalanSayi === 2 && c.sefer.kalkis === "14:00");
+  assert(a.sonSeferBilgisi({ bugun: liste(5), siradaki: 4 }, { dk: 15 * 60 }).siradakiSonMu === true);
+  assert(a.sonSeferBilgisi({ bugun: liste(5), siradaki: -1 }, { dk: 22 * 60 }) === null);
+  assert(a.sonSeferBilgisi({ bugun: [], siradaki: -1 }, { dk: 22 * 60 }) === null);
+  const g = a.sonSeferBilgisi({ bugun: [mk("23:30"), { ...mk("24:35"), gece: true }], siradaki: 0 }, { dk: 23 * 60 });
+  assert(g.sefer.kalkis === "24:35" && a.sonSeferBandi(g).includes("00:35"));
+  assert(a.sonSeferBandi({ sefer: mk("23:30"), kalanSayi: 1, siradakiSonMu: true }).includes("Bu, bugünün son vapuru"));
+  const x = calis("2026-11-04T20:30", "adadan");
+  const bx = a.sonSeferBilgisi(x.r, x.simdi);
+  assert(bx && bx.sefer === x.r.bugun[x.r.bugun.length - 1]);
+  const y = calis("2026-11-04T19:00", "adadan");
+  assert(a.sonSeferBilgisi(y.r, y.simdi) === null);
+  console.log("m) son sefer bilgisi OK:", ad(bx.sefer), "kalan", bx.kalanSayi);
+}
 console.log("TUM TESTLER GECTI");
