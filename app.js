@@ -126,20 +126,19 @@ function listeHesapla(veri, yon, secili, simdi) {
   return sonuc;
 }
 
-// Akşam "son vapuru kaçırma" bandı: 20:00 sonrası ya da kalan sefer <= 3 ise bilgi, yoksa null.
-function sonSeferBilgisi(r, simdi) {
+// Bugün yaklaşan sefer varsa son seferin bilgisi, yoksa null.
+function seferKimlik(s) { return `${s.kalkis}|${s.firma}|${s.kalkis_iskele}`; }
+function sonSeferBilgisi(r) {
   if (!r || !r.bugun || !r.bugun.length || r.siradaki === -1) return null;
   const kalanSayi = r.bugun.length - r.siradaki;
-  if (!(simdi.dk >= 1200 || kalanSayi <= 3)) return null;
   return { sefer: r.bugun[r.bugun.length - 1], kalanSayi, siradakiSonMu: r.siradaki === r.bugun.length - 1 };
 }
-function sonSeferBandi(b) {
+function sonSeferTusu(b) {
   if (!b) return "";
   const s = b.sefer;
-  const ic = b.siradakiSonMu
-    ? "🌙 Bu, bugünün son vapuru"
-    : `🌙 Bugün son vapur: <strong>${saatHtml(s.kalkis, s.gece)}</strong> · ${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)} · <span class="nokta ${FIRMA_SINIF[s.firma] || ""}"></span>${esc(s.firma)}`;
-  return `<div class="son-sefer" role="note">${ic}</div>`;
+  const etiket = b.siradakiSonMu ? "🌙 Son vapur bu" : `🌙 Son vapur ${saatHtml(s.kalkis, s.gece)}`;
+  const aria = `Bugünün son vapuru: ${saatGoster(s.kalkis)}${geceMi(s.kalkis) || s.gece ? " gece" : ""} ${s.kalkis_iskele} → ${s.varis_iskele} ${s.firma}`;
+  return `<button type="button" class="son-tus" id="son-tus" data-hedef="${esc(seferKimlik(s))}" aria-label="${esc(aria)}">${etiket}</button>`;
 }
 
 function kalanMetni(kalkis, simdiDk) {
@@ -267,7 +266,7 @@ function siradakiKart(s, simdi, iskeleler) {
   const bilgi = bilgiMetni(s);
   const kalanDk = dk(s.kalkis) - simdi.dk;
   const acil = aciliyet(kalanDk);
-  return `<div class="kart siradaki${acil ? " acil-" + acil : ""}" id="siradaki">
+  return `<div class="kart siradaki${acil ? " acil-" + acil : ""}" id="siradaki" data-sefer="${esc(seferKimlik(s))}">
     <div class="buyuk"><span class="saat">${saatHtml(s.kalkis, s.gece)}</span><span class="kalan">${kalanMetni(s.kalkis, simdi.dk)}</span></div>
     ${acil ? `<div class="acil-uyari" role="alert">⚠️ ${kalanDk === 0 ? "Şimdi kalkıyor" : `Son ${kalanDk} dakika`} ⚠️</div>` : ""}
     <div class="rota">${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)}</div>
@@ -279,7 +278,7 @@ function siradakiKart(s, simdi, iskeleler) {
 
 function gelecekSatir(s, simdi, iskeleler, kalanGoster) {
   const bilgi = bilgiMetni(s);
-  return `<li class="satir gelecek"><div class="sol"><span class="saat">${saatHtml(s.kalkis, s.gece)}</span></div>
+  return `<li class="satir gelecek" data-sefer="${esc(seferKimlik(s))}"><div class="sol"><span class="saat">${saatHtml(s.kalkis, s.gece)}</span></div>
     <div class="orta"><div class="rota">${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)}</div>
     <div class="alt-satir">${rozet(s.firma, kalanGoster ? kalanMetni(s.kalkis, simdi.dk) : "")}${bilgi ? `<span class="not">${esc(bilgi)}</span>` : ""}${araDurakMetni(s) ? `<span class="not ara-durak">ⓘ ${esc(araDurakMetni(s))}</span>` : ""}${yolGrubu(s, iskeleler, "hap kucuk")}</div></div></li>`;
 }
@@ -340,17 +339,19 @@ if (typeof document !== "undefined") {
     const gecmis = r.bugun.slice(0, kesim);
     let sonraki = null;
 
-    if (gecmis.length) {
+    const tus = sonSeferTusu(sonSeferBilgisi(r));
+    if (gecmis.length || tus) {
       const son2 = gecmis.slice(-1), eski = gecmis.slice(0, -1);
-      const baslik = eski.length
+      const baslik = !gecmis.length ? '<span class="baslik-bos"></span>'
+        : eski.length
         ? `<h2><button class="baslik-dugme" id="eski-dugme" aria-expanded="${durum.eskiAcik}">Geçmiş Seferler (${eski.length}) ${durum.eskiAcik ? "▴" : "▾"}</button></h2>`
         : "<h2>Geçmiş Seferler</h2>";
-      bolge.push(`<section class="bolum gecmis-bolum">${baslik}
-        <ul class="kompakt-liste">${(durum.eskiAcik ? eski : []).concat(son2).map(kompaktSatir).join("")}</ul></section>`);
+      bolge.push(`<section class="bolum gecmis-bolum"><div class="gecmis-baslik">${baslik}${tus}</div>
+        ${gecmis.length ? `<ul class="kompakt-liste">${(durum.eskiAcik ? eski : []).concat(son2).map(kompaktSatir).join("")}</ul>` : ""}</section>`);
     }
     if (r.siradaki !== -1) {
       sonraki = r.bugun[r.siradaki];
-      bolge.push(`<section class="bolum">${sonSeferBandi(sonSeferBilgisi(r, simdi))}<h2>SIRADAKİ Sefer</h2>${siradakiKart(sonraki, simdi, durum.iskeleler)}</section>`);
+      bolge.push(`<section class="bolum"><h2>SIRADAKİ Sefer</h2>${siradakiKart(sonraki, simdi, durum.iskeleler)}</section>`);
       const gelecek = r.bugun.slice(r.siradaki + 1);
       if (gelecek.length) {
         bolge.push(`<section class="bolum"><h2>Gelecek Seferler</h2><ul class="kart cam-liste">${gelecek.map((s) => gelecekSatir(s, simdi, durum.iskeleler, true)).join("")}</ul></section>`);
@@ -368,6 +369,16 @@ if (typeof document !== "undefined") {
     $("liste").innerHTML = bolge.join("");
     const ed = $("eski-dugme");
     if (ed) ed.addEventListener("click", () => { durum.eskiAcik = !durum.eskiAcik; ciz(false); });
+    const st = $("son-tus");
+    if (st) st.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const hedef = st.dataset.hedef;
+      const el = Array.from(document.querySelectorAll("[data-sefer]")).find((x) => x.dataset.sefer === hedef);
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      el.classList.remove("vurgu"); void el.offsetWidth; el.classList.add("vurgu");
+      setTimeout(() => el.classList.remove("vurgu"), 1500);
+    });
 
     if (kaydir) {
       const el = $("siradaki");
@@ -490,5 +501,5 @@ if (typeof document !== "undefined") {
 }
 
 if (typeof module !== "undefined") {
-  module.exports = { guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, sonSeferBilgisi, sonSeferBandi, gunSeferleri, kalanMetni, aciliyet, haritaLink, noktaBul, otoparkBilgisi, sureMetni, araDurakMetni, siradakiKart, gelecekSatir };
+  module.exports = { guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, sonSeferBilgisi, sonSeferTusu, seferKimlik, gunSeferleri, kalanMetni, aciliyet, haritaLink, noktaBul, otoparkBilgisi, sureMetni, araDurakMetni, siradakiKart, gelecekSatir };
 }
