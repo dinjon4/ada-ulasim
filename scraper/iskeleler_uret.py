@@ -60,15 +60,21 @@ ELLE_OTOPARK = {
     "Bostancı": ("İSPARK Bostancı Açık Otoparkı", 40.9523453, 29.0902652),
     "Maltepe": ("İSPARK Maltepe Sahil Dolgu Alanı Otoparkı", 40.9198163, 29.1261888),
     "Kartal": ("İSPARK Kartal Sahil Açık Otoparkı", 40.8873357, 29.1902295),
+    "Kabataş": ("İSPARK Kabataş Transfer Merkezi Otoparkı", 41.0335752, 28.9923408,
+                {"ucret": "ücretli (ilk 20 dk ücretsiz)", "tur": "underground", "kapasite": 160,
+                 "kaynak": "ispark.istanbul"}),
 }
 
 
 def elle_otopark(iskele, lat, lng):
     if iskele not in ELLE_OTOPARK:
         return None
-    ad, la, lo = ELLE_OTOPARK[iskele]
-    return [{"ad": ad, "lat": la, "lng": lo, "mesafe_m": round(mesafe_m((lat, lng), (la, lo))),
-             "isletmeci": "İSPARK", "ucret": "ücretli", "kaynak": "kullanıcı (Google Maps)", "elle": True}]
+    ad, la, lo, *ek = ELLE_OTOPARK[iskele]
+    kayit = {"ad": ad, "lat": la, "lng": lo, "mesafe_m": round(mesafe_m((lat, lng), (la, lo))),
+             "isletmeci": "İSPARK", "ucret": "ücretli", "kaynak": "kullanıcı (Google Maps)", "elle": True}
+    if ek:
+        kayit.update(ek[0])
+    return [kayit]
 
 
 def overpass(q):

@@ -1,5 +1,5 @@
 // Basit service worker: uygulama kabugu onbellekte, veri dosyalari once ag (cevrimdisiyken onbellek)
-const SURUM = "ada-vapur-v6";
+const SURUM = "ada-vapur-v7";
 const KABUK = ["./", "index.html", "app.js", "style.css", "manifest.json", "icon-180.png", "icon-512.png"];
 const VERI = ["data/seferler.json", "data/iskeleler.json"];
 

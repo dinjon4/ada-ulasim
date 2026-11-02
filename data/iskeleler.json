@@ -199,26 +199,16 @@
      "not": "OSM wikipedia=tr:Kabataş İskelesi",
      "otopark": [
       {
-       "ad": "Otopark (adsız)",
-       "lat": 41.030902,
-       "lng": 28.989508,
-       "mesafe_m": 444,
-       "isletmeci": null,
-       "ucret": null,
-       "tur": null,
-       "kapasite": null,
-       "osm": "way/843015054"
-      },
-      {
-       "ad": "Otopark (adsız)",
-       "lat": 41.037193,
-       "lng": 28.995967,
-       "mesafe_m": 495,
-       "isletmeci": null,
-       "ucret": "ücretli",
-       "tur": "surface",
-       "kapasite": null,
-       "osm": "way/24838241"
+       "ad": "İSPARK Kabataş Transfer Merkezi Otoparkı",
+       "lat": 41.0335752,
+       "lng": 28.9923408,
+       "mesafe_m": 154,
+       "isletmeci": "İSPARK",
+       "ucret": "ücretli (ilk 20 dk ücretsiz)",
+       "kaynak": "ispark.istanbul",
+       "elle": true,
+       "tur": "underground",
+       "kapasite": 160
       }
      ]
     },
@@ -232,26 +222,16 @@
      "not": "Mavi Marmara'nın Kabataş iskelesi OSM'de ayrı işaretli değil; motor iskelesi varsayıldı",
      "otopark": [
       {
-       "ad": "Otopark (adsız)",
-       "lat": 41.037193,
-       "lng": 28.995967,
-       "mesafe_m": 241,
-       "isletmeci": null,
-       "ucret": "ücretli",
-       "tur": "surface",
-       "kapasite": null,
-       "osm": "way/24838241"
-      },
-      {
-       "ad": "Otopark (adsız)",
-       "lat": 41.038303,
-       "lng": 28.989213,
-       "mesafe_m": 518,
-       "isletmeci": null,
-       "ucret": null,
-       "tur": null,
-       "kapasite": null,
-       "osm": "way/886793250"
+       "ad": "İSPARK Kabataş Transfer Merkezi Otoparkı",
+       "lat": 41.0335752,
+       "lng": 28.9923408,
+       "mesafe_m": 264,
+       "isletmeci": "İSPARK",
+       "ucret": "ücretli (ilk 20 dk ücretsiz)",
+       "kaynak": "ispark.istanbul",
+       "elle": true,
+       "tur": "underground",
+       "kapasite": 160
       }
      ]
     }
