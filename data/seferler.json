@@ -1,64 +1,59 @@
 {
- "son_kontrol": "2026-11-02T23:20:38+03:00",
+ "son_kontrol": "2026-11-02T23:23:24+03:00",
  "son_degisiklik": "2026-11-02T23:02:34+03:00",
- "guncelleme": "2026-11-02T23:20:38+03:00",
+ "guncelleme": "2026-11-02T23:23:24+03:00",
  "kaynaklar": {
   "sehirhatlari-maltepe": {
-   "durum": "hata",
-   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/maltepe-buyukada-heybeliada-burgazada-kinaliada-hatti-2020",
+   "durum": "ok",
    "sefer": 56,
    "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/maltepe-buyukada-heybeliada-burgazada-kinaliada-hatti-2020",
-   "not": "önceki veri kullanılıyor"
+   "son_basari": "2026-11-02T23:23:24+03:00"
   },
   "sehirhatlari-bostanci": {
-   "durum": "hata",
-   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/bostanci-adalar-ring-hatti-770",
+   "durum": "ok",
    "sefer": 35,
    "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/bostanci-adalar-ring-hatti-770",
-   "not": "önceki veri kullanılıyor"
+   "son_basari": "2026-11-02T23:23:24+03:00"
   },
   "sehirhatlari-kabatas": {
-   "durum": "hata",
-   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/kabatasadalar-177",
+   "durum": "ok",
    "sefer": 123,
    "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/kabatasadalar-177",
-   "not": "önceki veri kullanılıyor"
+   "son_basari": "2026-11-02T23:23:24+03:00"
   },
   "mavimarmara-bostanci-buyukada": {
-   "durum": "hata",
-   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://mavimarmara.net/tarifeler/bostanci-buyukada/",
+   "durum": "ok",
    "sefer": 16,
    "url": "https://mavimarmara.net/tarifeler/bostanci-buyukada/",
-   "not": "önceki veri kullanılıyor"
+   "son_basari": "2026-11-02T23:23:24+03:00"
   },
   "mavimarmara-buyukada-bostanci": {
-   "durum": "hata",
-   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://mavimarmara.net/tarifeler/buyukada-bostanci/",
+   "durum": "ok",
    "sefer": 17,
    "url": "https://mavimarmara.net/tarifeler/buyukada-bostanci/",
-   "not": "önceki veri kullanılıyor"
+   "son_basari": "2026-11-02T23:23:24+03:00"
   },
   "mavimarmara-kabatas-buyukada": {
-   "durum": "hata",
-   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://mavimarmara.net/tarifeler/kabatas-buyukada/",
+   "durum": "ok",
    "sefer": 2,
    "url": "https://mavimarmara.net/tarifeler/kabatas-buyukada/",
-   "not": "önceki veri kullanılıyor"
+   "son_basari": "2026-11-02T23:23:24+03:00"
   },
   "mavimarmara-buyukada-kabatas": {
-   "durum": "hata",
-   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://mavimarmara.net/tarifeler/buyukada-kabatas/",
+   "durum": "ok",
    "sefer": 2,
    "url": "https://mavimarmara.net/tarifeler/buyukada-kabatas/",
-   "not": "önceki veri kullanılıyor"
+   "son_basari": "2026-11-02T23:23:24+03:00"
   },
   "prenstur": {
    "durum": "ok",
    "sefer": 76,
-   "url": "https://www.prenstur.net/index3e95.html?option=com_content&view=article&id=75&Itemid=477"
+   "url": "https://www.prenstur.net/index3e95.html?option=com_content&view=article&id=75&Itemid=477",
+   "son_basari": "2026-11-02T23:23:24+03:00"
   },
   "tatiller": {
    "durum": "ok",
+   "son_basari": "2026-11-02T23:23:24+03:00",
    "sefer": 27,
    "url": "https://date.nager.at/api/v3/PublicHolidays/2026/TR"
   }

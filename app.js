@@ -117,6 +117,38 @@ function kalanMetni(kalkis, simdiDk) {
   return `${Math.floor(fark / 60)} sa ${fark % 60} dk sonra`;
 }
 
+// ---------- Veri güncelliği ----------
+const ESKI_GUN = 14;
+
+function istanbulGunu(iso) {
+  return new Date(iso).toLocaleDateString("en-CA", { timeZone: "Europe/Istanbul" });
+}
+
+function gunFarki(tarih1, tarih2) {
+  const t = (x) => { const [y, m, d] = x.split("-").map(Number); return Date.UTC(y, m - 1, d); };
+  return Math.round((t(tarih1) - t(tarih2)) / 86400000);
+}
+
+// Tarife kaynaklarının (tatiller hariç) son başarılı çekim zamanlarına göre güncellik.
+function guncellikDurumu(veri, bugunTarih) {
+  const yedek = veri.son_degisiklik || veri.son_kontrol;
+  const firmaEn = {}; // firma -> en eski son_basari
+  let enEski = null;
+  for (const [ad, k] of Object.entries(veri.kaynaklar || {})) {
+    if (ad === "tatiller") continue;
+    const t = k.son_basari || yedek;
+    if (!t) continue;
+    const firma = KAYNAK_AD[ad.replace(/-.*/, "")] || ad;
+    if (!firmaEn[firma] || t < firmaEn[firma]) firmaEn[firma] = t;
+    if (!enEski || t < enEski) enEski = t;
+  }
+  if (!enEski) return null;
+  const fark = gunFarki(bugunTarih, istanbulGunu(enEski));
+  const eskiFirmalar = Object.entries(firmaEn)
+    .filter(([, t]) => gunFarki(bugunTarih, istanbulGunu(t)) > ESKI_GUN).map(([f]) => f);
+  return { enEski, fark, eski: fark > ESKI_GUN, eskiFirmalar };
+}
+
 // ---------- Harita bağlantıları ----------
 
 // Firmanın o iskeledeki noktası (yoksa iskelenin ilk noktası).
@@ -304,29 +336,21 @@ if (typeof document !== "undefined") {
     t.textContent = testSaat ? `Test saati: ${testSaat.tarih} ${String(Math.floor(testSaat.dk / 60)).padStart(2, "0")}:${String(testSaat.dk % 60).padStart(2, "0")}` : "";
   }
 
-  function gunFarki(tarih1, tarih2) {
-    const t = (x) => { const [y, m, d] = x.split("-").map(Number); return Date.UTC(y, m - 1, d); };
-    return Math.round((t(tarih1) - t(tarih2)) / 86400000);
-  }
-
   // Başlık altındaki güncellik satırı
   function guncellikCiz() {
     const el = $("guncellik");
     const v = durum.veri;
-    if (!v || !v.son_kontrol) { el.hidden = true; return; }
+    if (!v || !v.kaynaklar) { el.hidden = true; return; }
+    const g = guncellikDurumu(v, simdiAl().tarih);
+    if (!g) { el.hidden = true; return; }
     const tarihTr = (iso) => new Date(iso).toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", day: "numeric", month: "short", year: "numeric" });
-    const gunStr = (iso) => new Date(iso).toLocaleDateString("en-CA", { timeZone: "Europe/Istanbul" });
-    const fark = gunFarki(simdiAl().tarih, gunStr(v.son_kontrol));
-    const gorece = fark <= 0 ? "bugün" : `${fark} gün önce`;
-    const parcalar = [`Son kontrol: ${tarihTr(v.son_kontrol)} (${gorece})`];
+    const gorece = g.fark <= 0 ? "bugün" : `${g.fark} gün önce`;
+    const parcalar = [`Tarifeler: ${tarihTr(g.enEski)} (${gorece})`];
     if (v.son_degisiklik) parcalar.push(`Tarife değişikliği: ${tarihTr(v.son_degisiklik)}`);
-    const eski = fark > 10;
-    const hatali = Object.entries(v.kaynaklar).filter(([, k]) => k.durum === "hata")
-      .map(([a]) => KAYNAK_AD[a.replace(/-.*/, "")] || a);
-    if (hatali.length) parcalar.push([...new Set(hatali)].map((a) => `${a}: eski veri`).join(", "));
-    if (eski) parcalar.push("Veriler güncel olmayabilir");
+    for (const f of g.eskiFirmalar) parcalar.push(`${f}: eski veri`);
+    if (g.eski) parcalar.push("Tarifeler güncel olmayabilir");
     el.textContent = parcalar.join(" · ");
-    el.className = "guncellik" + (eski || hatali.length ? " uyari" : "");
+    el.className = "guncellik" + (g.eski ? " uyari" : "");
     el.hidden = false;
   }
 
@@ -334,9 +358,9 @@ if (typeof document !== "undefined") {
     const v = durum.veri;
     const parcalar = [];
     if (v) {
-      const hatali = Object.entries(v.kaynaklar).filter(([, k]) => k.durum === "hata");
-      if (hatali.length) {
-        parcalar.push(`<p class="uyari">Uyarı: şu kaynaklar güncellenemedi, eski veri kullanılıyor: ${hatali.map(([a]) => esc(a)).join(", ")}.</p>`);
+      const gd = guncellikDurumu(v, simdiAl().tarih);
+      if (gd && gd.eskiFirmalar.length) {
+        parcalar.push(`<p class="uyari">Uyarı: şu kaynaklar uzun süredir güncellenemedi, eski veri kullanılıyor: ${gd.eskiFirmalar.map(esc).join(", ")}.</p>`);
       }
       if (v.kaynaklar.prenstur && v.kaynaklar.prenstur.degisti) {
         parcalar.push('<p class="uyari">Prenstur tarifesi değişmiş olabilir; gösterilen saatler eski olabilir.</p>');
@@ -386,5 +410,5 @@ if (typeof document !== "undefined") {
 }
 
 if (typeof module !== "undefined") {
-  module.exports = { saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, gunSeferleri, kalanMetni, haritaLink, noktaBul, otoparkBilgisi };
+  module.exports = { guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, gunSeferleri, kalanMetni, haritaLink, noktaBul, otoparkBilgisi };
 }

@@ -262,7 +262,9 @@ def main():
     simdi = datetime.now(ZoneInfo("Europe/Istanbul"))
     onceki = onceki_veri()
     onceki_seferler = onceki.get("seferler", [])
-    hatalar = []
+    hatalar = []        # genel hatalar (tatil vb.)
+    cekilemeyen = []    # cekilemeyen tarife kaynaklari
+    prenstur_degisti = []
     kaynaklar = {}
     tum = []
 
@@ -278,13 +280,16 @@ def main():
             yeni = fonk()
             if not yeni:
                 raise ValueError("0 sefer döndü")
-            kaynaklar[ad] = {"durum": "ok", "sefer": len(yeni), "url": url}
+            kaynaklar[ad] = {"durum": "ok", "sefer": len(yeni), "url": url, "son_basari": simdi.isoformat(timespec="seconds")}
         except Exception as e:
             eski = [s for s in onceki_seferler if s.get("kaynak") == ad]
             yeni = eski
+            # eski son_basari korunur (eski dosyada yoksa son_degisiklik en yakin tahmindir)
+            eski_basari = (onceki.get("kaynaklar", {}).get(ad, {}).get("son_basari")
+                           or onceki.get("son_degisiklik"))
             kaynaklar[ad] = {"durum": "hata", "hata": f"{type(e).__name__}: {e}", "sefer": len(eski), "url": url,
-                             "not": "önceki veri kullanılıyor"}
-            hatalar.append(f"{ad}: {type(e).__name__}: {e} (önceki {len(eski)} sefer kullanıldı)")
+                             "son_basari": eski_basari, "not": "önceki veri kullanılıyor"}
+            cekilemeyen.append(f"{ad}: {type(e).__name__}: {e} (önceki {len(eski)} sefer kullanıldı)")
         tum.extend(yeni)
 
     # Prenstur resim kontrolu
@@ -293,7 +298,7 @@ def main():
         if degisim:
             kaynaklar["prenstur"]["degisti"] = True
             kaynaklar["prenstur"]["uyari"] = degisim
-            hatalar.append(degisim)
+            prenstur_degisti.append(degisim)
     except Exception as e:
         kaynaklar["prenstur"]["kontrol_hatasi"] = f"{type(e).__name__}: {e}"
         hatalar.append(f"prenstur kontrolü yapılamadı: {type(e).__name__}: {e}")
@@ -301,10 +306,10 @@ def main():
     # Tatiller
     try:
         tatil_listesi = tatiller(simdi)
-        kaynaklar["tatiller"] = {"durum": "ok", "sefer": len(tatil_listesi), "url": TATIL_URL.format(yil=simdi.year)}
+        kaynaklar["tatiller"] = {"durum": "ok", "son_basari": simdi.isoformat(timespec="seconds"), "sefer": len(tatil_listesi), "url": TATIL_URL.format(yil=simdi.year)}
     except Exception as e:
         tatil_listesi = onceki.get("tatiller", [])
-        kaynaklar["tatiller"] = {"durum": "hata", "hata": f"{type(e).__name__}: {e}", "sefer": len(tatil_listesi),
+        kaynaklar["tatiller"] = {"durum": "hata", "son_basari": onceki.get("kaynaklar", {}).get("tatiller", {}).get("son_basari"), "hata": f"{type(e).__name__}: {e}", "sefer": len(tatil_listesi),
                                  "url": TATIL_URL.format(yil=simdi.year), "not": "önceki veri kullanılıyor"}
         hatalar.append(f"tatiller: {type(e).__name__}: {e}")
 
@@ -332,9 +337,16 @@ def main():
 
     ozet_yaz(tum)
     hata_dosyasi = VERI / "hatalar.txt"
-    if hatalar:
-        hata_dosyasi.write_text("\n".join(hatalar) + "\n", encoding="utf-8")
-        print("\nHATALAR:\n" + "\n".join(hatalar), file=sys.stderr)
+    govde = []
+    if prenstur_degisti:
+        govde.append("## PRENSTUR TARİFE RESMİ DEĞİŞTİ\n\n" + "\n".join(f"- **{d}**" for d in prenstur_degisti) +
+                     "\n\n`data/prenstur.json` elle güncellenmeli (README: 'Prenstur tarifesi değişince').")
+    if cekilemeyen or hatalar:
+        govde.append("## Çekilemeyen kaynaklar\n\n" + "\n".join(f"- {h}" for h in cekilemeyen + hatalar) +
+                     "\n\nEski veri korunuyor. Yerelden güncellemek için: `./guncelle.sh`")
+    print("\nCekilemeyen:", cekilemeyen or "yok", "| Prenstur degisti:", bool(prenstur_degisti))
+    if govde:
+        hata_dosyasi.write_text("\n\n".join(govde) + "\n", encoding="utf-8")
         sys.exit(1)
     hata_dosyasi.unlink(missing_ok=True)
 

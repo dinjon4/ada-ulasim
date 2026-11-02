@@ -1,7 +1,0 @@
-sehirhatlari-maltepe: HTTPError: 403 Client Error: Forbidden for url: https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/maltepe-buyukada-heybeliada-burgazada-kinaliada-hatti-2020 (önceki 56 sefer kullanıldı)
-sehirhatlari-bostanci: HTTPError: 403 Client Error: Forbidden for url: https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/bostanci-adalar-ring-hatti-770 (önceki 35 sefer kullanıldı)
-sehirhatlari-kabatas: HTTPError: 403 Client Error: Forbidden for url: https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/kabatasadalar-177 (önceki 123 sefer kullanıldı)
-mavimarmara-bostanci-buyukada: HTTPError: 403 Client Error: Forbidden for url: https://mavimarmara.net/tarifeler/bostanci-buyukada/ (önceki 16 sefer kullanıldı)
-mavimarmara-buyukada-bostanci: HTTPError: 403 Client Error: Forbidden for url: https://mavimarmara.net/tarifeler/buyukada-bostanci/ (önceki 17 sefer kullanıldı)
-mavimarmara-kabatas-buyukada: HTTPError: 403 Client Error: Forbidden for url: https://mavimarmara.net/tarifeler/kabatas-buyukada/ (önceki 2 sefer kullanıldı)
-mavimarmara-buyukada-kabatas: HTTPError: 403 Client Error: Forbidden for url: https://mavimarmara.net/tarifeler/buyukada-kabatas/ (önceki 2 sefer kullanıldı)

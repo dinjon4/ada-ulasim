@@ -20,12 +20,15 @@ Resmi değildir; sefer öncesi firmayı kontrol edin.
 
 Proje ticari değildir; kaynak sitelere seyrek (haftada 1 çalıştırma, birkaç istek) erişir.
 
-## Haftalık güncelleme ve 60 gün kuralı
+## Haftalık akış ve 60 gün kuralı
 
-- Workflow (`.github/workflows/topla.yml`) her Çarşamba 03:00 TR'de (`0 0 * * 3`, 00:00 UTC) çalışır.
-- `data/seferler.json` içinde `son_kontrol` her çalışmada güncellenir, `son_degisiklik` yalnızca sefer verisi gerçekten değiştiyse. Bu yüzden her hafta bir commit atılır. Bu bilerek böyledir: GitHub, 60 gün hareketsiz kalan depolarda zamanlanmış iş akışlarını kapatır; haftalık commit bunu engeller.
-- Elle tetiklemek için: GitHub'da **Actions > Seferleri topla > Run workflow**.
-- Arayüz başlığın altında "Son kontrol / Tarife değişikliği" satırını gösterir; son kontrol 10 günden eskiyse "Veriler güncel olmayabilir" uyarısı çıkar.
+1. Workflow (`.github/workflows/topla.yml`) her Çarşamba 03:00 TR'de (`0 0 * * 3`, 00:00 UTC) çalışır.
+2. **403 notu:** Şehir Hatları ve Mavi Marmara GitHub Actions IP'lerinden 403 döndürüyor (beklenen durum). Prenstur kontrolü ve tatil listesi Actions'ta çalışır. Çekilemeyen kaynakların eski verisi korunur.
+3. Çekilemeyen kaynak (veya Prenstur resim değişikliği) varsa Actions **"Haftalık tarife güncellemesi: ./guncelle.sh çalıştır"** başlıklı bir Issue açar (zaten açık biri varsa yenisini açmaz). GitHub bunu e-postayla bildirir.
+4. MacBook'ta tek komut: `./guncelle.sh`. Betik `git pull --rebase` yapar, gerekirse `.venv` kurar, `scraper/topla.py`'yi çalıştırıp özet tabloyu gösterir, `data/` değiştiyse "Veri guncellendi (yerel)" diye commit + push eder, her şey başarılıysa açık hatırlatma Issue'sunu kapatır ve site adresini yazar. Bir kaynak yerelden de çekilemezse açıkça uyarır; başarılı olanlar yine kaydedilir.
+5. Elle tetiklemek için: GitHub'da **Actions > Seferleri topla > Run workflow**.
+6. `data/seferler.json` içinde her kaynağın `son_basari` zamanı tutulur (çekim başarısızsa eski değer korunur). `son_kontrol` her çalışmada, `son_degisiklik` yalnızca sefer verisi değiştiyse güncellenir. Her hafta commit atılması bilerek böyledir: GitHub, 60 gün hareketsiz repoda zamanlanmış iş akışlarını kapatır.
+7. Arayüz başlık altında "Tarifeler: <en eski başarılı çekim> · Tarife değişikliği: <tarih>" gösterir. En eski başarılı çekim 14 günden eskiyse turuncu "Tarifeler güncel olmayabilir" uyarısı çıkar; kaynak bazlı "eski veri" notu da yalnız o kaynak 14 günden eskiyse görünür. Tek seferlik 403'ler kullanıcıya uyarı olarak yansımaz.
 
 ## Prenstur tarifesi değişince
 

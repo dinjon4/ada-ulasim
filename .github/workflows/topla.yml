@@ -13,8 +13,8 @@ jobs:
   topla:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - run: pip install requests beautifulsoup4
@@ -36,13 +36,15 @@ jobs:
             git push
           fi
 
-      - name: Hata varsa issue ac
+      # Şehir Hatları / Mavi Marmara GitHub IP'lerinden 403 verir (beklenen). Haftalık hatırlatma issue'su açılır;
+      # yerelden ./guncelle.sh çalıştırılınca kapanır.
+      - name: Hatirlatma issue'su ac
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           if [ -f data/hatalar.txt ]; then
-            TITLE="Sefer toplama uyarısı"
-            if gh issue list --state open --search "\"$TITLE\" in:title" --json title --jq '.[].title' | grep -qxF "$TITLE"; then
+            TITLE="Haftalık tarife güncellemesi: ./guncelle.sh çalıştır"
+            if gh issue list --state open --search "\"Haftalık tarife güncellemesi\" in:title" --json title --jq '.[].title' | grep -q "Haftalık tarife güncellemesi"; then
               echo "Acik issue zaten var"
             else
               gh issue create --title "$TITLE" --body-file data/hatalar.txt

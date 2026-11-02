@@ -55,4 +55,17 @@ const ad = (s) => `${a.saatGoster(s.kalkis)}${s.gece || s.kalkis >= "24" ? "(gec
   console.log("f) Kartal Pazar 23:59 bitti:", x.r.bugunBitti, "yarin ilk:", x.r.yarin.slice(0, 3).map(ad));
   assert(x.r.bugunBitti && x.r.yarin.every((s) => s.kalkis < "24:00"));
 }
+// g) guncellik durumu: 403'ler uyari cikarmaz, 14 gunden eskiyse cikar
+{
+  const k = (sb, d = "ok") => ({ durum: d, son_basari: sb });
+  const veri = { son_degisiklik: "2026-11-02T23:00:00+03:00", kaynaklar: {
+    "sehirhatlari-maltepe": k("2026-11-02T23:00:00+03:00", "hata"), "mavimarmara-bostanci-buyukada": k("2026-11-02T23:00:00+03:00", "hata"),
+    prenstur: k("2026-11-12T03:00:00+03:00"), tatiller: k("2026-01-01T00:00:00+03:00") } };
+  const g1 = a.guncellikDurumu(veri, "2026-11-12");
+  console.log("g1) 10 gun, 403'lu:", g1.fark, "eski:", g1.eski, "eski firmalar:", g1.eskiFirmalar);
+  assert(g1.fark === 10 && !g1.eski && g1.eskiFirmalar.length === 0);
+  const g2 = a.guncellikDurumu(veri, "2026-11-20");
+  console.log("g2) 18 gun:", g2.fark, "eski:", g2.eski, "eski firmalar:", g2.eskiFirmalar);
+  assert(g2.eski && g2.eskiFirmalar.includes("Şehir Hatları") && g2.eskiFirmalar.includes("Mavi Marmara") && !g2.eskiFirmalar.includes("Prenstur"));
+}
 console.log("TUM TESTLER GECTI");
