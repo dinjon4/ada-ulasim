@@ -24,8 +24,9 @@ h1 { margin: 0; font-size: 34px; font-weight: 800; letter-spacing: -.5px; }
 .sekmeler { display: flex; margin-top: 12px; padding: 4px; border-radius: 16px; background: var(--cam); border: 1px solid var(--cam-kenar); }
 .sekmeler button { flex: 1; min-height: 46px; border: 0; border-radius: 13px; background: transparent; color: #17404f; font-size: 17px; font-weight: 600; }
 .sekmeler button[aria-selected="true"] { background: #fff; color: var(--koyu); box-shadow: 0 1px 4px rgba(0,0,0,.2); }
-.filtre { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-.chip { min-height: 44px; padding: 0 16px; border-radius: 22px; border: 1px solid var(--cam-kenar); background: var(--cam); color: var(--koyu); font-size: 15px; }
+.filtre { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+.chip-satir { display: flex; flex-wrap: nowrap; gap: 6px; }
+.chip { flex: 1 1 0; min-width: 0; white-space: nowrap; min-height: 44px; padding: 0 4px; text-align: center; border-radius: 22px; border: 1px solid var(--cam-kenar); background: var(--cam); color: var(--koyu); font-size: 14px; }
 .chip[aria-pressed="true"] { background: rgba(255,255,255,.88); font-weight: 700; }
 .chip.diger { border-style: dashed; }
 .iskeleler { margin-top: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
@@ -82,7 +83,7 @@ ul.cam-liste { padding: 2px 12px; }
 .alt .uyari { background: var(--uyari); color: var(--uyari-yazi); padding: 8px 10px; border-radius: 10px; }
 .linkler { display: flex; flex-direction: column; gap: 2px; }
 .linkler a { display: inline-block; padding: 6px 0; }
-body.otoparkli .alt { padding-bottom: calc(86px + env(safe-area-inset-bottom)); }
+body.otoparkli .alt { padding-bottom: calc(var(--cubuk, 70px) + 24px + env(safe-area-inset-bottom)); }
 
 .otopark-cubugu {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
@@ -112,3 +113,5 @@ body.otoparkli .alt { padding-bottom: calc(86px + env(safe-area-inset-bottom)); 
 .chip[aria-pressed="false"] { text-decoration: line-through; opacity: .6; }
 .hap-sarmal { display: flex; flex-wrap: wrap; gap: 8px; }
 #iskele-yol h2 { color: #bfeaf0; }
+[hidden] { display: none !important; }
+.baslik-dugme { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; min-height: 44px; font: inherit; color: inherit; }

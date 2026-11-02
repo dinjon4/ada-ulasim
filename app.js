@@ -214,10 +214,10 @@ if (typeof document !== "undefined") {
   }
 
   function filtreCiz() {
-    const liste = durum.digerAcik ? ANA_ISKELELER.concat(DIGER_ISKELELER) : ANA_ISKELELER;
-    $("filtre").innerHTML = liste.map((p) =>
-      `<button class="chip" data-iskele="${p}" aria-pressed="${durum.secili.includes(p)}">${p}</button>`).join("") +
-      `<button class="chip diger" data-diger="1">${durum.digerAcik ? "Diğer ▲" : "Diğer ▼"}</button>`;
+    const cip = (p) => `<button class="chip" data-iskele="${p}" aria-pressed="${durum.secili.includes(p)}">${p}</button>`;
+    $("filtre").innerHTML =
+      `<div class="chip-satir">${ANA_ISKELELER.map(cip).join("")}<button class="chip diger" data-diger="1" aria-expanded="${durum.digerAcik}">Diğer ${durum.digerAcik ? "▲" : "▼"}</button></div>` +
+      (durum.digerAcik ? `<div class="chip-satir">${DIGER_ISKELELER.map(cip).join("")}</div>` : "");
   }
 
   // Sayfa altı: "İskelelere yol tarifi" (Büyükada iskeleleri + seçili kara iskeleleri)
@@ -244,6 +244,7 @@ if (typeof document !== "undefined") {
     if (!o) { b.hidden = true; document.body.classList.remove("otoparkli"); return; }
     b.hidden = false;
     document.body.classList.add("otoparkli");
+    document.documentElement.style.setProperty("--cubuk", b.offsetHeight + "px");
     b.innerHTML = `<a href="${o.link}" target="_blank" rel="noopener"><span class="p">P</span> En yakın otopark · ${o.mesafe} m · ${esc(o.ad)}</a>`;
   }
 
@@ -262,9 +263,11 @@ if (typeof document !== "undefined") {
 
     if (gecmis.length) {
       const son2 = gecmis.slice(-1), eski = gecmis.slice(0, -1);
-      bolge.push(`<section class="bolum gecmis-bolum"><h2>Geçmiş Seferler</h2>
+      const baslik = eski.length
+        ? `<h2><button class="baslik-dugme" id="eski-dugme" aria-expanded="${durum.eskiAcik}">Geçmiş Seferler (${eski.length}) ${durum.eskiAcik ? "▴" : "▾"}</button></h2>`
+        : "<h2>Geçmiş Seferler</h2>";
+      bolge.push(`<section class="bolum gecmis-bolum">${baslik}
         <svg class="dalga" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C60 30 120 90 200 55 S340 25 400 60 V120 H0Z"/><path d="M0 85 C80 60 150 110 230 80 S350 60 400 90 V120 H0Z"/></svg>
-        ${eski.length ? `<button class="eski-dugme" id="eski-dugme" aria-expanded="${durum.eskiAcik}">Önceki seferler (${eski.length}) ${durum.eskiAcik ? "▲" : "▼"}</button>` : ""}
         <ul class="kart cam-liste">${(durum.eskiAcik ? eski : []).concat(son2).map((s) => gecmisSatir(s)).join("")}</ul></section>`);
     }
     if (r.siradaki !== -1) {
@@ -288,7 +291,13 @@ if (typeof document !== "undefined") {
 
     if (kaydir) {
       const el = $("siradaki");
-      if (el) el.scrollIntoView({ block: "center" });
+      if (el) {
+        // otopark çubuğunu hesaba kat: kartı çubuğun üstündeki görünür alanın ortasına getir
+        const cubuk = $("otopark").hidden ? 0 : $("otopark").offsetHeight;
+        const r2 = el.getBoundingClientRect();
+        const gorunur = window.innerHeight - cubuk;
+        window.scrollTo(0, Math.max(0, r2.top + window.scrollY - (gorunur - r2.height) / 2));
+      }
     }
     const t = $("test");
     t.hidden = !testSaat;
