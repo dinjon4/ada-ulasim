@@ -109,3 +109,6 @@ body.otoparkli .alt { padding-bottom: calc(86px + env(safe-area-inset-bottom)); 
 .satir.gelecek { align-items: flex-start; }
 .satir.gelecek .saat { padding-top: 2px; }
 .gece { font-size: 11px; font-weight: 600; opacity: .8; border: 1px solid currentColor; border-radius: 6px; padding: 0 4px; margin-left: 4px; vertical-align: middle; }
+.chip[aria-pressed="false"] { text-decoration: line-through; opacity: .6; }
+.hap-sarmal { display: flex; flex-wrap: wrap; gap: 8px; }
+#iskele-yol h2 { color: #bfeaf0; }

@@ -220,24 +220,22 @@ if (typeof document !== "undefined") {
       `<button class="chip diger" data-diger="1">${durum.digerAcik ? "Diğer ▲" : "Diğer ▼"}</button>`;
   }
 
-  // Seçili iskeleler için "Yol tarifi" bağlantıları (iskele başlığı)
+  // Sayfa altı: "İskelelere yol tarifi" (Büyükada iskeleleri + seçili kara iskeleleri)
   function iskeleBaslikCiz() {
-    const kutu = $("iskeleler");
-    if (!durum.iskeleler) { kutu.innerHTML = ""; return; }
+    const kutu = $("iskele-yol");
+    if (!durum.iskeleler) { kutu.hidden = true; return; }
     const parcalar = [];
-    if (durum.yon === "adadan") {
-      for (const [firma, n] of Object.entries(durum.iskeleler.iskeleler[ADA].noktalar)) {
-        parcalar.push(`<a class="hap kucuk" href="${haritaLink(n.lat, n.lng, "walking")}" target="_blank" rel="noopener">📍 Büyükada · ${esc(firma)}</a>`);
-      }
-    } else {
-      for (const p of durum.secili) {
-        const i = durum.iskeleler.iskeleler[p];
-        if (!i) continue;
-        const n = Object.values(i.noktalar)[0];
-        parcalar.push(`<a class="hap kucuk" href="${haritaLink(n.lat, n.lng, iskeleModu(durum.iskeleler, p))}" target="_blank" rel="noopener">📍 ${esc(p)}</a>`);
-      }
+    for (const [firma, n] of Object.entries(durum.iskeleler.iskeleler[ADA].noktalar)) {
+      parcalar.push(`<a class="hap kucuk" href="${haritaLink(n.lat, n.lng, "walking")}" target="_blank" rel="noopener">📍 Büyükada · ${esc(firma)}</a>`);
     }
-    kutu.innerHTML = parcalar.length ? `<span class="etiket">Yol tarifi:</span>${parcalar.join("")}` : "";
+    for (const p of durum.secili) {
+      const i = durum.iskeleler.iskeleler[p];
+      if (!i) continue;
+      const n = Object.values(i.noktalar)[0];
+      parcalar.push(`<a class="hap kucuk" href="${haritaLink(n.lat, n.lng, iskeleModu(durum.iskeleler, p))}" target="_blank" rel="noopener">📍 ${esc(p)}</a>`);
+    }
+    kutu.innerHTML = `<h2>İskelelere yol tarifi</h2><div class="hap-sarmal">${parcalar.join("")}</div>`;
+    kutu.hidden = false;
   }
 
   function otoparkCubuguCiz(s) {
@@ -253,6 +251,7 @@ if (typeof document !== "undefined") {
     if (!durum.veri) return;
     const simdi = simdiAl();
     const r = listeHesapla(durum.veri, durum.yon, durum.secili, simdi);
+    if (!durum.secili.length) { r.bugun = []; r.siradaki = -1; r.yarin = []; r.bugunBitti = true; r.hepsiFiltreli = true; }
     for (const y of ["adadan", "adaya"]) $("sekme-" + y).setAttribute("aria-selected", String(y === durum.yon));
     $("yukleniyor").hidden = true;
 
@@ -262,7 +261,7 @@ if (typeof document !== "undefined") {
     let sonraki = null;
 
     if (gecmis.length) {
-      const son2 = gecmis.slice(-2), eski = gecmis.slice(0, -2);
+      const son2 = gecmis.slice(-1), eski = gecmis.slice(0, -1);
       bolge.push(`<section class="bolum gecmis-bolum"><h2>Geçmiş Seferler</h2>
         <svg class="dalga" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C60 30 120 90 200 55 S340 25 400 60 V120 H0Z"/><path d="M0 85 C80 60 150 110 230 80 S350 60 400 90 V120 H0Z"/></svg>
         ${eski.length ? `<button class="eski-dugme" id="eski-dugme" aria-expanded="${durum.eskiAcik}">Önceki seferler (${eski.length}) ${durum.eskiAcik ? "▲" : "▼"}</button>` : ""}
@@ -276,7 +275,7 @@ if (typeof document !== "undefined") {
         bolge.push(`<section class="bolum"><h2>Gelecek Seferler</h2><ul class="kart cam-liste">${gelecek.map((s) => gelecekSatir(s, simdi, durum.iskeleler, true)).join("")}</ul></section>`);
       }
     } else {
-      bolge.push(`<section class="bolum" id="siradaki"><div class="kart bos">${r.bugun.length ? "Bugün başka sefer yok" : "Seçili iskeleler için bugün sefer yok"}</div></section>`);
+      bolge.push(`<section class="bolum" id="siradaki"><div class="kart bos">${r.hepsiFiltreli ? "Tüm iskeleler filtrelendi" : r.bugun.length ? "Bugün başka sefer yok" : "Seçili iskeleler için bugün sefer yok"}</div></section>`);
       if (r.yarin.length) {
         sonraki = r.yarin[0];
         bolge.push(`<section class="bolum"><h2>Yarın ilk seferler</h2><ul class="kart cam-liste">${r.yarin.map((s) => gelecekSatir(s, simdi, durum.iskeleler, false)).join("")}</ul></section>`);
