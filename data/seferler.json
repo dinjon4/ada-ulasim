@@ -1,0 +1,4874 @@
+{
+ "son_kontrol": "2026-11-02T22:30:28+03:00",
+ "son_degisiklik": "2026-11-02T22:30:10+03:00",
+ "guncelleme": "2026-11-02T22:30:28+03:00",
+ "kaynaklar": {
+  "sehirhatlari-maltepe": {
+   "durum": "ok",
+   "sefer": 56,
+   "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/maltepe-buyukada-heybeliada-burgazada-kinaliada-hatti-2020"
+  },
+  "sehirhatlari-bostanci": {
+   "durum": "ok",
+   "sefer": 35,
+   "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/bostanci-adalar-ring-hatti-770"
+  },
+  "sehirhatlari-kabatas": {
+   "durum": "ok",
+   "sefer": 123,
+   "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/kabatasadalar-177"
+  },
+  "mavimarmara-bostanci-buyukada": {
+   "durum": "ok",
+   "sefer": 16,
+   "url": "https://mavimarmara.net/tarifeler/bostanci-buyukada/"
+  },
+  "mavimarmara-buyukada-bostanci": {
+   "durum": "ok",
+   "sefer": 17,
+   "url": "https://mavimarmara.net/tarifeler/buyukada-bostanci/"
+  },
+  "mavimarmara-kabatas-buyukada": {
+   "durum": "ok",
+   "sefer": 2,
+   "url": "https://mavimarmara.net/tarifeler/kabatas-buyukada/"
+  },
+  "mavimarmara-buyukada-kabatas": {
+   "durum": "ok",
+   "sefer": 2,
+   "url": "https://mavimarmara.net/tarifeler/buyukada-kabatas/"
+  },
+  "prenstur": {
+   "durum": "ok",
+   "sefer": 76,
+   "url": "https://www.prenstur.net/index3e95.html?option=com_content&view=article&id=75&Itemid=477"
+  },
+  "tatiller": {
+   "durum": "ok",
+   "sefer": 27,
+   "url": "https://date.nager.at/api/v3/PublicHolidays/2026/TR"
+  }
+ },
+ "notlar": {
+  "Prenstur": "Prenstur: Hafta sonları yarım saat aralıklarla ek seferler yapılmaktadır (saatleri listede yok)."
+ },
+ "seferler": [
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "07:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "HEYBELİADA - BÜYÜKADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "08:00",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "HEYBELİADA - BÜYÜKADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:00",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "BÜYÜKADA - HEYBELİADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "10:30",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "BÜYÜKADA - HEYBELİADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "11:30",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "HEYBELİADA - BÜYÜKADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "12:30",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "BÜYÜKADA - HEYBELİADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "13:30",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "BÜYÜKADA - HEYBELİADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "14:45",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "BÜYÜKADA - HEYBELİADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "15:30",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "HEYBELİADA - BÜYÜKADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "16:20",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "BÜYÜKADA - HEYBELİADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "17:30",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "HEYBELİADA - BÜYÜKADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "18:20",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "BÜYÜKADA - HEYBELİADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "19:30",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "BÜYÜKADA - HEYBELİADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "21:00",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "HEYBELİADA - BÜYÜKADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "22:00",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "BÜYÜKADA - HEYBELİADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "23:00",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "HEYBELİADA - BÜYÜKADA",
+   "kaynak": "mavimarmara-bostanci-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "06:20",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "HEYBELİADA - BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "07:25",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "DİREKT BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "08:00",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "DİREKT BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "08:50",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "DİREKT BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "09:35",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "HEYBELİADA - BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "11:05",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "HEYBELİADA - BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "12:20",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "DİREKT BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "13:05",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "HEYBELİADA - BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "14:05",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "HEYBELİADA - BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "15:20",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "HEYBELİADA - BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "16:20",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "DİREKT BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "17:25",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "DİREKT BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "18:20",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "DİREKT BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "19:20",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "DİREKT BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "20:35",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "DİREKT BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "21:50",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "DİREKT BOSTANCI",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "22:35",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "HEYBELİADA",
+   "kaynak": "mavimarmara-buyukada-bostanci"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "14:30",
+   "varis": "16:00",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "mavimarmara-buyukada-kabatas"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "15:30",
+   "varis": "17:00",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "mavimarmara-buyukada-kabatas"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:45",
+   "varis": "11:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "mavimarmara-kabatas-buyukada"
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "11:45",
+   "varis": "13:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "mavimarmara-kabatas-buyukada"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "06:45",
+   "varis": "06:55",
+   "gunler": [
+    "hafta_ici"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "07:40",
+   "varis": "07:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "08:25",
+   "varis": "08:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "08:55",
+   "varis": "09:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "09:25",
+   "varis": "09:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "09:55",
+   "varis": "10:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "10:55",
+   "varis": "11:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "11:55",
+   "varis": "12:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "12:55",
+   "varis": "13:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "13:55",
+   "varis": "14:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "14:55",
+   "varis": "15:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "15:55",
+   "varis": "16:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "16:25",
+   "varis": "16:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "16:55",
+   "varis": "17:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "17:25",
+   "varis": "17:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "17:55",
+   "varis": "18:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "18:55",
+   "varis": "19:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "19:55",
+   "varis": "20:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "20:55",
+   "varis": "21:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "07:15",
+   "varis": "07:40",
+   "gunler": [
+    "hafta_ici"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "08:15",
+   "varis": "08:40",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "08:55",
+   "varis": "09:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "09:25",
+   "varis": "09:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "09:55",
+   "varis": "10:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "10:25",
+   "varis": "10:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "11:25",
+   "varis": "11:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "12:25",
+   "varis": "12:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "13:25",
+   "varis": "13:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "14:25",
+   "varis": "14:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "15:25",
+   "varis": "15:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "16:25",
+   "varis": "16:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "17:00",
+   "varis": "17:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "17:30",
+   "varis": "18:00",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "18:00",
+   "varis": "18:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "18:25",
+   "varis": "18:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "19:25",
+   "varis": "19:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "20:25",
+   "varis": "20:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kartal",
+   "kalkis": "21:25",
+   "varis": "21:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "07:00",
+   "varis": null,
+   "gunler": [
+    "hafta_ici"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "08:00",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "08:40",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:40",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "10:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "11:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "12:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "13:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "14:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "15:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "16:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "16:45",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "17:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "17:50",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "18:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "19:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "20:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "21:10",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "06:20",
+   "varis": "06:45",
+   "gunler": [
+    "hafta_ici"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "07:15",
+   "varis": "07:40",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "08:00",
+   "varis": "08:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "08:30",
+   "varis": "08:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:00",
+   "varis": "09:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:30",
+   "varis": "09:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "10:30",
+   "varis": "10:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "11:30",
+   "varis": "11:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "12:30",
+   "varis": "12:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "13:30",
+   "varis": "13:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "14:30",
+   "varis": "14:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "15:30",
+   "varis": "15:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "16:00",
+   "varis": "16:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "16:30",
+   "varis": "16:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "17:00",
+   "varis": "17:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "17:30",
+   "varis": "17:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "18:30",
+   "varis": "18:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "19:30",
+   "varis": "19:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Prenstur",
+   "kalkis_iskele": "Kartal",
+   "varis_iskele": "Büyükada",
+   "kalkis": "20:30",
+   "varis": "20:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "prenstur"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "00:00",
+   "varis": "00:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "02:00",
+   "varis": "03:10",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "04:45",
+   "varis": "05:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "07:00",
+   "varis": "07:35",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "07:05",
+   "varis": "07:40",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "07:45",
+   "varis": "08:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:25",
+   "varis": "10:00",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "10:05",
+   "varis": "10:40",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "11:00",
+   "varis": "11:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "12:55",
+   "varis": "13:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "15:10",
+   "varis": "16:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "17:55",
+   "varis": "18:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "18:35",
+   "varis": "19:10",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "20:00",
+   "varis": "20:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Bostancı",
+   "varis_iskele": "Büyükada",
+   "kalkis": "21:45",
+   "varis": "22:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "00:35",
+   "varis": "01:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "03:10",
+   "varis": "03:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "05:55",
+   "varis": "06:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "06:45",
+   "varis": "07:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "07:05",
+   "varis": "07:45",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "08:30",
+   "varis": "09:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "09:15",
+   "varis": "09:50",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "10:00",
+   "varis": "11:10",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "10:40",
+   "varis": "11:50",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "12:50",
+   "varis": "13:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "16:20",
+   "varis": "16:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "17:45",
+   "varis": "18:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "18:15",
+   "varis": "18:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "19:10",
+   "varis": "20:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "22:55",
+   "varis": "23:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Bostancı",
+   "kalkis": "23:30",
+   "varis": "00:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "00:35",
+   "varis": "00:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "05:45",
+   "varis": "06:00",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "06:15",
+   "varis": "06:30",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "06:35",
+   "varis": "06:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "06:45",
+   "varis": "07:00",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "07:00",
+   "varis": "07:15",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "07:05",
+   "varis": "07:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "07:05",
+   "varis": "07:20",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "07:35",
+   "varis": "07:50",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "07:40",
+   "varis": "07:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "07:55",
+   "varis": "08:10",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "08:15",
+   "varis": "08:30",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "08:20",
+   "varis": "08:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "08:40",
+   "varis": "08:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "09:00",
+   "varis": "09:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "09:35",
+   "varis": "09:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "10:00",
+   "varis": "10:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "10:35",
+   "varis": "10:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "10:40",
+   "varis": "10:55",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "11:00",
+   "varis": "11:15",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "11:35",
+   "varis": "11:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "11:40",
+   "varis": "11:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "12:05",
+   "varis": "12:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "12:20",
+   "varis": "12:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "13:30",
+   "varis": "13:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "14:05",
+   "varis": "14:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "15:00",
+   "varis": "15:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "15:55",
+   "varis": "16:10",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "16:30",
+   "varis": "16:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "17:35",
+   "varis": "17:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "18:10",
+   "varis": "18:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "18:30",
+   "varis": "18:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "18:55",
+   "varis": "19:10",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "19:10",
+   "varis": "19:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "19:25",
+   "varis": "19:40",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "19:35",
+   "varis": "19:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "20:25",
+   "varis": "20:40",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "20:35",
+   "varis": "20:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "21:00",
+   "varis": "21:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "21:45",
+   "varis": "22:00",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "22:05",
+   "varis": "22:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "05:45",
+   "varis": "07:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "06:15",
+   "varis": "08:15",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "06:35",
+   "varis": "08:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "07:00",
+   "varis": "08:50",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "07:35",
+   "varis": "09:30",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "07:40",
+   "varis": "09:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "07:55",
+   "varis": "09:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "08:15",
+   "varis": "09:25",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "09:00",
+   "varis": "10:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "10:35",
+   "varis": "12:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "11:00",
+   "varis": "12:50",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "12:05",
+   "varis": "13:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "13:30",
+   "varis": "15:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "15:00",
+   "varis": "16:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "16:30",
+   "varis": "18:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "17:35",
+   "varis": "19:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "18:30",
+   "varis": "20:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "19:35",
+   "varis": "21:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "20:35",
+   "varis": "22:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kabataş",
+   "kalkis": "21:45",
+   "varis": "23:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "05:45",
+   "varis": "07:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "06:15",
+   "varis": "07:35",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "06:35",
+   "varis": "07:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "07:00",
+   "varis": "08:20",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "07:35",
+   "varis": "09:00",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "07:40",
+   "varis": "09:00",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "09:00",
+   "varis": "10:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "10:35",
+   "varis": "11:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "11:00",
+   "varis": "12:20",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "12:05",
+   "varis": "13:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "13:30",
+   "varis": "14:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "15:00",
+   "varis": "16:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "16:30",
+   "varis": "17:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "17:35",
+   "varis": "18:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "18:30",
+   "varis": "19:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "19:35",
+   "varis": "20:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "20:35",
+   "varis": "21:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Kadıköy",
+   "kalkis": "21:45",
+   "varis": "23:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "07:50",
+   "varis": "08:10",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "08:45",
+   "varis": "09:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "09:30",
+   "varis": "09:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "10:55",
+   "varis": "11:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "11:15",
+   "varis": "11:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "13:00",
+   "varis": "13:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "14:45",
+   "varis": "15:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "16:25",
+   "varis": "16:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "17:20",
+   "varis": "17:40",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "17:55",
+   "varis": "18:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "18:40",
+   "varis": "19:00",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "19:30",
+   "varis": "19:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "20:00",
+   "varis": "20:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "21:00",
+   "varis": "21:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Maltepe",
+   "kalkis": "21:35",
+   "varis": "21:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "01:00",
+   "varis": "01:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "02:55",
+   "varis": "03:10",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "05:40",
+   "varis": "05:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "07:35",
+   "varis": "07:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "08:15",
+   "varis": "08:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "08:30",
+   "varis": "08:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "08:35",
+   "varis": "08:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:00",
+   "varis": "09:15",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:15",
+   "varis": "09:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:30",
+   "varis": "09:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "10:00",
+   "varis": "10:15",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "10:30",
+   "varis": "10:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "10:35",
+   "varis": "10:50",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "11:00",
+   "varis": "11:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "11:35",
+   "varis": "11:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "12:35",
+   "varis": "12:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "12:45",
+   "varis": "13:00",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "13:30",
+   "varis": "13:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "13:35",
+   "varis": "13:50",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "14:30",
+   "varis": "14:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "15:30",
+   "varis": "15:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "16:05",
+   "varis": "16:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "16:10",
+   "varis": "16:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "17:30",
+   "varis": "17:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "17:40",
+   "varis": "17:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "18:00",
+   "varis": "18:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "18:30",
+   "varis": "18:40",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "19:05",
+   "varis": "19:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "19:15",
+   "varis": "19:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "19:20",
+   "varis": "19:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "19:45",
+   "varis": "20:00",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "20:20",
+   "varis": "20:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "20:30",
+   "varis": "20:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "20:45",
+   "varis": "21:00",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "21:10",
+   "varis": "21:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "21:20",
+   "varis": "21:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "22:40",
+   "varis": "22:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-bostanci"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Heybeliada",
+   "varis_iskele": "Büyükada",
+   "kalkis": "23:10",
+   "varis": "23:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "06:45",
+   "varis": "08:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "07:30",
+   "varis": "09:15",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "08:00",
+   "varis": "09:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "08:30",
+   "varis": "10:15",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:00",
+   "varis": "10:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:05",
+   "varis": "10:50",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "10:05",
+   "varis": "11:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "11:05",
+   "varis": "12:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "12:00",
+   "varis": "13:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "12:05",
+   "varis": "13:50",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "14:00",
+   "varis": "15:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "16:30",
+   "varis": "18:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "17:35",
+   "varis": "19:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "18:25",
+   "varis": "19:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "18:50",
+   "varis": "20:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "19:20",
+   "varis": "20:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "19:40",
+   "varis": "21:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "21:40",
+   "varis": "23:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kabataş",
+   "varis_iskele": "Büyükada",
+   "kalkis": "23:30",
+   "varis": "01:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "07:10",
+   "varis": "08:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "07:55",
+   "varis": "09:15",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "08:25",
+   "varis": "09:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "08:55",
+   "varis": "10:15",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:25",
+   "varis": "10:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:30",
+   "varis": "10:50",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "10:30",
+   "varis": "11:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "11:30",
+   "varis": "12:50",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "12:25",
+   "varis": "13:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "12:30",
+   "varis": "13:50",
+   "gunler": [
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "14:25",
+   "varis": "15:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "16:55",
+   "varis": "18:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "18:00",
+   "varis": "19:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "19:25",
+   "varis": "20:45",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "20:05",
+   "varis": "21:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "22:05",
+   "varis": "23:30",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Kadıköy",
+   "varis_iskele": "Büyükada",
+   "kalkis": "23:55",
+   "varis": "01:15",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-kabatas"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "06:45",
+   "varis": "07:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "08:20",
+   "varis": "08:40",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "09:15",
+   "varis": "09:35",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "10:05",
+   "varis": "10:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "11:20",
+   "varis": "11:40",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "12:00",
+   "varis": "12:20",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "13:45",
+   "varis": "14:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "15:35",
+   "varis": "15:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "16:50",
+   "varis": "17:10",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "17:50",
+   "varis": "18:10",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "18:35",
+   "varis": "18:55",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "19:05",
+   "varis": "19:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "20:05",
+   "varis": "20:25",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "20:40",
+   "varis": "21:00",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  },
+  {
+   "firma": "Şehir Hatları",
+   "kalkis_iskele": "Maltepe",
+   "varis_iskele": "Büyükada",
+   "kalkis": "21:45",
+   "varis": "22:05",
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adaya",
+   "not": "",
+   "kaynak": "sehirhatlari-maltepe"
+  }
+ ],
+ "tatiller": [
+  "2026-01-01",
+  "2026-03-20",
+  "2026-03-21",
+  "2026-03-22",
+  "2026-04-23",
+  "2026-05-01",
+  "2026-05-19",
+  "2026-05-27",
+  "2026-05-28",
+  "2026-05-29",
+  "2026-05-30",
+  "2026-07-15",
+  "2026-08-30",
+  "2026-10-29",
+  "2027-01-01",
+  "2027-03-10",
+  "2027-03-11",
+  "2027-03-12",
+  "2027-04-23",
+  "2027-05-01",
+  "2027-05-16",
+  "2027-05-17",
+  "2027-05-18",
+  "2027-05-19",
+  "2027-07-15",
+  "2027-08-30",
+  "2027-10-29"
+ ]
+}

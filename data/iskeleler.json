@@ -1,0 +1,321 @@
+{
+ "kaynak": "OpenStreetMap (c) katkıda bulunanlar, ODbL",
+ "iskeleler": {
+  "Büyükada": {
+   "kara": false,
+   "noktalar": {
+    "Şehir Hatları": {
+     "ad": "Büyükada (Adalar) vapur iskelesi",
+     "lat": 40.874726,
+     "lng": 29.125563,
+     "osm": "node/4040637476",
+     "osm_adi": "Adalar",
+     "belirsiz": false,
+     "not": "OSM'de Şehir Hatları Kabataş-Adalar hattının durağı",
+     "otopark": null
+    },
+    "Mavi Marmara": {
+     "ad": "Büyükada motor iskelesi (Mavi Marmara)",
+     "lat": 40.874508,
+     "lng": 29.127364,
+     "osm": "way/700032115",
+     "osm_adi": "Mavi Marmara İskelesi",
+     "belirsiz": true,
+     "not": "OSM'de 'Mavi Marmara İskelesi'; tam yeri doğrulanmadı",
+     "otopark": null
+    },
+    "Prenstur": {
+     "ad": "Büyükada motor iskelesi",
+     "lat": 40.874508,
+     "lng": 29.127364,
+     "osm": "way/700032115",
+     "osm_adi": "Mavi Marmara İskelesi",
+     "belirsiz": true,
+     "not": "Prenstur'un Büyükada iskelesi OSM'de ayrı işaretli değil; motor iskelesi varsayıldı",
+     "otopark": null
+    }
+   }
+  },
+  "Heybeliada": {
+   "kara": false,
+   "noktalar": {
+    "Şehir Hatları": {
+     "ad": "Heybeliada vapur iskelesi",
+     "lat": 40.878008,
+     "lng": 29.101407,
+     "osm": "node/10288058480",
+     "osm_adi": "Heybeliada",
+     "belirsiz": false,
+     "not": "OSM'de Şehir Hatları Kabataş-Adalar hattının durağı",
+     "otopark": null
+    },
+    "Prenstur": {
+     "ad": "Heybeliada motor iskelesi (Prenstur)",
+     "lat": 40.878751,
+     "lng": 29.100363,
+     "osm": "way/402967664",
+     "osm_adi": "Heybeliada-Büyükada-Kartal Motor İskelesi (Prenstur)",
+     "belirsiz": false,
+     "not": "OSM'de operator=Prenstur",
+     "otopark": null
+    }
+   }
+  },
+  "Maltepe": {
+   "kara": true,
+   "noktalar": {
+    "Şehir Hatları": {
+     "ad": "Maltepe vapur iskelesi",
+     "lat": 40.918205,
+     "lng": 29.12844,
+     "osm": "way/264038066",
+     "osm_adi": "Maltepe Vapur İskelesi",
+     "belirsiz": false,
+     "not": "",
+     "otopark": [
+      {
+       "ad": "Otopark (adsız)",
+       "lat": 40.918436,
+       "lng": 29.128876,
+       "mesafe_m": 45,
+       "isletmeci": null,
+       "ucret": null,
+       "tur": null,
+       "kapasite": null,
+       "osm": "way/264038065"
+      },
+      {
+       "ad": "Otopark (adsız)",
+       "lat": 40.919341,
+       "lng": 29.128233,
+       "mesafe_m": 128,
+       "isletmeci": null,
+       "ucret": null,
+       "tur": null,
+       "kapasite": null,
+       "osm": "way/1421713103"
+      }
+     ]
+    }
+   }
+  },
+  "Bostancı": {
+   "kara": true,
+   "noktalar": {
+    "Şehir Hatları": {
+     "ad": "Bostancı vapur iskelesi",
+     "lat": 40.95185,
+     "lng": 29.094258,
+     "osm": "way/404524230",
+     "osm_adi": "Bostancı Vapur İskelesi",
+     "belirsiz": false,
+     "not": "OSM operator=Şehir Hatları",
+     "otopark": [
+      {
+       "ad": "Otopark (adsız)",
+       "lat": 40.95401,
+       "lng": 29.095905,
+       "mesafe_m": 277,
+       "isletmeci": null,
+       "ucret": null,
+       "tur": "surface",
+       "kapasite": null,
+       "osm": "way/401274443"
+      },
+      {
+       "ad": "Otopark (adsız)",
+       "lat": 40.950783,
+       "lng": 29.09813,
+       "mesafe_m": 346,
+       "isletmeci": null,
+       "ucret": null,
+       "tur": "surface",
+       "kapasite": null,
+       "osm": "way/1300086131"
+      }
+     ]
+    },
+    "Mavi Marmara": {
+     "ad": "Bostancı motor iskelesi",
+     "lat": 40.952324,
+     "lng": 29.093979,
+     "osm": "way/404524231",
+     "osm_adi": "Bostancı Motor İskelesi",
+     "belirsiz": false,
+     "not": "OSM operator=Mavi Marmara",
+     "otopark": [
+      {
+       "ad": "Otopark (adsız)",
+       "lat": 40.95401,
+       "lng": 29.095905,
+       "mesafe_m": 248,
+       "isletmeci": null,
+       "ucret": null,
+       "tur": "surface",
+       "kapasite": null,
+       "osm": "way/401274443"
+      },
+      {
+       "ad": "İspark Bostancı İdo Açık Otoparkı 1",
+       "lat": 40.952347,
+       "lng": 29.090173,
+       "mesafe_m": 320,
+       "isletmeci": "İSPARK",
+       "ucret": "ücretli",
+       "tur": "surface",
+       "kapasite": null,
+       "osm": "way/236818445"
+      }
+     ]
+    }
+   }
+  },
+  "Kartal": {
+   "kara": true,
+   "noktalar": {
+    "Prenstur": {
+     "ad": "Kartal - Adalar iskelesi",
+     "lat": 40.886721,
+     "lng": 29.18685,
+     "osm": "node/10151469222",
+     "osm_adi": "Kartal - Adalar İskelesi",
+     "belirsiz": true,
+     "not": "OSM'de 'Kartal - Adalar İskelesi' (shelter); Prenstur'a özel işaret yok",
+     "otopark": [
+      {
+       "ad": "İspark",
+       "lat": 40.887276,
+       "lng": 29.187722,
+       "mesafe_m": 96,
+       "isletmeci": "İSPARK",
+       "ucret": "ücretli",
+       "tur": null,
+       "kapasite": null,
+       "osm": "node/4990138837"
+      },
+      {
+       "ad": "Otopark (adsız)",
+       "lat": 40.887343,
+       "lng": 29.188185,
+       "mesafe_m": 132,
+       "isletmeci": null,
+       "ucret": null,
+       "tur": null,
+       "kapasite": null,
+       "osm": "node/10151469223"
+      }
+     ]
+    }
+   }
+  },
+  "Kadıköy": {
+   "kara": true,
+   "noktalar": {
+    "Şehir Hatları": {
+     "ad": "Kadıköy iskelesi (Adalar hattı durağı)",
+     "lat": 40.991824,
+     "lng": 29.021548,
+     "osm": "node/583523020",
+     "osm_adi": "Kadiköy",
+     "belirsiz": false,
+     "not": "OSM'de Şehir Hatları Kabataş-Adalar hattının Kadıköy durağı",
+     "otopark": [
+      {
+       "ad": "İspark",
+       "lat": 40.989444,
+       "lng": 29.020865,
+       "mesafe_m": 271,
+       "isletmeci": "İSPARK",
+       "ucret": "ücretli",
+       "tur": "surface",
+       "kapasite": null,
+       "osm": "way/236167036"
+      },
+      {
+       "ad": "Kaya Otopark",
+       "lat": 40.992295,
+       "lng": 29.025234,
+       "mesafe_m": 314,
+       "isletmeci": "Kaya Otopark",
+       "ucret": "ücretli",
+       "tur": "surface",
+       "kapasite": null,
+       "osm": "way/1243824061"
+      }
+     ]
+    }
+   }
+  },
+  "Kabataş": {
+   "kara": true,
+   "noktalar": {
+    "Şehir Hatları": {
+     "ad": "Kabataş iskelesi",
+     "lat": 41.032998,
+     "lng": 28.994008,
+     "osm": "way/1383311663",
+     "osm_adi": "Kabataş İskelesi",
+     "belirsiz": false,
+     "not": "OSM wikipedia=tr:Kabataş İskelesi",
+     "otopark": [
+      {
+       "ad": "Otopark (adsız)",
+       "lat": 41.030902,
+       "lng": 28.989508,
+       "mesafe_m": 444,
+       "isletmeci": null,
+       "ucret": null,
+       "tur": null,
+       "kapasite": null,
+       "osm": "way/843015054"
+      },
+      {
+       "ad": "Otopark (adsız)",
+       "lat": 41.037193,
+       "lng": 28.995967,
+       "mesafe_m": 495,
+       "isletmeci": null,
+       "ucret": "ücretli",
+       "tur": "surface",
+       "kapasite": null,
+       "osm": "way/24838241"
+      }
+     ]
+    },
+    "Mavi Marmara": {
+     "ad": "Kabataş - Kadıköy motor iskelesi",
+     "lat": 41.035511,
+     "lng": 28.994163,
+     "osm": "way/225470894",
+     "osm_adi": "Kabataş - Kadıköy Motor İskelesi",
+     "belirsiz": true,
+     "not": "Mavi Marmara'nın Kabataş iskelesi OSM'de ayrı işaretli değil; motor iskelesi varsayıldı",
+     "otopark": [
+      {
+       "ad": "Otopark (adsız)",
+       "lat": 41.037193,
+       "lng": 28.995967,
+       "mesafe_m": 241,
+       "isletmeci": null,
+       "ucret": "ücretli",
+       "tur": "surface",
+       "kapasite": null,
+       "osm": "way/24838241"
+      },
+      {
+       "ad": "Otopark (adsız)",
+       "lat": 41.038303,
+       "lng": 28.989213,
+       "mesafe_m": 518,
+       "isletmeci": null,
+       "ucret": null,
+       "tur": null,
+       "kapasite": null,
+       "osm": "way/886793250"
+      }
+     ]
+    }
+   }
+  }
+ }
+}

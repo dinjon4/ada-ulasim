@@ -1,0 +1,19 @@
+{
+ "aciklama": "Prenstur tarifesi yalnız JPEG resim olarak yayınlanıyor; saatler resimden ELLE girildi. Resim değişince README'deki adımlarla güncelleyin. '*' = hafta sonu (Cumartesi+Pazar) ve resmi tatillerde yapılmaz. Satır biçimi: kalkış/ara/son.",
+ "sayfa": "https://www.prenstur.net/index3e95.html?option=com_content&view=article&id=75&Itemid=477",
+ "gorsel": "2026-2027-kis-tarifesi.jpeg",
+ "sha256": "e8ae2d93fab10b679e95ae5781091656050103b5ce3561ec1ad7a7803e9a25ed",
+ "hafta_sonu_notu": "Prenstur: Hafta sonları yarım saat aralıklarla ek seferler yapılmaktadır (saatleri listede yok).",
+ "kartal_heybeliada": [
+  "*06:20/06:45/06:55", "07:15/07:40/07:50", "08:00/08:25/08:35", "08:30/08:55/09:05", "09:00/09:25/09:35",
+  "09:30/09:55/10:05", "10:30/10:55/11:05", "11:30/11:55/12:05", "12:30/12:55/13:05", "13:30/13:55/14:05",
+  "14:30/14:55/15:05", "15:30/15:55/16:05", "16:00/16:25/16:35", "16:30/16:55/17:05", "17:00/17:25/17:35",
+  "17:30/17:55/18:05", "18:30/18:55/19:05", "19:30/19:55/20:05", "20:30/20:55/21:05"
+ ],
+ "heybeliada_kartal": [
+  "*07:00/07:15/07:40", "08:00/08:15/08:40", "08:40/08:55/09:20", "09:10/09:25/09:55", "09:40/09:55/10:20",
+  "10:10/10:25/10:55", "11:10/11:25/11:55", "12:10/12:25/12:55", "13:10/13:25/13:55", "14:10/14:25/14:55",
+  "15:10/15:25/15:55", "16:10/16:25/16:55", "16:45/17:00/17:30", "17:10/17:30/18:00", "17:50/18:00/18:30",
+  "18:10/18:25/18:55", "19:10/19:25/19:55", "20:10/20:25/20:55", "21:10/21:25/21:55"
+ ]
+}

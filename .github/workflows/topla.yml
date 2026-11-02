@@ -1,0 +1,50 @@
+name: Seferleri topla
+
+on:
+  schedule:
+    - cron: "0 0 * * 3"    # her Çarşamba 03:00 TR (00:00 UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  topla:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests beautifulsoup4
+
+      # Betik hata verse de (cikis kodu != 0) iyi veri korunur ve asagidaki adimlar calisir.
+      - name: Seferleri topla
+        run: python scraper/topla.py
+        continue-on-error: true
+
+      - name: Degisiklik varsa commit et
+        run: |
+          git config user.name "ada-vapur-bot"
+          git config user.email "ada-vapur-bot@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Degisiklik yok"
+          else
+            git commit -m "Veri guncellendi"
+            git push
+          fi
+
+      - name: Hata varsa issue ac
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f data/hatalar.txt ]; then
+            TITLE="Sefer toplama uyarısı"
+            if gh issue list --state open --search "\"$TITLE\" in:title" --json title --jq '.[].title' | grep -qxF "$TITLE"; then
+              echo "Acik issue zaten var"
+            else
+              gh issue create --title "$TITLE" --body-file data/hatalar.txt
+            fi
+          fi

@@ -1,0 +1,15 @@
+{
+  "name": "Ada Vapur",
+  "short_name": "Ada Vapur",
+  "description": "Büyükada vapur ve motor seferleri (Şehir Hatları, Mavi Marmara, Prenstur)",
+  "lang": "tr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0d1b2a",
+  "theme_color": "#0b5ea8",
+  "icons": [
+    {"src": "icon-180.png", "sizes": "180x180", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ]
+}
