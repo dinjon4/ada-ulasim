@@ -32,6 +32,25 @@ function istanbulSimdi() {
   return { tarih: `${p.year}-${p.month}-${p.day}`, dk: Number(p.hour) * 60 + Number(p.minute) };
 }
 
+// Hizmet günü 03:00'te başlar: 03:00'ten önce hizmet tarihi dündür ve dakika 24 saat eklenir
+// (00:40 -> dünün 24:40'ı). Gün tipi (tatil dahil) hizmet tarihinden hesaplanır.
+function hizmetGunu(simdi) {
+  if (simdi.dk >= 180) return simdi;
+  const [y, m, d] = simdi.tarih.split("-").map(Number);
+  const dun = new Date(Date.UTC(y, m - 1, d - 1)).toISOString().slice(0, 10);
+  return { tarih: dun, dk: simdi.dk + 1440 };
+}
+
+// "24:35" -> "00:35" (gece seferi)
+function saatGoster(saat) {
+  const [h, m] = saat.split(":").map(Number);
+  return h >= 24 ? `${String(h - 24).padStart(2, "0")}:${String(m).padStart(2, "0")}` : saat;
+}
+function geceMi(saat) { return Number(saat.split(":")[0]) >= 24; }
+function saatHtml(saat) {
+  return esc(saatGoster(saat)) + (geceMi(saat) ? ' <small class="gece">gece</small>' : "");
+}
+
 function sonrakiGun(tarih) {
   const [y, m, d] = tarih.split("-").map(Number);
   const t = new Date(Date.UTC(y, m - 1, d + 1));
@@ -138,15 +157,15 @@ function rozet(firma, ek) {
 }
 
 function gecmisSatir(s, iskeleler) {
-  return `<li class="satir gecmis"><span class="saat">${esc(s.kalkis)}</span>
+  return `<li class="satir gecmis"><span class="saat">${saatHtml(s.kalkis)}</span>
     <span class="rota">${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)}</span>
     <span class="kalkti">· kalktı</span></li>`;
 }
 
 function siradakiKart(s, simdi, iskeleler) {
-  const bilgi = [s.varis ? `varış ${s.varis}` : "", s.not].filter(Boolean).join(" · ");
+  const bilgi = [s.varis ? `varış ${saatGoster(s.varis)}` : "", s.not].filter(Boolean).join(" · ");
   return `<div class="kart siradaki" id="siradaki">
-    <div class="buyuk"><span class="saat">${esc(s.kalkis)}</span><span class="kalan">${kalanMetni(s.kalkis, simdi.dk)}</span></div>
+    <div class="buyuk"><span class="saat">${saatHtml(s.kalkis)}</span><span class="kalan">${kalanMetni(s.kalkis, simdi.dk)}</span></div>
     <div class="rota">${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)}</div>
     ${bilgi ? `<div class="not">${esc(bilgi)}</div>` : ""}
     <div class="alt-satir">${rozet(s.firma)}${yolDugmesi(s, iskeleler, "hap")}</div>
@@ -154,8 +173,8 @@ function siradakiKart(s, simdi, iskeleler) {
 }
 
 function gelecekSatir(s, simdi, iskeleler, kalanGoster) {
-  const bilgi = [s.varis ? `varış ${s.varis}` : "", s.not].filter(Boolean).join(" · ");
-  return `<li class="satir gelecek"><div class="sol"><span class="saat">${esc(s.kalkis)}</span></div>
+  const bilgi = [s.varis ? `varış ${saatGoster(s.varis)}` : "", s.not].filter(Boolean).join(" · ");
+  return `<li class="satir gelecek"><div class="sol"><span class="saat">${saatHtml(s.kalkis)}</span></div>
     <div class="orta"><div class="rota">${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)}</div>
     <div class="alt-satir">${rozet(s.firma, kalanGoster ? kalanMetni(s.kalkis, simdi.dk) : "")}${bilgi ? `<span class="not">${esc(bilgi)}</span>` : ""}${yolDugmesi(s, iskeleler, "hap kucuk sag")}</div></div></li>`;
 }
@@ -169,7 +188,7 @@ if (typeof document !== "undefined") {
     veri: null, iskeleler: null,
   };
   const testSaat = saatiCoz(new URLSearchParams(location.search).get("t"));
-  const simdiAl = () => testSaat || istanbulSimdi();
+  const simdiAl = () => hizmetGunu(testSaat || istanbulSimdi());
   const $ = (id) => document.getElementById(id);
 
   function kaydet() {
@@ -343,5 +362,5 @@ if (typeof document !== "undefined") {
 }
 
 if (typeof module !== "undefined") {
-  module.exports = { saatiCoz, gunTipi, sonrakiGun, listeHesapla, gunSeferleri, kalanMetni, haritaLink, noktaBul, otoparkBilgisi };
+  module.exports = { hizmetGunu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, gunSeferleri, kalanMetni, haritaLink, noktaBul, otoparkBilgisi };
 }

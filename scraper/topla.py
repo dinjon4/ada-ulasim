@@ -44,8 +44,7 @@ ADA = "Büyükada"
 ILGILI = {"Maltepe", "Bostancı", "Kartal", "Kadıköy", "Kabataş", "Heybeliada"}
 HEPSI = ["hafta_ici", "cumartesi", "pazar"]
 HAFTA_ICI_CT = ["hafta_ici", "cumartesi"]
-# gece yarisindan sonra kalan seferin ait oldugu takvim gunu (onceki gun tipine gore)
-SONRAKI_GUN = {"hafta_ici": ["hafta_ici", "cumartesi"], "cumartesi": ["pazar"], "pazar": ["hafta_ici"]}
+# Hizmet gunu modeli: gece yarisini gecen saatler 24+ yazilir ("24:35"), gunler tablonun kendisinden gelir
 
 SAAT_RE = re.compile(r"(\d{1,2}):(\d{2})")
 
@@ -59,6 +58,14 @@ def indir(url, **kw):
 def saat_dk(s):
     h, m = s.split(":")
     return int(h) * 60 + int(m)
+
+
+def hh_mm_24(s, ofset):
+    """'HH:MM' dondurur; ofset>=1 ise (gece yarisi gecildi) saate 24 eklenir: 00:35 -> 24:35."""
+    t = hh_mm(s)
+    if t is None or not ofset:
+        return t
+    return f"{int(t[:2]) + 24 * ofset:02d}{t[2:]}"
 
 
 def hh_mm(s):
@@ -120,10 +127,11 @@ def sehirhatlari(url, kaynak="sehirhatlari"):
             ilk = next((saat_dk(s) for s in saatler if s), None)
             if ilk is None:
                 continue
-            # satirlar kronolojik: ilk saat geriye giderse gece yarisi gecilmistir
-            if onceki_ilk is not None and ilk < onceki_ilk:
+            # satirlar kronolojik: ilk saat 12 saatten fazla geriye giderse gece yarisi gecilmistir
+            # (kucuk geri adimlar, satirin ilk sutunlarinin '-' olmasindan kaynaklanir)
+            if onceki_ilk is not None and ilk + 720 < onceki_ilk:
                 ofset = 1
-            onceki_ilk = ilk
+            onceki_ilk = max(ilk, onceki_ilk or 0) if ofset == 0 else ilk
             # satir icinde de gece yarisi gecilebilir (ornegin 23:30 -> 00:30)
             gun_ofset, son = [], None
             for s in saatler:
@@ -146,9 +154,8 @@ def sehirhatlari(url, kaynak="sehirhatlari"):
                     g = list(gunler)
                     if yildiz_kurali and (yildizli[i] or yildizli[j]):
                         g = HAFTA_ICI_CT
-                    if gun_ofset[i] >= 1:
-                        g = sorted({x for d in g for x in SONRAKI_GUN[d]}, key=HEPSI.index)
-                    seferler.append(kayit("Şehir Hatları", a, b, saatler[i], saatler[j], g, "", kaynak))
+                    seferler.append(kayit("Şehir Hatları", a, b, hh_mm_24(saatler[i], gun_ofset[i]),
+                                          hh_mm_24(saatler[j], gun_ofset[j]), g, "", kaynak))
     return tekille(seferler)
 
 
