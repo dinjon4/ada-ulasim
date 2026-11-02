@@ -116,6 +116,16 @@ assert.strictEqual(a.sureMetni("10:00", "16:00"), "");
   assert(a.siradakiKart(sira(x), x.simdi, {}).includes("varış 03:10 (1 saat 10 dakika)"));
   console.log("k) sureMetni OK");
 }
+// k2) aciliyet metni
+{
+  const ik0 = require("../data/iskeleler.json");
+  const s0 = { yon: "adaya", firma: "Mavi Marmara", kalkis_iskele: "Bostancı", varis_iskele: "Büyükada", kalkis: "08:00", gunler: [] };
+  const h0 = a.siradakiKart(s0, { dk: 480 }, ik0), h10 = a.siradakiKart(s0, { dk: 470 }, ik0);
+  assert(h0.includes("⚠️ Şimdi kalkıyor ⚠️") && !h0.includes("Son 0 dakika"));
+  assert(h10.includes("⚠️ Son 10 dakika ⚠️"));
+  console.log("aciliyet metni OK");
+}
+
 // l) otopark P dugmesi
 {
   const ik = require("../data/iskeleler.json");
@@ -129,6 +139,7 @@ assert.strictEqual(a.sureMetni("10:00", "16:00"), "");
   for (const h of [kart, satir]) {
     assert(h.includes('class="park-dugme"') && h.includes("travelmode=driving") && h.includes(`aria-label="Otopark: ${bo.ad} · ${bo.mesafe} m"`));
     assert(h.indexOf("park-dugme") < h.indexOf("Yol tarifi"));
+    assert(h.includes('<svg viewBox="0 0 100 100"') && h.includes('aria-hidden="true"'));
   }
   const k2 = a.siradakiKart(adadan, simdi, ik);
   assert(k2.includes("park-dugme") && k2.includes("travelmode=walking") && !k2.includes("travelmode=driving"));

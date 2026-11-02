@@ -110,7 +110,8 @@ ul.cam-liste { padding: 2px 12px; }
   .siradaki { background: #14506a; }
 }
 .yol-grup { display: inline-flex; align-items: center; gap: 8px; margin-left: auto; flex: none; }
-.park-dugme { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #1f63c4; color: #fff; font-weight: 800; font-size: 22px; line-height: 1; text-decoration: none; border: 2px solid rgba(255,255,255,.92); box-sizing: border-box; box-shadow: 0 1px 4px rgba(0,0,0,.18); }
+.park-dugme { flex: none; display: inline-flex; width: 44px; height: 44px; border-radius: 50%; line-height: 0; text-decoration: none; background: none; border: 0; box-shadow: none; padding: 0; }
+.park-dugme svg { display: block; width: 44px; height: 44px; }
 .satir.gelecek { align-items: flex-start; }
 .satir.gelecek .saat { padding-top: 2px; }
 .gece { font-size: 11px; font-weight: 600; opacity: .8; border: 1px solid currentColor; border-radius: 6px; padding: 0 4px; margin-left: 4px; vertical-align: middle; }

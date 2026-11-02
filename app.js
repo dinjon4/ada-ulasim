@@ -244,7 +244,7 @@ function otoparkBilgisi(s, iskeleler, yon) {
 function yolGrubu(s, iskeleler, sinif) {
   const o = otoparkBilgisi(s, iskeleler);
   const etiket = o ? esc(`Otopark: ${o.ad} · ${o.mesafe} m`) : "";
-  const p = o ? `<a class="park-dugme" href="${o.link}" target="_blank" rel="noopener" aria-label="${etiket}" title="${etiket}">P</a>` : "";
+  const p = o ? `<a class="park-dugme" href="${o.link}" target="_blank" rel="noopener" aria-label="${etiket}" title="${etiket}"><svg viewBox="0 0 100 100" width="44" height="44" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="50" fill="#0073e6"/><circle cx="50" cy="50" r="44" fill="none" stroke="#fff" stroke-width="3"/><path fill="#fff" fill-rule="evenodd" d="M34 24H56A19 19 0 0 1 56 62H46V76H34ZM46 35V51H55A8 8 0 0 0 55 35Z"/></svg></a>` : "";
   const y = yolDugmesi(s, iskeleler, sinif);
   return p || y ? `<span class="yol-grup">${p}${y}</span>` : "";
 }
@@ -269,7 +269,7 @@ function siradakiKart(s, simdi, iskeleler) {
   const acil = aciliyet(kalanDk);
   return `<div class="kart siradaki${acil ? " acil-" + acil : ""}" id="siradaki">
     <div class="buyuk"><span class="saat">${saatHtml(s.kalkis, s.gece)}</span><span class="kalan">${kalanMetni(s.kalkis, simdi.dk)}</span></div>
-    ${acil ? `<div class="acil-uyari" role="alert">⚠️ Son ${kalanDk} dakika ⚠️</div>` : ""}
+    ${acil ? `<div class="acil-uyari" role="alert">⚠️ ${kalanDk === 0 ? "Şimdi kalkıyor" : `Son ${kalanDk} dakika`} ⚠️</div>` : ""}
     <div class="rota">${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)}</div>
     ${bilgi ? `<div class="not">${esc(bilgi)}</div>` : ""}
     ${araDurakMetni(s) ? `<div class="ara-durak">ⓘ ${esc(araDurakMetni(s))}</div>` : ""}
