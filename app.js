@@ -66,6 +66,21 @@ function dk(saat) {
   return h * 60 + m;
 }
 
+// Yolculuk süresi: "1 saat 10 dakika" / "35 dakika" / "1 saat"; varış yoksa veya süre bozuksa "".
+function sureMetni(kalkis, varis) {
+  if (!kalkis || !varis) return "";
+  let fark = dk(varis) - dk(kalkis);
+  if (fark < 0) fark += 1440;
+  if (!(fark > 0 && fark <= 300)) return "";
+  const sa = Math.floor(fark / 60), d = fark % 60;
+  return [sa ? `${sa} saat` : "", d ? `${d} dakika` : ""].filter(Boolean).join(" ");
+}
+
+function bilgiMetni(s) {
+  const sure = sureMetni(s.kalkis, s.varis);
+  return [s.varis ? `varış ${saatGoster(s.varis)}${sure ? ` (${sure})` : ""}` : "", s.not].filter(Boolean).join(" · ");
+}
+
 // Seferin "öteki" iskelesi (Büyükada dışındaki uç).
 function digerIskele(s) {
   return s.yon === "adadan" ? s.varis_iskele : s.kalkis_iskele;
@@ -224,7 +239,7 @@ function araDurakMetni(s) {
 }
 
 function siradakiKart(s, simdi, iskeleler) {
-  const bilgi = [s.varis ? `varış ${saatGoster(s.varis)}` : "", s.not].filter(Boolean).join(" · ");
+  const bilgi = bilgiMetni(s);
   const kalanDk = dk(s.kalkis) - simdi.dk;
   const acil = aciliyet(kalanDk);
   return `<div class="kart siradaki${acil ? " acil-" + acil : ""}" id="siradaki">
@@ -238,7 +253,7 @@ function siradakiKart(s, simdi, iskeleler) {
 }
 
 function gelecekSatir(s, simdi, iskeleler, kalanGoster) {
-  const bilgi = [s.varis ? `varış ${saatGoster(s.varis)}` : "", s.not].filter(Boolean).join(" · ");
+  const bilgi = bilgiMetni(s);
   return `<li class="satir gelecek"><div class="sol"><span class="saat">${saatHtml(s.kalkis, s.gece)}</span></div>
     <div class="orta"><div class="rota">${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)}</div>
     <div class="alt-satir">${rozet(s.firma, kalanGoster ? kalanMetni(s.kalkis, simdi.dk) : "")}${bilgi ? `<span class="not">${esc(bilgi)}</span>` : ""}${araDurakMetni(s) ? `<span class="not ara-durak">ⓘ ${esc(araDurakMetni(s))}</span>` : ""}${yolDugmesi(s, iskeleler, "hap kucuk sag")}</div></div></li>`;
@@ -463,5 +478,5 @@ if (typeof document !== "undefined") {
 }
 
 if (typeof module !== "undefined") {
-  module.exports = { guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, gunSeferleri, kalanMetni, aciliyet, haritaLink, noktaBul, otoparkBilgisi, araDurakMetni, siradakiKart, gelecekSatir };
+  module.exports = { guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, gunSeferleri, kalanMetni, aciliyet, haritaLink, noktaBul, otoparkBilgisi, sureMetni, araDurakMetni, siradakiKart, gelecekSatir };
 }

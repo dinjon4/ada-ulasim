@@ -103,4 +103,17 @@ assert.strictEqual(a.aciliyet(-1), "");
   assert(!a.siradakiKart(s, simdi, isk).includes("Kınalıada"));
   console.log("j) ara_durak metni OK");
 }
+// k) sureMetni
+assert.strictEqual(a.sureMetni("02:00", "03:10"), "1 saat 10 dakika");
+assert.strictEqual(a.sureMetni("07:45", "08:20"), "35 dakika");
+assert.strictEqual(a.sureMetni("15:00", "16:00"), "1 saat");
+assert.strictEqual(a.sureMetni("23:50", "24:20"), "30 dakika");
+assert.strictEqual(a.sureMetni("10:00", null), "");
+assert.strictEqual(a.sureMetni("10:00", "10:00"), "");
+assert.strictEqual(a.sureMetni("10:00", "16:00"), "");
+{
+  const x = calis("2026-11-09T01:50", "adaya");
+  assert(a.siradakiKart(sira(x), x.simdi, {}).includes("varış 03:10 (1 saat 10 dakika)"));
+  console.log("k) sureMetni OK");
+}
 console.log("TUM TESTLER GECTI");
