@@ -277,7 +277,7 @@ if (typeof document !== "undefined") {
     b.hidden = false;
     document.body.classList.add("otoparkli");
     document.documentElement.style.setProperty("--cubuk", b.offsetHeight + "px");
-    b.innerHTML = `<a href="${o.link}" target="_blank" rel="noopener"><span class="p">P</span> En yakın otopark · ${o.mesafe} m · ${esc(o.ad)}</a>`;
+    b.innerHTML = `<a href="${o.link}" target="_blank" rel="noopener"><span class="p">P</span><span class="metin"><span class="ust">En yakın otopark · ${o.mesafe} m</span><span class="ad">${esc(o.ad)}</span></span></a>`;
   }
 
   function ciz(kaydir) {

@@ -54,6 +54,23 @@ NOKTALAR = {
 }
 
 
+# Elle verilen (Google Maps) otoparklar: OSM verisinin yerine gecer ve yeniden uretimde ezilmez.
+ELLE_OTOPARK = {
+    "Kadıköy": ("İSPARK Kadıköy Metro Açık Otoparkı", 40.9895293, 29.020949),
+    "Bostancı": ("İSPARK Bostancı Açık Otoparkı", 40.9523453, 29.0902652),
+    "Maltepe": ("İSPARK Maltepe Sahil Dolgu Alanı Otoparkı", 40.9198163, 29.1261888),
+    "Kartal": ("İSPARK Kartal Sahil Açık Otoparkı", 40.8873357, 29.1902295),
+}
+
+
+def elle_otopark(iskele, lat, lng):
+    if iskele not in ELLE_OTOPARK:
+        return None
+    ad, la, lo = ELLE_OTOPARK[iskele]
+    return [{"ad": ad, "lat": la, "lng": lo, "mesafe_m": round(mesafe_m((lat, lng), (la, lo))),
+             "isletmeci": "İSPARK", "ucret": "ücretli", "kaynak": "kullanıcı (Google Maps)", "elle": True}]
+
+
 def overpass(q):
     for _ in range(4):
         for u in URLS:
@@ -125,7 +142,8 @@ def main():
         for firma, (tur, oid, aciklama, belirsiz, not_) in bilgi["firmalar"].items():
             el = ogeler[(tur, oid)]
             lat, lng = merkez(el)
-            otopark = (otoparklar(park, lat, lng) or None) if bilgi["kara"] else None
+            otopark = elle_otopark(ad, lat, lng) or (
+                (otoparklar(park, lat, lng) or None) if bilgi["kara"] else None)
             noktalar[firma] = {
                 "ad": aciklama, "lat": round(lat, 6), "lng": round(lng, 6),
                 "osm": f"{tur}/{oid}", "osm_adi": el.get("tags", {}).get("name"),
@@ -136,5 +154,17 @@ def main():
     HEDEF.write_text(json.dumps(cikti, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+def elle_uygula():
+    """Mevcut iskeleler.json'a yalniz elle otoparklari uygular (Overpass'a gitmez)."""
+    veri = json.loads(HEDEF.read_text(encoding="utf-8"))
+    for ad, i in veri["iskeleler"].items():
+        for n in i["noktalar"].values():
+            e = elle_otopark(ad, n["lat"], n["lng"])
+            if e:
+                n["otopark"] = e
+    HEDEF.write_text(json.dumps(veri, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    elle_uygula() if "--elle" in sys.argv else main()

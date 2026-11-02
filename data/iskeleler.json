@@ -74,26 +74,14 @@
      "not": "",
      "otopark": [
       {
-       "ad": "Otopark (adsız)",
-       "lat": 40.918436,
-       "lng": 29.128876,
-       "mesafe_m": 45,
-       "isletmeci": null,
-       "ucret": null,
-       "tur": null,
-       "kapasite": null,
-       "osm": "way/264038065"
-      },
-      {
-       "ad": "Otopark (adsız)",
-       "lat": 40.919341,
-       "lng": 29.128233,
-       "mesafe_m": 128,
-       "isletmeci": null,
-       "ucret": null,
-       "tur": null,
-       "kapasite": null,
-       "osm": "way/1421713103"
+       "ad": "İSPARK Maltepe Sahil Dolgu Alanı Otoparkı",
+       "lat": 40.9198163,
+       "lng": 29.1261888,
+       "mesafe_m": 261,
+       "isletmeci": "İSPARK",
+       "ucret": "ücretli",
+       "kaynak": "kullanıcı (Google Maps)",
+       "elle": true
       }
      ]
     }
@@ -112,26 +100,14 @@
      "not": "OSM operator=Şehir Hatları",
      "otopark": [
       {
-       "ad": "Otopark (adsız)",
-       "lat": 40.95401,
-       "lng": 29.095905,
-       "mesafe_m": 277,
-       "isletmeci": null,
-       "ucret": null,
-       "tur": "surface",
-       "kapasite": null,
-       "osm": "way/401274443"
-      },
-      {
-       "ad": "Otopark (adsız)",
-       "lat": 40.950783,
-       "lng": 29.09813,
-       "mesafe_m": 346,
-       "isletmeci": null,
-       "ucret": null,
-       "tur": "surface",
-       "kapasite": null,
-       "osm": "way/1300086131"
+       "ad": "İSPARK Bostancı Açık Otoparkı",
+       "lat": 40.9523453,
+       "lng": 29.0902652,
+       "mesafe_m": 340,
+       "isletmeci": "İSPARK",
+       "ucret": "ücretli",
+       "kaynak": "kullanıcı (Google Maps)",
+       "elle": true
       }
      ]
     },
@@ -145,26 +121,14 @@
      "not": "OSM operator=Mavi Marmara",
      "otopark": [
       {
-       "ad": "Otopark (adsız)",
-       "lat": 40.95401,
-       "lng": 29.095905,
-       "mesafe_m": 248,
-       "isletmeci": null,
-       "ucret": null,
-       "tur": "surface",
-       "kapasite": null,
-       "osm": "way/401274443"
-      },
-      {
-       "ad": "İspark Bostancı İdo Açık Otoparkı 1",
-       "lat": 40.952347,
-       "lng": 29.090173,
-       "mesafe_m": 320,
+       "ad": "İSPARK Bostancı Açık Otoparkı",
+       "lat": 40.9523453,
+       "lng": 29.0902652,
+       "mesafe_m": 312,
        "isletmeci": "İSPARK",
        "ucret": "ücretli",
-       "tur": "surface",
-       "kapasite": null,
-       "osm": "way/236818445"
+       "kaynak": "kullanıcı (Google Maps)",
+       "elle": true
       }
      ]
     }
@@ -183,26 +147,14 @@
      "not": "OSM'de 'Kartal - Adalar İskelesi' (shelter); Prenstur'a özel işaret yok",
      "otopark": [
       {
-       "ad": "İspark",
-       "lat": 40.887276,
-       "lng": 29.187722,
-       "mesafe_m": 96,
+       "ad": "İSPARK Kartal Sahil Açık Otoparkı",
+       "lat": 40.8873357,
+       "lng": 29.1902295,
+       "mesafe_m": 292,
        "isletmeci": "İSPARK",
        "ucret": "ücretli",
-       "tur": null,
-       "kapasite": null,
-       "osm": "node/4990138837"
-      },
-      {
-       "ad": "Otopark (adsız)",
-       "lat": 40.887343,
-       "lng": 29.188185,
-       "mesafe_m": 132,
-       "isletmeci": null,
-       "ucret": null,
-       "tur": null,
-       "kapasite": null,
-       "osm": "node/10151469223"
+       "kaynak": "kullanıcı (Google Maps)",
+       "elle": true
       }
      ]
     }
@@ -221,26 +173,14 @@
      "not": "OSM'de Şehir Hatları Kabataş-Adalar hattının Kadıköy durağı",
      "otopark": [
       {
-       "ad": "İspark",
-       "lat": 40.989444,
-       "lng": 29.020865,
-       "mesafe_m": 271,
+       "ad": "İSPARK Kadıköy Metro Açık Otoparkı",
+       "lat": 40.9895293,
+       "lng": 29.020949,
+       "mesafe_m": 260,
        "isletmeci": "İSPARK",
        "ucret": "ücretli",
-       "tur": "surface",
-       "kapasite": null,
-       "osm": "way/236167036"
-      },
-      {
-       "ad": "Kaya Otopark",
-       "lat": 40.992295,
-       "lng": 29.025234,
-       "mesafe_m": 314,
-       "isletmeci": "Kaya Otopark",
-       "ucret": "ücretli",
-       "tur": "surface",
-       "kapasite": null,
-       "osm": "way/1243824061"
+       "kaynak": "kullanıcı (Google Maps)",
+       "elle": true
       }
      ]
     }

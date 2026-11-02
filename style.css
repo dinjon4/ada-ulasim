@@ -115,3 +115,6 @@ body.otoparkli .alt { padding-bottom: calc(var(--cubuk, 70px) + 24px + env(safe-
 #iskele-yol h2 { color: #bfeaf0; }
 [hidden] { display: none !important; }
 .baslik-dugme { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; min-height: 44px; font: inherit; color: inherit; }
+.otopark-cubugu .metin { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
+.otopark-cubugu .ust { font-size: 13px; opacity: .8; }
+.otopark-cubugu .ad { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
