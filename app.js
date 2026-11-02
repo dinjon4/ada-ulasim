@@ -61,6 +61,14 @@ function gunTipi(tarih, tatiller) {
   return gun === 0 ? "pazar" : gun === 6 ? "cumartesi" : "hafta_ici";
 }
 
+// "HH:MM" (input type=time) -> {tarih, dk}; seçilen an şimdiden önceyse ertesi gün. Geçersizse null.
+function hedefZamani(saatStr, simdi) {
+  const m = /^(\d{2}):(\d{2})$/.exec(saatStr || "");
+  if (!m || !simdi || Number(m[1]) > 23 || Number(m[2]) > 59) return null;
+  const d = Number(m[1]) * 60 + Number(m[2]);
+  return { tarih: d < simdi.dk ? sonrakiGun(simdi.tarih) : simdi.tarih, dk: d };
+}
+
 function dk(saat) {
   const [h, m] = saat.split(":").map(Number);
   return h * 60 + m;
@@ -273,12 +281,18 @@ function gecmisBaslik(gecmis, durum) {
   const n = gecmis.length - (tek ? 0 : 1);
   return `<h2><button class="baslik-dugme baslik-hap" id="eski-dugme"${tek ? ' data-tek="1"' : ""} aria-expanded="${acik}">Geçmiş Seferler (${n}) ${acik ? "▴" : "▾"}</button></h2>`;
 }
-function siradakiKart(s, simdi, iskeleler) {
+// "Saat seç" hapı (şeffaf time input hapın üstünde); seçiliyse saat + ✕ (şimdiye dön).
+function saatTusu(hedef, bugunTarih) {
+  if (!hedef) return '<label class="baslik-hap saat-tus">🕐 Saat seç<input type="time" id="saat-sec" aria-label="Saat seç"></label>';
+  const t = dkYaz(hedef.dk);
+  return `<span class="saat-grup"><label class="baslik-hap saat-tus">🕐 ${t}<input type="time" id="saat-sec" aria-label="Saat seç" value="${t}"></label><button type="button" id="saat-sifirla" class="saat-x" aria-label="Şimdiye dön">✕</button></span>`;
+}
+function siradakiKart(s, simdi, iskeleler, planli) {
   const bilgi = bilgiMetni(s);
   const kalanDk = dk(s.kalkis) - simdi.dk;
-  const acil = aciliyet(kalanDk);
+  const acil = planli ? "" : aciliyet(kalanDk);
   return `<div class="kart siradaki${acil ? " acil-" + acil : ""}" id="siradaki" data-sefer="${esc(seferKimlik(s))}">
-    <div class="buyuk"><span class="saat">${saatHtml(s.kalkis, s.gece)}</span><span class="kalan">${kalanMetni(s.kalkis, simdi.dk)}</span></div>
+    <div class="buyuk"><span class="saat">${saatHtml(s.kalkis, s.gece)}</span>${planli ? "" : `<span class="kalan">${kalanMetni(s.kalkis, simdi.dk)}</span>`}</div>
     ${acil ? `<div class="acil-uyari" role="alert">⚠️ ${kalanDk === 0 ? "Şimdi kalkıyor" : `Son ${kalanDk} dakika`} ⚠️</div>` : ""}
     <div class="rota">${esc(s.kalkis_iskele)} → ${esc(s.varis_iskele)}</div>
     ${bilgi ? `<div class="not">${esc(bilgi)}</div>` : ""}
@@ -300,6 +314,7 @@ if (typeof document !== "undefined") {
     secili: JSON.parse(localStorage.getItem("secili") || "null") || ANA_ISKELELER.slice(),
     digerAcik: localStorage.getItem("digerAcik") === "1",
     eskiAcik: false,
+    hedef: null,
     gecmisGizli: false,
     veri: null, iskeleler: null,
   };
@@ -340,7 +355,13 @@ if (typeof document !== "undefined") {
 
 function ciz(kaydir) {
     if (!durum.veri) return;
-    const simdi = simdiAl();
+    const gercek = simdiAl();
+    if (durum.hedef && (durum.hedef.tarih < gercek.tarih || (durum.hedef.tarih === gercek.tarih && durum.hedef.dk < gercek.dk))) durum.hedef = null;
+    const simdi = durum.hedef || gercek;
+    const planli = !!durum.hedef;
+    const yarinMi = planli && durum.hedef.tarih !== gercek.tarih;
+    const baslikMetni = planli ? `${yarinMi ? "Yarın " : ""}${dkYaz(durum.hedef.dk)} SONRASI İLK Sefer` : "SIRADAKİ Sefer";
+    const sBaslik = `<div class="gecmis-baslik"><h2>${baslikMetni}</h2>${saatTusu(durum.hedef, gercek.tarih)}</div>`;
     const r = listeHesapla(durum.veri, durum.yon, durum.secili, simdi);
     if (!durum.secili.length) { r.bugun = []; r.siradaki = -1; r.yarin = []; r.bugunBitti = true; r.hepsiFiltreli = true; }
     for (const y of ["adadan", "adaya"]) $("sekme-" + y).setAttribute("aria-selected", String(y === durum.yon));
@@ -359,16 +380,16 @@ function ciz(kaydir) {
     }
     if (r.siradaki !== -1) {
       sonraki = r.bugun[r.siradaki];
-      bolge.push(`<section class="bolum"><h2>SIRADAKİ Sefer</h2>${siradakiKart(sonraki, simdi, durum.iskeleler)}</section>`);
+      bolge.push(`<section class="bolum">${sBaslik}${siradakiKart(sonraki, simdi, durum.iskeleler, planli)}</section>`);
       const gelecek = r.bugun.slice(r.siradaki + 1);
       if (gelecek.length) {
-        bolge.push(`<section class="bolum"><h2>Gelecek Seferler</h2><ul class="kart cam-liste">${gelecek.map((s) => gelecekSatir(s, simdi, durum.iskeleler, true)).join("")}</ul></section>`);
+        bolge.push(`<section class="bolum"><h2>Gelecek Seferler</h2><ul class="kart cam-liste">${gelecek.map((s) => gelecekSatir(s, simdi, durum.iskeleler, !planli)).join("")}</ul></section>`);
       }
       if (r.yarinIlk.length) {
         bolge.push(`<section class="bolum yarin-onizleme"><h2>Yarın ilk seferler</h2><ul class="kompakt-liste">${r.yarinIlk.map(kompaktSatir).join("")}</ul></section>`);
       }
     } else {
-      bolge.push(`<section class="bolum" id="siradaki"><div class="kart bos">${r.hepsiFiltreli ? "Tüm iskeleler filtrelendi" : r.bugun.length ? "Bugün başka sefer yok" : "Seçili iskeleler için bugün sefer yok"}</div></section>`);
+      bolge.push(`<section class="bolum">${sBaslik}<div class="kart bos" id="siradaki">${r.hepsiFiltreli ? "Tüm iskeleler filtrelendi" : planli ? `${dkYaz(durum.hedef.dk)} sonrası ${yarinMi ? "yarın" : "bugün"} sefer yok` : r.bugun.length ? "Bugün başka sefer yok" : "Seçili iskeleler için bugün sefer yok"}</div></section>`);
       if (r.yarin.length) {
         sonraki = r.yarin[0];
         bolge.push(`<section class="bolum"><h2>Yarın ilk seferler</h2><ul class="kart cam-liste">${r.yarin.map((s) => gelecekSatir(s, simdi, durum.iskeleler, false)).join("")}</ul></section>`);
@@ -377,6 +398,14 @@ function ciz(kaydir) {
     $("liste").innerHTML = bolge.join("");
     const ed = $("eski-dugme");
     if (ed) ed.addEventListener("click", () => { if (ed.dataset.tek) durum.gecmisGizli = !durum.gecmisGizli; else durum.eskiAcik = !durum.eskiAcik; ciz(false); });
+    const ss = $("saat-sec");
+    if (ss) {
+      const uygula = () => { if (!ss.value) return; const h = hedefZamani(ss.value, simdiAl()); if (!h || (durum.hedef && durum.hedef.dk === h.dk && durum.hedef.tarih === h.tarih)) return; durum.hedef = h; ciz(true); };
+      ss.addEventListener("blur", uygula);
+      ss.addEventListener("change", () => { if (document.activeElement !== ss) uygula(); });
+    }
+    const sx = $("saat-sifirla");
+    if (sx) sx.addEventListener("click", () => { durum.hedef = null; ciz(true); });
     const st = $("son-tus");
     if (st) st.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -509,5 +538,5 @@ function ciz(kaydir) {
 }
 
 if (typeof module !== "undefined") {
-  module.exports = { guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, sonSeferBilgisi, sonSeferTusu, seferKimlik, gunSeferleri, kalanMetni, aciliyet, haritaLink, noktaBul, otoparkBilgisi, sureMetni, araDurakMetni, siradakiKart, gelecekSatir, gecmisBaslik, gecmisGorunen };
+  module.exports = { hedefZamani, saatTusu, guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, sonSeferBilgisi, sonSeferTusu, seferKimlik, gunSeferleri, kalanMetni, aciliyet, haritaLink, noktaBul, otoparkBilgisi, sureMetni, araDurakMetni, siradakiKart, gelecekSatir, gecmisBaslik, gecmisGorunen };
 }

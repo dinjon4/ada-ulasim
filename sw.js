@@ -1,5 +1,5 @@
 // Service worker: tüm dosyalar ağ öncelikli (GitHub Pages max-age'ini aşmak için no-cache), ağ yoksa önbellek.
-const SURUM = "ada-vapur-v19";
+const SURUM = "ada-vapur-v20";
 const KABUK = ["./", "index.html", "app.js", "style.css", "manifest.json", "icon-180.png", "icon-512.png",
   "data/seferler.json", "data/iskeleler.json"];
 

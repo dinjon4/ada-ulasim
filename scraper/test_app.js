@@ -193,4 +193,20 @@ assert.strictEqual(a.sureMetni("10:00", "16:00"), "");
   assert(a.gecmisBaslik([], {}).includes("baslik-bos"));
   console.log("n) gecmisBaslik OK");
 }
+{
+  const si = { tarih: "2026-11-04", dk: 600 };
+  const h1 = a.hedefZamani("18:30", si), h2 = a.hedefZamani("09:00", si);
+  assert(h1.tarih === "2026-11-04" && h1.dk === 1110);
+  assert(h2.tarih === "2026-11-05" && h2.dk === 540);
+  assert(a.hedefZamani("", si) === null && a.hedefZamani("xx", si) === null && a.hedefZamani("25:00", si) === null);
+  const ik = require("../data/iskeleler.json");
+  const sf = { yon: "adaya", firma: "Şehir Hatları", kalkis: "10:05", varis: "10:50", kalkis_iskele: "Bostancı", varis_iskele: "Büyükada", gunler: ["hafta_ici"] };
+  const kp = a.siradakiKart(sf, si, ik, true), kn = a.siradakiKart(sf, si, ik, false);
+  assert(!kp.includes("acil-uyari") && !kp.includes("acil-") && !kp.includes('class="kalan"'));
+  assert(kn.includes("acil-uyari") && kn.includes("acil-kirmizi"));
+  const t0 = a.saatTusu(null, "2026-11-04"), t1 = a.saatTusu(h1, "2026-11-04");
+  assert(t0.includes('id="saat-sec"') && t0.includes("Saat seç") && !t0.includes("saat-sifirla"));
+  assert(t1.includes('id="saat-sec"') && t1.includes("saat-sifirla") && t1.includes("18:30") && t1.includes('value="18:30"'));
+  console.log("o) hedefZamani / saatTusu OK");
+}
 console.log("TUM TESTLER GECTI");
