@@ -209,4 +209,9 @@ assert.strictEqual(a.sureMetni("10:00", "16:00"), "");
   assert(t1.includes('id="saat-sec"') && t1.includes("saat-sifirla") && t1.includes("18:30") && t1.includes('value="18:30"'));
   console.log("o) hedefZamani / saatTusu OK");
 }
+{
+  const mh = v.seferler.filter((x) => x.firma === "Mavi Marmara" && x.kalkis_iskele === "Büyükada" && x.varis_iskele === "Heybeliada" && x.kalkis === "09:35");
+  assert(mh.length === 1 && mh[0].varis === null && mh[0].yon === "adadan");
+  console.log("p) Mavi Marmara Büyükada->Heybeliada turetilmis kayit OK");
+}
 console.log("TUM TESTLER GECTI");

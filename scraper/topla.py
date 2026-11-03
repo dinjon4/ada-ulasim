@@ -188,6 +188,23 @@ def _iskele_adi(p):
     return _ISKELE_ADLARI.get(p, p.capitalize())
 
 
+def mm_heybeli_turet(seferler):
+    """Buyukada->Bostanci seferlerinden Heybeliada'ya ugrayanlar icin ayrica Buyukada->Heybeliada
+    kaydi turetir (varis saati bilinmez -> None). Idempotent; ara_durakta Heybeliada olmayana dokunmaz."""
+    var = {(s["firma"], s["kalkis_iskele"], s["varis_iskele"], s["kalkis"], s["kaynak"]) for s in seferler}
+    cikti = list(seferler)
+    for s in seferler:
+        if s["kalkis_iskele"] != ADA or "Heybeliada" not in s.get("ara_durak", ()):
+            continue
+        k = (s["firma"], ADA, "Heybeliada", s["kalkis"], s["kaynak"])
+        if s["firma"] != "Mavi Marmara" or s["varis_iskele"] == "Heybeliada" or k in var:
+            continue
+        var.add(k)
+        cikti.append(kayit(s["firma"], ADA, "Heybeliada", s["kalkis"], None, s["gunler"],
+                           not_="Bostancı seferi", kaynak=s["kaynak"], ara_durak=[]))
+    return cikti
+
+
 def mavimarmara(url, kalkis_iskele, varis_iskele, kaynak="mavimarmara"):
     soup = BeautifulSoup(indir(url).text, "html.parser")
     tablo = soup.find("table")
@@ -208,7 +225,7 @@ def mavimarmara(url, kalkis_iskele, varis_iskele, kaynak="mavimarmara"):
         seferler.append(kayit("Mavi Marmara", kalkis_iskele, varis_iskele, kalkis, varis,
                               HAFTA_ICI_CT if yildizli else HEPSI, not_, kaynak,
                               ara_durak=mm_ara_durak(not_, kalkis_iskele, varis_iskele)))
-    return tekille(seferler)
+    return mm_heybeli_turet(tekille(seferler))
 
 
 # ---------- Prenstur ----------
