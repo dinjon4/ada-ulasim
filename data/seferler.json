@@ -1,59 +1,73 @@
 {
- "son_kontrol": "2026-11-03T00:12:03+03:00",
- "son_degisiklik": "2026-11-03T00:12:03+03:00",
- "guncelleme": "2026-11-03T00:12:03+03:00",
+ "son_kontrol": "2026-11-04T06:35:13+03:00",
+ "son_degisiklik": "2026-11-04T06:35:13+03:00",
+ "guncelleme": "2026-11-04T06:35:13+03:00",
  "kaynaklar": {
   "sehirhatlari-maltepe": {
-   "durum": "ok",
+   "durum": "hata",
+   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/maltepe-buyukada-heybeliada-burgazada-kinaliada-hatti-2020",
    "sefer": 56,
    "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/maltepe-buyukada-heybeliada-burgazada-kinaliada-hatti-2020",
-   "son_basari": "2026-11-03T00:12:03+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00",
+   "not": "önceki veri kullanılıyor"
   },
   "sehirhatlari-bostanci": {
-   "durum": "ok",
+   "durum": "hata",
+   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/bostanci-adalar-ring-hatti-770",
    "sefer": 35,
    "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/bostanci-adalar-ring-hatti-770",
-   "son_basari": "2026-11-03T00:12:03+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00",
+   "not": "önceki veri kullanılıyor"
   },
   "sehirhatlari-kabatas": {
-   "durum": "ok",
+   "durum": "hata",
+   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/kabatasadalar-177",
    "sefer": 123,
    "url": "https://sehirhatlari.istanbul/tr/seferler/ic-hatlar/adalar-hatlari/kabatasadalar-177",
-   "son_basari": "2026-11-03T00:12:03+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00",
+   "not": "önceki veri kullanılıyor"
   },
   "mavimarmara-bostanci-buyukada": {
-   "durum": "ok",
+   "durum": "hata",
+   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://mavimarmara.net/tarifeler/bostanci-buyukada/",
    "sefer": 16,
    "url": "https://mavimarmara.net/tarifeler/bostanci-buyukada/",
-   "son_basari": "2026-11-03T00:12:03+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00",
+   "not": "önceki veri kullanılıyor"
   },
   "mavimarmara-buyukada-bostanci": {
-   "durum": "ok",
+   "durum": "hata",
+   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://mavimarmara.net/tarifeler/buyukada-bostanci/",
    "sefer": 24,
    "url": "https://mavimarmara.net/tarifeler/buyukada-bostanci/",
-   "son_basari": "2026-11-03T00:12:03+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00",
+   "not": "önceki veri kullanılıyor"
   },
   "mavimarmara-kabatas-buyukada": {
-   "durum": "ok",
+   "durum": "hata",
+   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://mavimarmara.net/tarifeler/kabatas-buyukada/",
    "sefer": 2,
    "url": "https://mavimarmara.net/tarifeler/kabatas-buyukada/",
-   "son_basari": "2026-11-03T00:12:03+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00",
+   "not": "önceki veri kullanılıyor"
   },
   "mavimarmara-buyukada-kabatas": {
-   "durum": "ok",
+   "durum": "hata",
+   "hata": "HTTPError: 403 Client Error: Forbidden for url: https://mavimarmara.net/tarifeler/buyukada-kabatas/",
    "sefer": 2,
    "url": "https://mavimarmara.net/tarifeler/buyukada-kabatas/",
-   "son_basari": "2026-11-03T00:12:03+03:00"
+   "son_basari": "2026-11-03T00:12:03+03:00",
+   "not": "önceki veri kullanılıyor"
   },
   "prenstur": {
    "durum": "ok",
    "sefer": 76,
    "url": "https://www.prenstur.net/index3e95.html?option=com_content&view=article&id=75&Itemid=477",
-   "son_basari": "2026-11-03T00:12:03+03:00"
+   "son_basari": "2026-11-04T06:35:13+03:00"
   },
   "tatiller": {
    "durum": "ok",
-   "son_basari": "2026-11-03T00:12:03+03:00",
+   "son_basari": "2026-11-04T06:35:13+03:00",
    "sefer": 27,
    "url": "https://date.nager.at/api/v3/PublicHolidays/2026/TR"
   }
@@ -615,6 +629,118 @@
    "ara_durak": [
     "Heybeliada"
    ]
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "06:20",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "Bostancı seferi",
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "09:35",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "Bostancı seferi",
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "11:05",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "Bostancı seferi",
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "13:05",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "Bostancı seferi",
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "14:05",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "Bostancı seferi",
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "15:20",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "Bostancı seferi",
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
+  },
+  {
+   "firma": "Mavi Marmara",
+   "kalkis_iskele": "Büyükada",
+   "varis_iskele": "Heybeliada",
+   "kalkis": "22:35",
+   "varis": null,
+   "gunler": [
+    "hafta_ici",
+    "cumartesi",
+    "pazar"
+   ],
+   "yon": "adadan",
+   "not": "Bostancı seferi",
+   "kaynak": "mavimarmara-buyukada-bostanci",
+   "ara_durak": []
   },
   {
    "firma": "Mavi Marmara",
@@ -5565,118 +5691,6 @@
    "yon": "adaya",
    "not": "",
    "kaynak": "sehirhatlari-maltepe",
-   "ara_durak": []
-  },
-  {
-   "firma": "Mavi Marmara",
-   "kalkis_iskele": "Büyükada",
-   "varis_iskele": "Heybeliada",
-   "kalkis": "06:20",
-   "varis": null,
-   "gunler": [
-    "hafta_ici",
-    "cumartesi",
-    "pazar"
-   ],
-   "yon": "adadan",
-   "not": "Bostancı seferi",
-   "kaynak": "mavimarmara-buyukada-bostanci",
-   "ara_durak": []
-  },
-  {
-   "firma": "Mavi Marmara",
-   "kalkis_iskele": "Büyükada",
-   "varis_iskele": "Heybeliada",
-   "kalkis": "09:35",
-   "varis": null,
-   "gunler": [
-    "hafta_ici",
-    "cumartesi",
-    "pazar"
-   ],
-   "yon": "adadan",
-   "not": "Bostancı seferi",
-   "kaynak": "mavimarmara-buyukada-bostanci",
-   "ara_durak": []
-  },
-  {
-   "firma": "Mavi Marmara",
-   "kalkis_iskele": "Büyükada",
-   "varis_iskele": "Heybeliada",
-   "kalkis": "11:05",
-   "varis": null,
-   "gunler": [
-    "hafta_ici",
-    "cumartesi",
-    "pazar"
-   ],
-   "yon": "adadan",
-   "not": "Bostancı seferi",
-   "kaynak": "mavimarmara-buyukada-bostanci",
-   "ara_durak": []
-  },
-  {
-   "firma": "Mavi Marmara",
-   "kalkis_iskele": "Büyükada",
-   "varis_iskele": "Heybeliada",
-   "kalkis": "13:05",
-   "varis": null,
-   "gunler": [
-    "hafta_ici",
-    "cumartesi",
-    "pazar"
-   ],
-   "yon": "adadan",
-   "not": "Bostancı seferi",
-   "kaynak": "mavimarmara-buyukada-bostanci",
-   "ara_durak": []
-  },
-  {
-   "firma": "Mavi Marmara",
-   "kalkis_iskele": "Büyükada",
-   "varis_iskele": "Heybeliada",
-   "kalkis": "14:05",
-   "varis": null,
-   "gunler": [
-    "hafta_ici",
-    "cumartesi",
-    "pazar"
-   ],
-   "yon": "adadan",
-   "not": "Bostancı seferi",
-   "kaynak": "mavimarmara-buyukada-bostanci",
-   "ara_durak": []
-  },
-  {
-   "firma": "Mavi Marmara",
-   "kalkis_iskele": "Büyükada",
-   "varis_iskele": "Heybeliada",
-   "kalkis": "15:20",
-   "varis": null,
-   "gunler": [
-    "hafta_ici",
-    "cumartesi",
-    "pazar"
-   ],
-   "yon": "adadan",
-   "not": "Bostancı seferi",
-   "kaynak": "mavimarmara-buyukada-bostanci",
-   "ara_durak": []
-  },
-  {
-   "firma": "Mavi Marmara",
-   "kalkis_iskele": "Büyükada",
-   "varis_iskele": "Heybeliada",
-   "kalkis": "22:35",
-   "varis": null,
-   "gunler": [
-    "hafta_ici",
-    "cumartesi",
-    "pazar"
-   ],
-   "yon": "adadan",
-   "not": "Bostancı seferi",
-   "kaynak": "mavimarmara-buyukada-bostanci",
    "ara_durak": []
   }
  ],
