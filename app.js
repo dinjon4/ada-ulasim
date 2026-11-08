@@ -1,4 +1,4 @@
-// Ada Vapur: Büyükada sefer listesi. Çerçeve yok; saat hesabı cihazda, İstanbul saatine göre.
+// Seyrüsefer: Büyükada sefer listesi. Çerçeve yok; saat hesabı cihazda, İstanbul saatine göre.
 "use strict";
 
 const ADA = "Büyükada";
