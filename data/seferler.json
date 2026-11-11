@@ -1,7 +1,7 @@
 {
- "son_kontrol": "2026-11-04T06:35:13+03:00",
+ "son_kontrol": "2026-11-11T06:25:49+03:00",
  "son_degisiklik": "2026-11-04T06:35:13+03:00",
- "guncelleme": "2026-11-04T06:35:13+03:00",
+ "guncelleme": "2026-11-11T06:25:49+03:00",
  "kaynaklar": {
   "sehirhatlari-maltepe": {
    "durum": "hata",
@@ -63,11 +63,11 @@
    "durum": "ok",
    "sefer": 76,
    "url": "https://www.prenstur.net/index3e95.html?option=com_content&view=article&id=75&Itemid=477",
-   "son_basari": "2026-11-04T06:35:13+03:00"
+   "son_basari": "2026-11-11T06:25:49+03:00"
   },
   "tatiller": {
    "durum": "ok",
-   "son_basari": "2026-11-04T06:35:13+03:00",
+   "son_basari": "2026-11-11T06:25:49+03:00",
    "sefer": 27,
    "url": "https://date.nager.at/api/v3/PublicHolidays/2026/TR"
   }
