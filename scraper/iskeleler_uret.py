@@ -25,6 +25,18 @@ NOKTALAR = {
         "Prenstur": ("way", 700032115, "Büyükada motor iskelesi", True,
                      "Prenstur'un Büyükada iskelesi OSM'de ayrı işaretli değil; motor iskelesi varsayıldı"),
     }},
+    "Kınalıada": {"kara": False, "firmalar": {
+        "Şehir Hatları": ("way", 401651883, "Kınalıada vapur iskelesi", False,
+                          "OSM'de operator=Şehir Hatları, 'Kınalıada Vapur İskelesi'"),
+        "Mavi Marmara": ("way", 401651888, "Kınalıada motor iskelesi (Mavi Marmara)", False,
+                         "OSM'de operator=Mavi Marmara"),
+    }},
+    "Burgazada": {"kara": False, "firmalar": {
+        "Şehir Hatları": ("way", 401416370, "Burgazada vapur iskelesi", False,
+                          "OSM'de operator=Şehir Hatları, 'Burgazada Vapur İskelesi'"),
+        "Mavi Marmara": ("way", 401416371, "Burgazada motor iskelesi (Mavi Marmara)", False,
+                         "OSM'de operator=Mavi Marmara"),
+    }},
     "Heybeliada": {"kara": False, "firmalar": {
         "Şehir Hatları": ("node", 10288058480, "Heybeliada vapur iskelesi", False,
                           "OSM'de Şehir Hatları Kabataş-Adalar hattının durağı"),

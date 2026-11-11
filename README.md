@@ -1,6 +1,6 @@
 # Seyrüsefer
 
-Büyükada vapur ve motor seferlerini tek listede gösteren küçük, ticari olmayan bir web sitesi (PWA). Şehir Hatları, Mavi Marmara ve Prenstur seferlerini birleştirir; iki sekme vardır: **Adadan çıkış** ve **Adaya gidiş**. iPhone'da Safari > Paylaş > Ana Ekrana Ekle ile uygulama gibi açılır.
+Adalar'a (Kınalıada, Burgazada, Heybeliada, Büyükada) vapur ve motor seferlerini tek listede gösteren küçük, ticari olmayan bir web sitesi (PWA). Şehir Hatları, Mavi Marmara ve Prenstur seferlerini birleştirir. Sayfanın en üstündeki şeritten hedef ada seçilir (seçim hatırlanır, varsayılan Büyükada); iki sekme vardır: **Adadan çıkış** ve **Adaya gidiş** (seçili adaya göre, adalar arası seferler de dahil). iPhone'da Safari > Paylaş > Ana Ekrana Ekle ile uygulama gibi açılır.
 
 Resmi değildir; sefer öncesi firmayı kontrol edin.
 
@@ -10,6 +10,7 @@ Resmi değildir; sefer öncesi firmayı kontrol edin.
 - Ön yüz (`index.html`, `app.js`, `style.css`) çerçevesiz statik dosyalardır; saat hesabı cihazda, İstanbul saatine göre yapılır.
 - Bir kaynak çekilemezse veya 0 sefer dönerse o kaynağın eski seferleri korunur, `data/hatalar.txt` yazılır ve Actions bir GitHub Issue açar.
 - Resmi tatiller https://date.nager.at üzerinden alınır; tatil günleri Pazar gibi sayılır.
+- `data/seferler.json`: her kayıt bir (kalkış, varış) çiftidir; bir ucu ada, öteki ucu ada ya da kara iskelesidir (Maltepe, Bostancı, Kartal, Kadıköy, Kabataş). Yön (adadan/adaya) uygulamada seçili adaya göre hesaplanır; `yon` alanı yalnız uyumluluk içindir (Büyükada'ya göre, adalar arası seferde `adalar_arasi`). Mavi Marmara'nın Büyükada/Bostancı sayfalarından Heybeliada kayıtları, Prenstur'dan Kartal↔Heybeliada kayıtları (ara durak Büyükada) türetilir.
 - `data/iskeleler.json`: iskele koordinatları ve en yakın otoparklar (OpenStreetMap, `scraper/iskeleler_uret.py` ile üretilir). Yol tarifi düğmesi Google Maps'i açar.
 
 ## Kaynaklar

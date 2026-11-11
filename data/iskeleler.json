@@ -36,6 +36,56 @@
     }
    }
   },
+  "Kınalıada": {
+   "kara": false,
+   "noktalar": {
+    "Şehir Hatları": {
+     "ad": "Kınalıada vapur iskelesi",
+     "lat": 40.910598,
+     "lng": 29.055672,
+     "osm": "way/401651883",
+     "osm_adi": "Kınalıada Vapur İskelesi",
+     "belirsiz": false,
+     "not": "OSM'de operator=Şehir Hatları, 'Kınalıada Vapur İskelesi'",
+     "otopark": null
+    },
+    "Mavi Marmara": {
+     "ad": "Kınalıada motor iskelesi (Mavi Marmara)",
+     "lat": 40.909143,
+     "lng": 29.055413,
+     "osm": "way/401651888",
+     "osm_adi": "Mavimarmara.net",
+     "belirsiz": false,
+     "not": "OSM'de operator=Mavi Marmara",
+     "otopark": null
+    }
+   }
+  },
+  "Burgazada": {
+   "kara": false,
+   "noktalar": {
+    "Şehir Hatları": {
+     "ad": "Burgazada vapur iskelesi",
+     "lat": 40.881127,
+     "lng": 29.070308,
+     "osm": "way/401416370",
+     "osm_adi": "Burgazada Vapur İskelesi",
+     "belirsiz": false,
+     "not": "OSM'de operator=Şehir Hatları, 'Burgazada Vapur İskelesi'",
+     "otopark": null
+    },
+    "Mavi Marmara": {
+     "ad": "Burgazada motor iskelesi (Mavi Marmara)",
+     "lat": 40.880313,
+     "lng": 29.069813,
+     "osm": "way/401416371",
+     "osm_adi": "Burgazada Motor İskelesi",
+     "belirsiz": false,
+     "not": "OSM'de operator=Mavi Marmara",
+     "otopark": null
+    }
+   }
+  },
   "Heybeliada": {
    "kara": false,
    "noktalar": {

@@ -1,9 +1,11 @@
-// Seyrüsefer: Büyükada sefer listesi. Çerçeve yok; saat hesabı cihazda, İstanbul saatine göre.
+// Seyrüsefer: Adalar (Kınalıada, Burgazada, Heybeliada, Büyükada) sefer listesi. Çerçeve yok; saat hesabı cihazda, İstanbul saatine göre.
 "use strict";
 
-const ADA = "Büyükada";
+// Adalar batıdan doğuya (hedef ada şeridi bu sırada).
+const ADALAR = ["Kınalıada", "Burgazada", "Heybeliada", "Büyükada"];
+const VARSAYILAN_ADA = "Büyükada";
 const ANA_ISKELELER = ["Maltepe", "Bostancı", "Kartal"];
-const DIGER_ISKELELER = ["Kadıköy", "Kabataş", "Heybeliada"];
+const KARA_DIGER = ["Kadıköy", "Kabataş"];
 const FIRMA_SINIF = { "Şehir Hatları": "f-sh", "Mavi Marmara": "f-mm", "Prenstur": "f-pt" };
 const KAYNAK_AD = { sehirhatlari: "Şehir Hatları", mavimarmara: "Mavi Marmara", prenstur: "Prenstur", tatiller: "Tatil listesi" };
 const RESMI_LINKLER = [
@@ -89,15 +91,36 @@ function bilgiMetni(s) {
   return [s.varis ? `varış ${saatGoster(s.varis)}${sure ? ` (${sure})` : ""}` : "", s.not].filter(Boolean).join(" · ");
 }
 
-// Seferin "öteki" iskelesi (Büyükada dışındaki uç).
-function digerIskele(s) {
-  return s.yon === "adadan" ? s.varis_iskele : s.kalkis_iskele;
+// Yön seçili adaya göre hesaplanır (veri "yon" alanı kullanılmaz): adaya gidiş = varış seçili ada.
+function seferYonu(s, ada) {
+  return s.varis_iskele === ada ? "adaya" : s.kalkis_iskele === ada ? "adadan" : null;
 }
 
-function gunSeferleri(veri, yon, secili, tarih) {
+// Seferin "öteki" iskelesi (seçili ada dışındaki uç); sefer seçili adaya değmiyorsa null.
+function digerIskele(s, ada) {
+  const y = seferYonu(s, ada);
+  return y === "adadan" ? s.varis_iskele : y === "adaya" ? s.kalkis_iskele : null;
+}
+
+// Seçili adaya göre filtre iskeleleri: ana (kara) iskeleler + diğerleri (Kadıköy, Kabataş, öteki adalar); kendisi yok.
+function anaIskeleler(ada) { return ANA_ISKELELER.filter((p) => p !== ada); }
+function digerIskeleler(ada) { return KARA_DIGER.concat(ADALAR.filter((p) => p !== ada)); }
+function tumIskeleler(ada) { return anaIskeleler(ada).concat(digerIskeleler(ada)); }
+
+// Kayıtlı iskele listesini seçili ada için temizler: bilinmeyen/kendisi/tekrar atılır; boş kalırsa varsayılan.
+function seciliTemizle(liste, ada) {
+  const gecerli = tumIskeleler(ada);
+  const t = (Array.isArray(liste) ? liste : []).filter((p, i, a) => gecerli.includes(p) && a.indexOf(p) === i);
+  return t.length ? t : anaIskeleler(ada);
+}
+
+function adaGecerli(ada) { return ADALAR.includes(ada) ? ada : VARSAYILAN_ADA; }
+
+function gunSeferleri(veri, yon, secili, tarih, ada) {
+  ada = adaGecerli(ada);
   const tip = gunTipi(tarih, veri.tatiller);
   return veri.seferler
-    .filter((s) => s.yon === yon && s.gunler.includes(tip) && secili.includes(digerIskele(s)))
+    .filter((s) => seferYonu(s, ada) === yon && s.gunler.includes(tip) && secili.includes(digerIskele(s, ada)))
     .sort((a, b) => dk(a.kalkis) - dk(b.kalkis) || a.firma.localeCompare(b.firma, "tr"));
 }
 
@@ -106,9 +129,9 @@ function dkYaz(toplamDk) {
 }
 
 // Dünün gün tipine göre kalkışı >= 24:00 olan seferler, bugünün ilk saatlerine (00:xx, "gece") çekilir.
-function dunGeceSeferleri(veri, yon, secili, tarih) {
+function dunGeceSeferleri(veri, yon, secili, tarih, ada) {
   const dun = oncekiGun(tarih);
-  return gunSeferleri(veri, yon, secili, dun)
+  return gunSeferleri(veri, yon, secili, dun, ada)
     .filter((s) => dk(s.kalkis) >= 1440)
     .map((s) => Object.assign({}, s, {
       kalkis: dkYaz(dk(s.kalkis) - 1440),
@@ -119,13 +142,14 @@ function dunGeceSeferleri(veri, yon, secili, tarih) {
 
 // Bugünün listesi: dünün gece seferleri + bugünün tüm seferleri (24+ olanlar sonda, "gece").
 // "Şimdi" = İstanbul takvim günü + dakikası; sabit gün sınırı yok.
-function listeHesapla(veri, yon, secili, simdi) {
-  const bugun = dunGeceSeferleri(veri, yon, secili, simdi.tarih)
-    .concat(gunSeferleri(veri, yon, secili, simdi.tarih))
+function listeHesapla(veri, yon, secili, simdi, ada) {
+  ada = adaGecerli(ada);
+  const bugun = dunGeceSeferleri(veri, yon, secili, simdi.tarih, ada)
+    .concat(gunSeferleri(veri, yon, secili, simdi.tarih, ada))
     .sort((a, b) => dk(a.kalkis) - dk(b.kalkis) || a.firma.localeCompare(b.firma, "tr"));
   const siradaki = bugun.findIndex((s) => dk(s.kalkis) >= simdi.dk);
   const yarinGun = sonrakiGun(simdi.tarih);
-  const yarinSeferleri = gunSeferleri(veri, yon, secili, yarinGun).filter((s) => dk(s.kalkis) < 1440);
+  const yarinSeferleri = gunSeferleri(veri, yon, secili, yarinGun, ada).filter((s) => dk(s.kalkis) < 1440);
   const sonuc = { bugun, siradaki, yarin: [], yarinIlk: yarinSeferleri.slice(0, 3), bugunBitti: siradaki === -1 };
   if (sonuc.bugunBitti) {
     // yarının yalnız <24:00 seferleri (24+ olanlar yarının listesine ait gece seferleri değil, zaten bugünün listesinde)
@@ -209,7 +233,7 @@ function haritaLink(lat, lng, mod) {
   return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=${mod}`;
 }
 
-// Adalar (Büyükada/Heybeliada) -> yürüyerek, karadaki iskeleler -> toplu taşıma.
+// Adalar -> yürüyerek, karadaki iskeleler -> toplu taşıma.
 function iskeleModu(iskeleler, iskele) {
   const i = iskeleler && iskeleler.iskeleler && iskeleler.iskeleler[iskele];
   return i && i.kara ? "transit" : "walking";
@@ -232,12 +256,13 @@ function yolDugmesi(s, iskeleler, sinif) {
   return l ? `<a class="${sinif}" href="${l}" target="_blank" rel="noopener">📍 Yol tarifi</a>` : "";
 }
 
-// Seferin KARA tarafındaki iskelenin otoparkı (Heybeliada kara değil -> null).
-// Adaya gidiş: arabayla otoparka (driving); adadan çıkış: otoparka yürüyerek (walking).
-function otoparkBilgisi(s, iskeleler, yon) {
+// Seferin KARA tarafındaki iskelenin otoparkı (adalar kara değil -> null).
+// Kalkış karada (adaya gidiş): arabayla otoparka (driving); varış karada (adadan çıkış): yürüyerek (walking).
+function otoparkBilgisi(s, iskeleler) {
   if (!s || !iskeleler || !iskeleler.iskeleler) return null;
-  yon = yon || s.yon;
-  const kara = digerIskele(s);
+  const karaKalkis = !ADALAR.includes(s.kalkis_iskele);
+  const kara = karaKalkis ? s.kalkis_iskele : s.varis_iskele;
+  const yon = karaKalkis ? "adaya" : "adadan";
   const i = iskeleler.iskeleler[kara];
   if (!i || !i.kara) return null;
   const nokta = noktaBul(iskeleler, kara, s.firma);
@@ -254,6 +279,11 @@ function yolGrubu(s, iskeleler, sinif) {
   const p = o ? `<a class="park-dugme" href="${o.link}" target="_blank" rel="noopener" aria-label="${etiket}" title="${etiket}"><svg viewBox="0 0 100 100" width="44" height="44" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="50" fill="#0073e6"/><circle cx="50" cy="50" r="44" fill="none" stroke="#fff" stroke-width="3"/><path fill="#fff" fill-rule="evenodd" d="M34 24H56A19 19 0 0 1 56 62H46V76H34ZM46 35V51H55A8 8 0 0 0 55 35Z"/></svg></a>` : "";
   const y = yolDugmesi(s, iskeleler, sinif);
   return p || y ? `<span class="yol-grup">${p}${y}</span>` : "";
+}
+
+// Hedef ada şeridi: 4 parçalı seçici (batıdan doğuya), seçili ada dolu.
+function adaSeridiHtml(ada) {
+  return ADALAR.map((a) => `<button type="button" role="tab" data-ada="${esc(a)}" aria-selected="${a === ada}" aria-label="${esc(a)}">${esc(a)}</button>`).join("");
 }
 
 function rozet(firma, ek) {
@@ -309,10 +339,17 @@ function gelecekSatir(s, simdi, iskeleler, kalanGoster) {
 }
 
 if (typeof document !== "undefined") {
+  // localStorage erişimi (gizli sekme vb. durumlarda hata verebilir)
+  const lsOku = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+  const lsYaz = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+  let kayitliSecili = null;
+  try { kayitliSecili = JSON.parse(lsOku("secili") || "null"); } catch (e) {}
+  const baslangicAda = adaGecerli(lsOku("ada"));
   const durum = {
-    yon: localStorage.getItem("yon") === "adaya" ? "adaya" : "adadan",
-    secili: JSON.parse(localStorage.getItem("secili") || "null") || ANA_ISKELELER.slice(),
-    digerAcik: localStorage.getItem("digerAcik") === "1",
+    ada: baslangicAda,
+    yon: lsOku("yon") === "adaya" ? "adaya" : "adadan",
+    secili: seciliTemizle(kayitliSecili, baslangicAda),
+    digerAcik: lsOku("digerAcik") === "1",
     eskiAcik: false,
     hedef: null,
     gecmisGizli: false,
@@ -323,29 +360,33 @@ if (typeof document !== "undefined") {
   const $ = (id) => document.getElementById(id);
 
   function kaydet() {
-    localStorage.setItem("yon", durum.yon);
-    localStorage.setItem("secili", JSON.stringify(durum.secili));
-    localStorage.setItem("digerAcik", durum.digerAcik ? "1" : "0");
+    lsYaz("yon", durum.yon);
+    lsYaz("ada", durum.ada);
+    lsYaz("secili", JSON.stringify(durum.secili));
+    lsYaz("digerAcik", durum.digerAcik ? "1" : "0");
   }
+
+  function adaSeridiCiz() { $("ada-serit").innerHTML = adaSeridiHtml(durum.ada); }
 
   function filtreCiz() {
     const cip = (p) => `<button class="chip" data-iskele="${p}" aria-pressed="${durum.secili.includes(p)}">${p}</button>`;
     $("filtre").innerHTML =
-      `<div class="chip-satir">${ANA_ISKELELER.map(cip).join("")}<button class="chip diger" data-diger="1" aria-expanded="${durum.digerAcik}">Diğer ${durum.digerAcik ? "▲" : "▼"}</button></div>` +
-      (durum.digerAcik ? `<div class="chip-satir">${DIGER_ISKELELER.map(cip).join("")}</div>` : "");
+      `<div class="chip-satir">${anaIskeleler(durum.ada).map(cip).join("")}<button class="chip diger" data-diger="1" aria-expanded="${durum.digerAcik}">Diğer ${durum.digerAcik ? "▲" : "▼"}</button></div>` +
+      (durum.digerAcik ? `<div class="chip-satir diger-satir">${digerIskeleler(durum.ada).map(cip).join("")}</div>` : "");
   }
 
-  // Sayfa altı: "İskelelere yol tarifi" (Büyükada iskeleleri + seçili kara iskeleleri)
+  // Sayfa altı: "İskelelere yol tarifi" (seçili adanın iskeleleri + seçili öteki iskeleler)
   function iskeleBaslikCiz() {
     const kutu = $("iskele-yol");
     if (!durum.iskeleler) { kutu.hidden = true; return; }
     const parcalar = [];
-    for (const [firma, n] of Object.entries(durum.iskeleler.iskeleler[ADA].noktalar)) {
-      parcalar.push(`<a class="hap kucuk" href="${haritaLink(n.lat, n.lng, "walking")}" target="_blank" rel="noopener">📍 Büyükada · ${esc(firma)}</a>`);
+    const adaIskele = durum.iskeleler.iskeleler[durum.ada];
+    for (const [firma, n] of Object.entries(adaIskele ? adaIskele.noktalar : {})) {
+      parcalar.push(`<a class="hap kucuk" href="${haritaLink(n.lat, n.lng, "walking")}" target="_blank" rel="noopener">📍 ${esc(durum.ada)} · ${esc(firma)}</a>`);
     }
     for (const p of durum.secili) {
       const i = durum.iskeleler.iskeleler[p];
-      if (!i) continue;
+      if (!i || p === durum.ada) continue;
       const n = Object.values(i.noktalar)[0];
       parcalar.push(`<a class="hap kucuk" href="${haritaLink(n.lat, n.lng, iskeleModu(durum.iskeleler, p))}" target="_blank" rel="noopener">📍 ${esc(p)}</a>`);
     }
@@ -362,7 +403,7 @@ function ciz(kaydir) {
     const yarinMi = planli && durum.hedef.tarih !== gercek.tarih;
     const baslikMetni = planli ? `${yarinMi ? "Yarın " : ""}${dkYaz(durum.hedef.dk)} SONRASI İLK Sefer` : "SIRADAKİ Sefer";
     const sBaslik = `<div class="gecmis-baslik"><h2>${baslikMetni}</h2>${saatTusu(durum.hedef, gercek.tarih)}</div>`;
-    const r = listeHesapla(durum.veri, durum.yon, durum.secili, simdi);
+    const r = listeHesapla(durum.veri, durum.yon, durum.secili, simdi, durum.ada);
     if (!durum.secili.length) { r.bugun = []; r.siradaki = -1; r.yarin = []; r.bugunBitti = true; r.hepsiFiltreli = true; }
     for (const y of ["adadan", "adaya"]) $("sekme-" + y).setAttribute("aria-selected", String(y === durum.yon));
     $("yukleniyor").hidden = true;
@@ -474,6 +515,14 @@ function ciz(kaydir) {
     if (!b) return;
     durum.yon = b.dataset.yon; kaydet(); iskeleBaslikCiz(); ciz(true);
   });
+  $("ada-serit").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-ada]");
+    if (!b || b.dataset.ada === durum.ada) return;
+    durum.ada = adaGecerli(b.dataset.ada);
+    durum.secili = seciliTemizle(durum.secili, durum.ada);
+    durum.eskiAcik = false; durum.gecmisGizli = false;
+    kaydet(); adaSeridiCiz(); filtreCiz(); iskeleBaslikCiz(); ciz(true);
+  });
   $("filtre").addEventListener("click", (e) => {
     const b = e.target.closest("button");
     if (!b) return;
@@ -492,9 +541,10 @@ function ciz(kaydir) {
       fetch("data/iskeleler.json").then((r) => r.json()).catch(() => null),
     ]);
     durum.veri = v; durum.iskeleler = i;
-    filtreCiz(); iskeleBaslikCiz(); altCiz(); guncellikCiz(); ciz(true);
+    adaSeridiCiz(); filtreCiz(); iskeleBaslikCiz(); altCiz(); guncellikCiz(); ciz(true);
   }
 
+  adaSeridiCiz();
   filtreCiz();
   altCiz();
   yukle().catch(() => { $("yukleniyor").textContent = "Veri yüklenemedi. İnternet bağlantısını kontrol edin."; });
@@ -538,5 +588,5 @@ function ciz(kaydir) {
 }
 
 if (typeof module !== "undefined") {
-  module.exports = { hedefZamani, saatTusu, guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, sonSeferBilgisi, sonSeferTusu, seferKimlik, gunSeferleri, kalanMetni, aciliyet, haritaLink, noktaBul, otoparkBilgisi, sureMetni, araDurakMetni, siradakiKart, gelecekSatir, gecmisBaslik, gecmisGorunen };
+  module.exports = { ADALAR, seferYonu, digerIskele, anaIskeleler, digerIskeleler, tumIskeleler, seciliTemizle, adaGecerli, adaSeridiHtml, hedefZamani, saatTusu, guncellikDurumu, saatGoster, saatiCoz, gunTipi, sonrakiGun, listeHesapla, sonSeferBilgisi, sonSeferTusu, seferKimlik, gunSeferleri, kalanMetni, aciliyet, haritaLink, noktaBul, otoparkBilgisi, sureMetni, araDurakMetni, siradakiKart, gelecekSatir, gecmisBaslik, gecmisGorunen };
 }

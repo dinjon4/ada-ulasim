@@ -211,7 +211,58 @@ assert.strictEqual(a.sureMetni("10:00", "16:00"), "");
 }
 {
   const mh = v.seferler.filter((x) => x.firma === "Mavi Marmara" && x.kalkis_iskele === "Büyükada" && x.varis_iskele === "Heybeliada" && x.kalkis === "09:35");
-  assert(mh.length === 1 && mh[0].varis === null && mh[0].yon === "adadan");
+  assert(mh.length === 1 && mh[0].varis === null);
   console.log("p) Mavi Marmara Büyükada->Heybeliada turetilmis kayit OK");
+}
+// q) hedef ada: yon seciliden hesaplanir, kendi chip'i yok, serit secili adayi isaretler
+{
+  const H = "Heybeliada";
+  const mk = (k, v) => ({ firma: "Şehir Hatları", kalkis_iskele: k, varis_iskele: v, kalkis: "10:00", varis: "10:30", gunler: ["hafta_ici", "cumartesi", "pazar"], yon: "YANLIS", not: "", ara_durak: [] });
+  assert.strictEqual(a.seferYonu(mk("Büyükada", H), H), "adaya");
+  assert.strictEqual(a.seferYonu(mk(H, "Bostancı"), H), "adadan");
+  assert.strictEqual(a.seferYonu(mk("Bostancı", "Büyükada"), H), null);
+  assert.strictEqual(a.digerIskele(mk("Büyükada", H), H), "Büyükada");
+  const mini = { tatiller: [], seferler: [mk("Büyükada", H), mk(H, "Bostancı"), mk("Bostancı", "Büyükada"), mk("Kınalıada", H)] };
+  const sim = a.saatiCoz("2026-11-09T09:00");
+  const tum = a.tumIskeleler(H);
+  const adaya = a.listeHesapla(mini, "adaya", tum, sim, H).bugun.map(ad);
+  const adadan = a.listeHesapla(mini, "adadan", tum, sim, H).bugun.map(ad);
+  assert.deepStrictEqual(adaya, ["10:00 Büyükada->Heybeliada", "10:00 Kınalıada->Heybeliada"]);
+  assert.deepStrictEqual(adadan, ["10:00 Heybeliada->Bostancı"]);
+  // gercek veride: Heybeliada secili, Buyukada->Heybeliada seferleri "adaya" altinda
+  const gv = a.gunSeferleri(v, "adaya", a.tumIskeleler(H), "2026-11-09", H);
+  assert(gv.some((s) => s.kalkis_iskele === "Büyükada" && s.varis_iskele === H));
+  assert(a.gunSeferleri(v, "adadan", a.tumIskeleler(H), "2026-11-09", H).some((s) => s.kalkis_iskele === H && s.varis_iskele === "Bostancı"));
+  assert(gv.every((s) => s.varis_iskele === H));
+  // chip'lerde secili ada yok; tum adalar icin
+  for (const x of a.ADALAR) {
+    const t = a.tumIskeleler(x);
+    assert(!t.includes(x) && !a.anaIskeleler(x).includes(x) && !a.digerIskeleler(x).includes(x));
+    assert(a.ADALAR.filter((y) => y !== x).every((y) => t.includes(y)) && t.includes("Kabataş") && t.includes("Maltepe"));
+    // secilmis liste temizligi: kendisi/bilinmeyen atilir, bos kalirsa varsayilan
+    assert(!a.seciliTemizle(["Kartal", x, "Yok"], x).includes(x));
+    assert.deepStrictEqual(a.seciliTemizle([x, "Yok"], x), a.anaIskeleler(x));
+    assert.deepStrictEqual(a.seciliTemizle(null, x), a.anaIskeleler(x));
+  }
+  assert.deepStrictEqual(a.seciliTemizle(["Kartal", "Heybeliada", "Kartal"], "Büyükada"), ["Kartal", "Heybeliada"]);
+  // veri 'yon' alanina bagimlilik yok: yon bozuk olsa da sonuc ayni (yukaridaki mini veri 'YANLIS' yon tasir)
+  // ada serit HTML'i
+  const sh = a.adaSeridiHtml(H);
+  assert((sh.match(/<button/g) || []).length === 4);
+  assert(sh.indexOf("Kınalıada") < sh.indexOf("Burgazada") && sh.indexOf("Burgazada") < sh.indexOf("Heybeliada") && sh.indexOf("Heybeliada") < sh.indexOf("Büyükada"));
+  assert(sh.includes('data-ada="Heybeliada" aria-selected="true"') && (sh.match(/aria-selected="true"/g) || []).length === 1);
+  assert(a.adaSeridiHtml("Büyükada").includes('data-ada="Büyükada" aria-selected="true"'));
+  assert.strictEqual(a.adaGecerli("Yok"), "Büyükada");
+  // otopark: adalar arasi sefer P dugmesi gostermez; kara tarafi kalkis ise driving
+  const ik = require("../data/iskeleler.json");
+  assert(a.otoparkBilgisi(mk("Burgazada", H), ik) === null);
+  const o = a.otoparkBilgisi(mk("Bostancı", "Burgazada"), ik);
+  assert(o && o.link.includes("driving") && o.iskele === "Bostancı");
+  // yeni adalarin iskeleleri var, kara degil
+  for (const x of ["Kınalıada", "Burgazada"]) assert(ik.iskeleler[x] && ik.iskeleler[x].kara === false && Object.keys(ik.iskeleler[x].noktalar).length > 0);
+  // Heybeliada kalkisli seferler veride (Kartal, Bostanci)
+  assert(v.seferler.some((s) => s.firma === "Prenstur" && s.kalkis_iskele === "Kartal" && s.varis_iskele === H && s.ara_durak.includes("Büyükada")));
+  assert(v.seferler.some((s) => s.firma === "Mavi Marmara" && s.kalkis_iskele === "Bostancı" && s.varis_iskele === H && s.varis === null));
+  console.log("q) hedef ada OK");
 }
 console.log("TUM TESTLER GECTI");

@@ -1,4 +1,8 @@
-"""Büyükada vapur/motor seferlerini toplayip data/seferler.json uretir.
+"""Adalar (Kinaliada, Burgazada, Heybeliada, Buyukada) vapur/motor seferlerini toplayip data/seferler.json uretir.
+
+Bir sefer kaydi, bir ucu ada olan her (kalkis, varis) cifti icin tutulur: ada<->kara (Maltepe, Bostanci,
+Kartal, Kadikoy, Kabatas) ve adalar arasi. Yon uygulamada secili adaya gore hesaplanir; "yon" alani
+yalniz uyumluluk icin Buyukada'ya gore yazilir (adadan/adaya) ya da adalar arasi seferde "adalar_arasi".
 
 Kaynaklar: Şehir Hatları (HTML tablolar), Mavi Marmara (HTML tablo), Prenstur (elle girilmis
 data/prenstur.json + resim degisti mi kontrolu). Her kaynak ayri ayri basarisiz olabilir;
@@ -40,8 +44,10 @@ PRENSTUR_SAYFA = "https://www.prenstur.net/index3e95.html?option=com_content&vie
 PRENSTUR_TABAN = "https://www.prenstur.net/"
 TATIL_URL = "https://date.nager.at/api/v3/PublicHolidays/{yil}/TR"
 
-ADA = "Büyükada"
-ILGILI = {"Maltepe", "Bostancı", "Kartal", "Kadıköy", "Kabataş", "Heybeliada"}
+ADA = "Büyükada"  # yalniz "yon" uyumluluk alani ve Mavi Marmara/Prenstur turetmeleri icin
+ADALAR = ["Kınalıada", "Burgazada", "Heybeliada", "Büyükada"]
+# Eminönü yalniz ara_durak olarak geciyor (kendi sefer kaydi yok), bu yuzden burada degil
+ILGILI = {"Maltepe", "Bostancı", "Kartal", "Kadıköy", "Kabataş"}
 HEPSI = ["hafta_ici", "cumartesi", "pazar"]
 HAFTA_ICI_CT = ["hafta_ici", "cumartesi"]
 # Hizmet gunu modeli: gece yarisini gecen saatler 24+ yazilir ("24:35"), gunler tablonun kendisinden gelir
@@ -74,7 +80,10 @@ def hh_mm(s):
 
 
 def kayit(firma, kalkis_iskele, varis_iskele, kalkis, varis, gunler, not_="", kaynak="", ara_durak=()):
-    yon = "adadan" if kalkis_iskele == ADA else "adaya"
+    if kalkis_iskele in ADALAR and varis_iskele in ADALAR:
+        yon = "adalar_arasi"
+    else:
+        yon = "adadan" if kalkis_iskele == ADA else "adaya"  # eski uyumluluk (Buyukada'ya gore)
     return {"firma": firma, "kalkis_iskele": kalkis_iskele, "varis_iskele": varis_iskele,
             "kalkis": kalkis, "varis": varis, "gunler": list(gunler), "yon": yon,
             "not": not_, "kaynak": kaynak, "ara_durak": list(ara_durak)}
@@ -149,7 +158,7 @@ def sehirhatlari(url, kaynak="sehirhatlari"):
                     a, b = duraklar[i], duraklar[j]
                     if saatler[i] is None or saatler[j] is None:
                         continue
-                    if not ((a == ADA and b in ILGILI) or (b == ADA and a in ILGILI)):
+                    if not ((a in ADALAR and (b in ADALAR or b in ILGILI)) or (b in ADALAR and a in ILGILI)):
                         continue
                     g = list(gunler)
                     if yildiz_kurali and (yildizli[i] or yildizli[j]):
@@ -189,19 +198,26 @@ def _iskele_adi(p):
 
 
 def mm_heybeli_turet(seferler):
-    """Buyukada->Bostanci seferlerinden Heybeliada'ya ugrayanlar icin ayrica Buyukada->Heybeliada
-    kaydi turetir (varis saati bilinmez -> None). Idempotent; ara_durakta Heybeliada olmayana dokunmaz."""
+    """Buyukada->Bostanci ve Bostanci->Buyukada seferlerinden Heybeliada'ya ugrayanlar icin ayrica
+    Buyukada->Heybeliada (Buyukada kalkisli) ve Bostanci->Heybeliada (Bostanci kalkisli) kaydi turetir
+    (varis saati bilinmez -> None). Idempotent; ara_durakta Heybeliada olmayana dokunmaz."""
     var = {(s["firma"], s["kalkis_iskele"], s["varis_iskele"], s["kalkis"], s["kaynak"]) for s in seferler}
     cikti = list(seferler)
     for s in seferler:
-        if s["kalkis_iskele"] != ADA or "Heybeliada" not in s.get("ara_durak", ()):
+        if s["firma"] != "Mavi Marmara" or "Heybeliada" not in s.get("ara_durak", ()):
             continue
-        k = (s["firma"], ADA, "Heybeliada", s["kalkis"], s["kaynak"])
-        if s["firma"] != "Mavi Marmara" or s["varis_iskele"] == "Heybeliada" or k in var:
+        if (s["kalkis_iskele"], s["varis_iskele"]) == (ADA, "Bostancı"):
+            kal, not_ = ADA, "Bostancı seferi"
+        elif (s["kalkis_iskele"], s["varis_iskele"]) == ("Bostancı", ADA):
+            kal, not_ = "Bostancı", "Büyükada seferi"
+        else:
+            continue
+        k = (s["firma"], kal, "Heybeliada", s["kalkis"], s["kaynak"])
+        if k in var:
             continue
         var.add(k)
-        cikti.append(kayit(s["firma"], ADA, "Heybeliada", s["kalkis"], None, s["gunler"],
-                           not_="Bostancı seferi", kaynak=s["kaynak"], ara_durak=[]))
+        cikti.append(kayit(s["firma"], kal, "Heybeliada", s["kalkis"], None, s["gunler"],
+                           not_=not_, kaynak=s["kaynak"], ara_durak=[]))
     return cikti
 
 
@@ -249,10 +265,12 @@ def prenstur_seferler(kaynak="prenstur"):
     for g, kartal, ada, hey in satirlar(veri["kartal_heybeliada"]):
         seferler.append(kayit("Prenstur", "Kartal", ADA, kartal, ada, g, "", kaynak))
         seferler.append(kayit("Prenstur", ADA, "Heybeliada", ada, hey, g, "", kaynak))
+        seferler.append(kayit("Prenstur", "Kartal", "Heybeliada", kartal, hey, g, "", kaynak, ara_durak=[ADA]))
     # Heybeliada kalkis / Büyükada kalkis / Kartal varis
     for g, hey, ada, kartal in satirlar(veri["heybeliada_kartal"]):
         seferler.append(kayit("Prenstur", "Heybeliada", ADA, hey, None, g, "", kaynak))
         seferler.append(kayit("Prenstur", ADA, "Kartal", ada, kartal, g, "", kaynak))
+        seferler.append(kayit("Prenstur", "Heybeliada", "Kartal", hey, kartal, g, "", kaynak, ara_durak=[ADA]))
     return tekille(seferler)
 
 

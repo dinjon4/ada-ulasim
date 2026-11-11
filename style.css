@@ -21,6 +21,9 @@ h1 { margin: 0; font-size: 34px; font-weight: 800; letter-spacing: -.5px; }
 .guncellik.uyari { display: inline-block; background: var(--uyari); color: var(--uyari-yazi); padding: 4px 9px; border-radius: 9px; font-weight: 600; }
 .test { margin-top: 6px; font-size: 12.5px; display: inline-block; background: var(--uyari); color: var(--uyari-yazi); padding: 3px 8px; border-radius: 8px; }
 
+.ada-serit { display: flex; margin-top: 8px; padding: 4px; border-radius: 16px; background: var(--cam); border: 1px solid var(--cam-kenar); }
+.ada-serit button { flex: 1 1 0; min-width: 0; min-height: 44px; padding: 0 2px; border: 0; border-radius: 13px; background: transparent; color: #17404f; font-size: 13.5px; font-weight: 600; white-space: nowrap; }
+.ada-serit button[aria-selected="true"] { background: #fff; color: var(--koyu); box-shadow: 0 1px 4px rgba(0,0,0,.2); }
 .sekmeler { display: flex; margin-top: 12px; padding: 4px; border-radius: 16px; background: var(--cam); border: 1px solid var(--cam-kenar); }
 .sekmeler button { flex: 1; min-height: 46px; border: 0; border-radius: 13px; background: transparent; color: #17404f; font-size: 17px; font-weight: 600; }
 .sekmeler button[aria-selected="true"] { background: #fff; color: var(--koyu); box-shadow: 0 1px 4px rgba(0,0,0,.2); }
@@ -28,6 +31,8 @@ h1 { margin: 0; font-size: 34px; font-weight: 800; letter-spacing: -.5px; }
 .chip-satir { display: flex; flex-wrap: nowrap; gap: 6px; }
 .chip { flex: 1 1 0; min-width: 0; white-space: nowrap; min-height: 44px; padding: 0 4px; text-align: center; border-radius: 22px; border: 1px solid var(--cam-kenar); background: var(--cam); color: var(--koyu); font-size: 14px; }
 .chip[aria-pressed="true"] { background: rgba(255,255,255,.88); font-weight: 700; }
+.chip-satir.diger-satir { flex-wrap: wrap; }
+.diger-satir .chip { flex: 1 1 auto; padding: 0 14px; }
 .chip.diger { border-style: dashed; }
 .iskeleler { margin-top: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .etiket { font-size: 13px; color: #1b3b49; }
